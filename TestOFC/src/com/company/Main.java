@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -9,6 +7,8 @@ public class Main {
     Questions ask = new Questions();
 
     ask.zeroQuestion();
+    ask.fifthQuestion();
+    ask.secondQuestion();
 
 
 
