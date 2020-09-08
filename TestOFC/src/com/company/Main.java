@@ -13,7 +13,7 @@ public class Main {
 
         //  цикл, пока не нажмём ноль, программа работает
         while (exit != 0) {
-        get.beginTest();
+            get.beginTest();
 
             // проверка ввода, выход или продолжение программы
             System.out.println("Продолжить: 1, Выход: 0.");
@@ -22,4 +22,5 @@ public class Main {
 
 
     }
+
 }

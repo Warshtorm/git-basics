@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Questions {
-    int enterAresponse;
+    public int enterAresponse;
 
     String[] array = new String[10];  //массив для хранения вопросов
     Scanner scanner = new Scanner(System.in);  // вызов сканнера
@@ -31,21 +31,22 @@ public class Questions {
             // создаём переменную в которую заносим случайный индекс массива
             int num = random.nextInt(array.length);
 
-            // выводим вопрос на экран
+            // выводим вопрос на экран в текстовом виде
+            System.out.println();
             System.out.println(array[num]);
 
             // вводим ответ в консоль
             System.out.print("Верно ли утверждение: 1 - да, 0 - нет ");
             enterAresponse = scanner.nextInt();
 
-            // если остаток от деления равен нулю, выводим сообщение какой индекс, чотный или нет
-            if (num % 2 != 0 & num % 2 == enterAresponse) {
-                System.out.println(" - правильно" + num);
+            // если остаток от деления 1 и ввод 1 или остаток 0 и ввод 0 то правильно, остальное не правильно
+            if (num % 2 != 0 & num % 2 == enterAresponse || num % 2 == 0 & num % 2 == enterAresponse) {
+                System.out.println(" - правильно");
             } else
-                System.out.println(" - не правильно" + num);
-            }
+                System.out.println(" - не правильно");
         }
     }
+}
 
 
 
