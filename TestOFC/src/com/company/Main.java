@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Questions get = new Questions();
+        QuestionsPtv get = new QuestionsPtv();
         Scanner scan = new Scanner(System.in);  // вызов сканнера
 
         int exit = 1;  // переменная для выхода
