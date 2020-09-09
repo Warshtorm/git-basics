@@ -6,7 +6,7 @@ import java.util.Scanner;
 class QuestionsPtv {
     public int enterAresponse;
 
-    String[] array = new String[10];  //массив для хранения вопросов
+    String[] array = new String[11];  //массив для хранения вопросов
     Scanner scanner = new Scanner(System.in);  // вызов сканнера
     Random random = new Random();
 
@@ -21,7 +21,7 @@ class QuestionsPtv {
         array[7] = "Рабочее давление СПРК-8Б составляет 0,7 мПа";
         array[8] = "СВП - ствол водно - пенный";
         array[9] = "СВП - ствол воздушно - пенный";
-        array[10] = "" ;
+        array[10] = "123" ;
     }
 
 
