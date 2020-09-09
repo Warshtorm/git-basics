@@ -6,7 +6,7 @@ import java.util.Scanner;
 class QuestionsPtv {
     public int enterAresponse;
 
-    String[] array = new String[45];  //массив для хранения вопросов
+    String[] array = new String[46];  //массив для хранения вопросов
     Scanner scanner = new Scanner(System.in);  // вызов сканнера
     Random random = new Random();
 
