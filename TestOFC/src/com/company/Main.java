@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
 
         QuestionsPtv get = new QuestionsPtv();
-
         Scanner scan = new Scanner(System.in);  // вызов сканнера
 
         int exit = 1;  // переменная для выхода
@@ -15,7 +14,6 @@ public class Main {
         //  цикл, пока не нажмём ноль, программа работает
         while (exit != 0) {
             get.beginTest();
-
             // проверка ввода, выход или продолжение программы
             System.out.println("Продолжить: 1, Выход: 0.");
             exit = scan.nextInt();
