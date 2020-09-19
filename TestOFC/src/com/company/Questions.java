@@ -6,7 +6,7 @@ import java.util.Scanner;
 class QuestionsPtv {
     public int enterAresponse;
 
-    String[] array = new String[116];  //массив для хранения вопросов
+    String[] array = new String[116];  // массив для хранения вопросов
     Scanner scanner = new Scanner(System.in);  // вызов сканнера
     Random random = new Random(); // создаём рандомайзер
 
@@ -141,9 +141,9 @@ class QuestionsPtv {
     }
 
 
-    //  вывод 10 вопросов из списка через цикл
-    public void beginTest() {
 
+    public void beginTest() {
+        //  вывод 10 вопросов из списка через цикл
         for (int cycle = 0; cycle < 5; ++cycle) {
 
             // создаём переменную в которую заносим случайный индекс массива
@@ -160,10 +160,11 @@ class QuestionsPtv {
 
             // если остаток от деления 1 и ввод 1 или остаток 0 и ввод 0 то правильно, остальное не правильно
             if (num % 2 != 0 & num % 2 == enterAresponse || num % 2 == 0 & num % 2 == enterAresponse) {
-                System.out.println(" - верно");
-            } else
-                System.out.println(" - не верно");
-        }
+                System.out.println(" - верно \n ========================================================= ");
+             } else {
+                System.out.println(" - не верно \n =========================================================");
+             }
+            }
     }
 }
 

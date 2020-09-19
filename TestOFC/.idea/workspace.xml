@@ -26,7 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Questions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,26 +101,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="719" y="208" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1600417231628" />
-    <state width="1493" height="676" key="GridCell.Tab.0.bottom" timestamp="1600417303787">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600421553526">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1600421553526" />
+    <state width="2517" height="882" key="GridCell.Tab.0.bottom" timestamp="1600506076639">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600417303787" />
-    <state width="2517" height="563" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1599635292710" />
-    <state width="1493" height="676" key="GridCell.Tab.0.center" timestamp="1600417303787">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2517" height="882" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076639" />
+    <state width="2517" height="882" key="GridCell.Tab.0.center" timestamp="1600506076638">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600417303787" />
-    <state width="2517" height="563" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1599635292710" />
-    <state width="1493" height="676" key="GridCell.Tab.0.left" timestamp="1600417303787">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2517" height="882" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076638" />
+    <state width="2517" height="882" key="GridCell.Tab.0.left" timestamp="1600506076638">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600417303787" />
-    <state width="2517" height="563" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1599635292710" />
-    <state width="1493" height="676" key="GridCell.Tab.0.right" timestamp="1600417303787">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2517" height="882" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076638" />
+    <state width="2517" height="882" key="GridCell.Tab.0.right" timestamp="1600506076639">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600417303787" />
-    <state width="2517" height="563" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1599635292710" />
+    <state width="2517" height="882" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076639" />
     <state x="469" y="0" key="SettingsEditor" timestamp="1600417245417">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
