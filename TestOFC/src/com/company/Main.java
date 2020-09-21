@@ -6,14 +6,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        QuestionsPtv get = new QuestionsPtv();
+        Ptv ptvQuestion = new Ptv();
         Scanner scan = new Scanner(System.in);  // вызов сканнера
 
         int exit = 1;  // переменная для выхода
 
         //  цикл, пока не нажмём ноль, остаёмся в программе и работаем
         while (exit != 0) {
-            get.beginTest();
+
+            ptvQuestion.beginTest(); // начинаем тест
+
+            // получаем и выводим статистику по ответам
+            System.out.print("Правильных ответов: " + ptvQuestion.getCorrectAnswer()
+                    + " Неправильных ответов: " + ptvQuestion.getWrongAnswer());
+            System.out.println();
+
             // проверка ввода, выход или продолжение программы
             System.out.println("Продолжить: 1, Выход: 0.");
             exit = scan.nextInt();
