@@ -25,12 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Firstaid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Ptv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Suot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestOFC/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestOFC/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestOFC/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestOFC/com/company/frames$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestOFC/com/company/frames$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestOFC/com/company/frames.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestOFC/com/company/frames.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/frames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Frames.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +64,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+    <configuration name="Loader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Loader" />
       <module name="TestOFC" />
       <extension name="coverage">
         <pattern>
@@ -80,7 +84,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Loader" />
       </list>
     </recent_temporary>
   </component>
@@ -108,9 +112,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1600705503926">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1600787192548">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600787192548" />
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1600705503926" />
     <state x="719" y="208" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600417231628">
       <screen x="0" y="0" width="1536" height="834" />
@@ -120,29 +125,34 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1600421553526" />
-    <state width="1478" height="669" key="GridCell.Tab.0.bottom" timestamp="1600707602049">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1478" height="654" key="GridCell.Tab.0.bottom" timestamp="1600788393495">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="669" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600707602049" />
+    <state width="1478" height="654" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600788393495" />
+    <state width="1478" height="669" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600708546827" />
     <state width="2517" height="882" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076639" />
-    <state width="1478" height="669" key="GridCell.Tab.0.center" timestamp="1600707602049">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1478" height="654" key="GridCell.Tab.0.center" timestamp="1600788393495">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="669" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600707602049" />
+    <state width="1478" height="654" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600788393495" />
+    <state width="1478" height="669" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600708546827" />
     <state width="2517" height="882" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076638" />
-    <state width="1478" height="669" key="GridCell.Tab.0.left" timestamp="1600707602049">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1478" height="654" key="GridCell.Tab.0.left" timestamp="1600788393495">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="669" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600707602049" />
+    <state width="1478" height="654" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600788393495" />
+    <state width="1478" height="669" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600708546827" />
     <state width="2517" height="882" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076638" />
-    <state width="1478" height="669" key="GridCell.Tab.0.right" timestamp="1600707602049">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1478" height="654" key="GridCell.Tab.0.right" timestamp="1600788393495">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="669" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600707602049" />
+    <state width="1478" height="654" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600788393495" />
+    <state width="1478" height="669" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600708546827" />
     <state width="2517" height="882" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1600506076639" />
-    <state x="469" y="0" key="SettingsEditor" timestamp="1600417245417">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="469" y="0" key="SettingsEditor" timestamp="1600783653582">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="469" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600783653582" />
     <state x="469" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600417245417" />
     <state x="781" y="165" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1599437323875" />
   </component>
