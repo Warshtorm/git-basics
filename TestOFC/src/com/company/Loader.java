@@ -15,7 +15,8 @@ public class Loader {
         //  цикл, пока не нажмём ноль, остаёмся в программе и работаем
         while (exit != 0) {
 
-                ptvQuestion.beginTestPtv(); // начинаем тест
+            ptvQuestion.beginTestPtv(); // начинаем тест
+
 
             // получаем и выводим статистику по ответам
             System.out.print("Правильных ответов: " + ptvQuestion.getCorrectAnswer()

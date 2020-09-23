@@ -8,7 +8,7 @@ class Questions {
     private int correctAnswer = 0; // колличество правильных ответов
     private int wrongAnswer = 0; // колличество неправильных ответов
     private int num = 0; // хранение случайного индекса массива
-    private static int numTitle; // номер вопроса
+    private static int numTitle = 0; // номер вопроса
 
     String[] arrayPtv = new String[116];  // массив для хранения вопросов по теме ПТВ
     String[] arraySuot = new String[6];  // массив для хранения вопросов по теме СУОТ
@@ -23,15 +23,10 @@ class Questions {
             num = random.nextInt(arrayPtv.length);
 
             // выводим вопрос на экран в текстовом виде
-            numTitle = i + 1;  // номер вопроса
+            numTitle++;  // номер вопроса
             System.out.println("Вопрос №  " + numTitle + "\n");
             System.out.println(arrayPtv[num]);
-
-            // вводим ответ в консоль
-            System.out.print("Верно ли утверждение: 1 - да, 0 - нет ");
-            enterAresponse = scanner.nextInt();
             correctOrincorrectanswer(); // выводим ответ, верно или нет
-
         }
     }
 
@@ -42,28 +37,26 @@ class Questions {
             // создаём переменную в которую заносим случайный индекс массива
             num = random.nextInt(arraySuot.length);
 
-            numTitle = i + 1;  // номер вопроса
+            numTitle++;  // номер вопроса
             System.out.println("Вопрос №  " + numTitle + "\n");
             // выводим вопрос на экран в текстовом виде
             System.out.println(arraySuot[num]);
-
-            // вводим ответ в консоль
-            System.out.print("Верно ли утверждение: 1 - да, 0 - нет ");
-            enterAresponse = scanner.nextInt();
             correctOrincorrectanswer(); // выводим ответ, верно или нет
         }
     }
 
-
+    // вводим ответ в консоль
     // если остаток от деления 1 и ввод 1 или остаток 0 и ввод 0 то правильно,
     // остальное не правильно
     public void correctOrincorrectanswer() {
+        System.out.print("Верно ли утверждение: 1 - да, 0 - нет ");
+        enterAresponse = scanner.nextInt();
         if (num % 2 != 0 & num % 2 == enterAresponse || num % 2 == 0 & num % 2 == enterAresponse) {
             correctAnswer++;
-            System.out.println(" - верно \n ========================================================= ");
+            System.out.println(" - верно \n========================================================= ");
         } else {
             wrongAnswer++;
-            System.out.println(" - не верно \n =========================================================");
+            System.out.println(" - не верно \n=========================================================");
         }
     }
 
