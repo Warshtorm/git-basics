@@ -11,13 +11,13 @@ class Questions {
     private static int numTitle = 0; // номер вопроса
 
     String[] arrayPtv = new String[116];  // массив для хранения вопросов по теме ПТВ
-    String[] arraySuot = new String[6];  // массив для хранения вопросов по теме СУОТ
+    String[] arraySuot = new String[12];  // массив для хранения вопросов по теме СУОТ
     Scanner scanner = new Scanner(System.in);  // вызов сканнера
     Random random = new Random(); // создаём рандомайзер
 
     public void beginTestPtv() {
         //  вывод 5 вопросов из списка через цикл по теме ПТВ
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 10; ++i) {
 
             // создаём переменную в которую заносим случайный индекс массива
             num = random.nextInt(arrayPtv.length);
@@ -32,7 +32,7 @@ class Questions {
 
     public void beginTestSuot() {
         //  вывод 5 вопросов из списка через цикл по теме СУОТ
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 10; ++i) {
 
             // создаём переменную в которую заносим случайный индекс массива
             num = random.nextInt(arraySuot.length);
@@ -45,9 +45,9 @@ class Questions {
         }
     }
 
-    // вводим ответ в консоль
-    // если остаток от деления 1 и ввод 1 или остаток 0 и ввод 0 то правильно,
-    // остальное не правильно
+    /*вводим ответ в консоль
+     если остаток от деления 1 и ввод 1 или остаток 0 и ввод 0 то правильно,
+     остальное не правильно*/
     public void correctOrincorrectanswer() {
         System.out.print("Верно ли утверждение: 1 - да, 0 - нет ");
         enterAresponse = scanner.nextInt();
@@ -59,6 +59,17 @@ class Questions {
             System.out.println(" - не верно \n=========================================================");
         }
     }
+        public void getStatistic() {
+            // получаем и выводим статистику по ответам
+            System.out.print("Правильных ответов: " + getCorrectAnswer()
+                    + " Неправильных ответов: " + getWrongAnswer());
+            System.out.println();
+        }
+
+        public static void getInfoOfWorkProgramm(){
+            System.out.println("Вопросы задаются в форме утверждения, нужно определить верно ли оно" +
+                    " и выбрать соответствующий ответ.");
+        }
 
 
     // геттер для правильного ответа

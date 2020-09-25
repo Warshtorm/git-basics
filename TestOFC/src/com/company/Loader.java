@@ -6,29 +6,41 @@ public class Loader {
 
     public static void main(String[] args) {
 
-        Ptv ptvQuestion = new Ptv();
-        Suot suotQuestion = new Suot();
+        int inputExit = 1;  // переменная для выхода
+
+        Ptv ptvQuestion = new Ptv();  // ссылка на вопросы птв
+        Suot suotQuestion = new Suot(); // ссылка на вопросы суот
         Scanner scan = new Scanner(System.in);  // вызов сканнера
 
-        int exit = 1;  // переменная для выхода
-
         //  цикл, пока не нажмём ноль, остаёмся в программе и работаем
-        while (exit != 0) {
+        while (inputExit != 0) {
 
-            ptvQuestion.beginTestPtv(); // начинаем тест
+            System.out.println("Вы находитесь в меню программы: " +
+                    "\n - Нажмите 1 + Enter для начала теста по теме ПТВ " +
+                    "\n - Нажмите 2 + Enter для начала теста по СУОТ" +
+                    "\n - Нажмите 3 + Enter для получения информации по работе с программой  ");
 
+            switch (inputExit = scan.nextInt()) {
+                case 1: {
+                    ptvQuestion.beginTestPtv(); // начинаем тест по теме ПТВ
+                    ptvQuestion.getStatistic(); // получаем и выводим статистику по ответам
+                }
+                break;
 
-            // получаем и выводим статистику по ответам
-            System.out.print("Правильных ответов: " + ptvQuestion.getCorrectAnswer()
-                    + " Неправильных ответов: " + ptvQuestion.getWrongAnswer());
-            System.out.println();
+                case 2: {
+                    suotQuestion.beginTestSuot(); // начинаем тест по теме СУОТ
+                    suotQuestion.getStatistic(); // получаем и выводим статистику по ответам
+                }
+                break;
 
+                case 3: {
+                    Questions.getInfoOfWorkProgramm(); // руководство по работе с программой
+                }
+                break;
+            }
             // проверка ввода, выход или продолжение программы
             System.out.println("Продолжить: 1, Выход: 0.");
-            exit = scan.nextInt();
+            inputExit = scan.nextInt();
         }
-
-
     }
-
 }
