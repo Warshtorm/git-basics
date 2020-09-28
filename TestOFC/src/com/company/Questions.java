@@ -11,7 +11,7 @@ class Questions {
     private static int numTitle = 0; // номер вопроса
 
     String[] arrayPtv = new String[116];  // массив для хранения вопросов по теме ПТВ
-    String[] arraySuot = new String[12];  // массив для хранения вопросов по теме СУОТ
+    String[] arraySuot = new String[36];  // массив для хранения вопросов по теме СУОТ
     Scanner scanner = new Scanner(System.in);  // вызов сканнера
     Random random = new Random(); // создаём рандомайзер
 
@@ -59,17 +59,18 @@ class Questions {
             System.out.println(" - не верно \n=========================================================");
         }
     }
-        public void getStatistic() {
-            // получаем и выводим статистику по ответам
-            System.out.print("Правильных ответов: " + getCorrectAnswer()
-                    + " Неправильных ответов: " + getWrongAnswer());
-            System.out.println();
-        }
 
-        public static void getInfoOfWorkProgramm(){
-            System.out.println("Вопросы задаются в форме утверждения, нужно определить верно ли оно" +
-                    " и выбрать соответствующий ответ.");
-        }
+    public void getStatistic() {
+        // получаем и выводим статистику по ответам
+        System.out.print("Правильных ответов: " + getCorrectAnswer()
+                + " Неправильных ответов: " + getWrongAnswer());
+        System.out.println();
+    }
+
+    public static void getInfoOfWorkProgramm() {
+        System.out.println("Вопросы задаются в форме утверждения, нужно определить верно ли оно" +
+                " и выбрать соответствующий ответ.");
+    }
 
 
     // геттер для правильного ответа

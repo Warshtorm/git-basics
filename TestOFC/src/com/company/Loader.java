@@ -15,12 +15,9 @@ public class Loader {
         //  цикл, пока не нажмём ноль, остаёмся в программе и работаем
         while (inputExit != 0) {
 
-            System.out.println("Вы находитесь в меню программы: " +
-                    "\n - Нажмите 1 + Enter для начала теста по теме ПТВ " +
-                    "\n - Нажмите 2 + Enter для начала теста по СУОТ" +
-                    "\n - Нажмите 3 + Enter для получения информации по работе с программой  ");
-
-            switch (inputExit = scan.nextInt()) {
+            Loader.startMenu(); //  стартуем меню программы
+            int switchChoice = scan.nextInt();
+            switch (switchChoice) {
                 case 1: {
                     ptvQuestion.beginTestPtv(); // начинаем тест по теме ПТВ
                     ptvQuestion.getStatistic(); // получаем и выводим статистику по ответам
@@ -37,10 +34,22 @@ public class Loader {
                     Questions.getInfoOfWorkProgramm(); // руководство по работе с программой
                 }
                 break;
+                default: {
+                    System.out.println("Ошибка выбора в меню, повторите попытку... ");
+                }
             }
             // проверка ввода, выход или продолжение программы
             System.out.println("Продолжить: 1, Выход: 0.");
             inputExit = scan.nextInt();
         }
+    }
+
+    public static void startMenu() {
+        System.out.println("Вы находитесь в меню программы: " +
+                "\n - Нажмите 1 + Enter для начала теста по теме ПТВ " +
+                "\n - Нажмите 2 + Enter для начала теста по СУОТ" +
+                "\n - Нажмите 3 + Enter для получения информации по работе с программой  " +
+                "\n Ввод :");
+
     }
 }
