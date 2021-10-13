@@ -30,7 +30,8 @@ public abstract class FireBarrels implements Equipments{
         return "Номер ствола: "
                 .concat(Integer.toString(deviceNumber)) + "\nНазвание: "
                 .concat(deviceName) + "\nЗавод изготовитель: "
-                .concat(manufacturer) + "\nДата выпуска: " + dateOfmanufacture;
+                .concat(manufacturer) + "\nДата выпуска: "
+                .concat(String.valueOf(dateOfmanufacture));
 
     }
 
