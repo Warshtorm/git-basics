@@ -1,6 +1,6 @@
-public class sprk12 implements FireBarrels{
+public class sprk12 extends FireBarrels{
     @Override
-    public void getInfo() {
+    public void getDisplayInfo() {
 
     }
 }

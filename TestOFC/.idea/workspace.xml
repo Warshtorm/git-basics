@@ -25,10 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Questions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Suot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Suot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Automated accounting system for fire - technical weapons/src/Equipments.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Automated accounting system for fire - technical weapons/src/Equipments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Automated accounting system for fire - technical weapons/src/FireBarrels.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Automated accounting system for fire - technical weapons/src/FireBarrels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Automated accounting system for fire - technical weapons/src/firebarrels/qq.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Automated accounting system for fire - technical weapons/src/firebarrels/qq.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,3 +1,4 @@
 public interface Equipments {
-    void getInfo();
+
+    void getDisplayInfo();
 }
