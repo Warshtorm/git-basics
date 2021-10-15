@@ -1,12 +1,15 @@
 package main.java.Firebarrells;
 
 import main.java.Equipments;
-
 import java.time.LocalDate;
 
+/**Класс FireBarrells объединяет в себе все пожарные стволы
+ * и их  параметры */
 public abstract class FireBarrels implements Equipments {
 
-    protected int id; // идентификатор
+    protected static int count = 0;
+
+    protected int id = 0; /*идентификатор*/
     protected int deviceNumber; // номер
     protected String deviceName; // название
     protected String deviceTU; // пример
@@ -14,12 +17,18 @@ public abstract class FireBarrels implements Equipments {
     protected String manufacturer; // завод изготовитель
 
     /*Рабочие харрактеристики*/
-    protected String workingPressure; // рабочее давление, мПа
-    protected String waterConsumption; // расход воды / расствора: 2,4,6,8 л.с
-    protected int waterJetrange; // дальность водяной струи, M
-    protected int waterSprayJetRange; // дальность водяной, расспыленной струи, M
-    protected int foamJetRange; // дальность пенной струи, M
-    protected double foamMultiplicity; // кратность пены
+    /**рабочее давление, мПа*/
+    protected String workingPressure;
+    /**расход воды / расствора, л.с*/
+    protected String waterConsumption;
+    /**дальность водяной струи, Mетров*/
+    protected int waterJetrange; //
+    /**дальность водяной, расспыленной струи, Mетров*/
+    protected int waterSprayJetRange;
+    /**дальность пенной струи, Mетров*/
+    protected int foamJetRange;
+    /**кратность пены*/
+    protected double foamMultiplicity;
 
     /*физические харрактеристики*/
     protected double deviceWeight; // масса, кг
@@ -27,16 +36,21 @@ public abstract class FireBarrels implements Equipments {
     /*дата изготовления, ремонта (предыдущего ремонта), обслуживания (предыдущего обслуживания)
      * и последующие*/
     protected LocalDate dateOfmanufacture; // дата изготовления
-    protected LocalDate testDate; // дата тех. обслуживания, испытания
+    protected LocalDate testDate; // дата испытания
+    protected LocalDate previousTestDate; // дата последнего испытания
+    protected LocalDate nextTestDate; // дата следующего испытания
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Номер ствола: "
-                .concat(Integer.toString(deviceNumber)) + "\nНазвание: "
-                .concat(deviceName) + "\nЗавод изготовитель: "
-                .concat(manufacturer) + "\nДата выпуска: "
-                .concat(String.valueOf(dateOfmanufacture));
-
+                .concat(Integer.toString(deviceNumber))
+                .concat("\nНазвание: ")
+                .concat(deviceName)
+                .concat("\nЗавод изготовитель: ")
+                .concat(manufacturer)
+                .concat("\nДата выпуска: ")
+                .concat(String.valueOf(dateOfmanufacture))
+                .concat("\nДата испытания: " + testDate);
     }
 
 }

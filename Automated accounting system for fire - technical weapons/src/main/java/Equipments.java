@@ -2,5 +2,6 @@ package main.java;
 
 public interface Equipments {
 
-    void getDisplayInfo();
+/**Интерфейс Equipments объединяет в себе все устройства*/
+    String getDisplayInfo();
 }
