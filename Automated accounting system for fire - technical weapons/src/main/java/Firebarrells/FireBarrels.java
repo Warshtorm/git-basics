@@ -1,6 +1,10 @@
+package main.java.Firebarrells;
+
+import main.java.Equipments;
+
 import java.time.LocalDate;
 
-public abstract class FireBarrels implements Equipments{
+public abstract class FireBarrels implements Equipments {
 
     protected int id; // идентификатор
     protected int deviceNumber; // номер
