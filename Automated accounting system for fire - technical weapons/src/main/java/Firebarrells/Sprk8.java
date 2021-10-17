@@ -4,16 +4,15 @@ import java.time.LocalDate;
 
 public class Sprk8 extends FireBarrels{
 
-    public Sprk8(int deviceNumber, LocalDate testDate){
+    public Sprk8(int deviceNumber){
     this();
     this.deviceNumber = deviceNumber;
-    this.testDate = testDate;
     }
 
     public Sprk8(){
         count++;
         id += FireBarrels.count;
-        deviceNumber = 1;
+        deviceNumber = 8;
         deviceName = "СПРК-8Б";
         deviceTU = "TU 888 888888 88"; // TODO: доделать через регулярку
         deviceType = 'Б';
@@ -35,7 +34,7 @@ public class Sprk8 extends FireBarrels{
 
     @Override
     public String getDisplayInfo() {
-    return "СПРК-8Б : Ствол пожарный, ручной, комбинированный," +
+    return deviceName + " : Ствол пожарный, ручной, комбинированный," +
             "\n8 - максимальный расход воды/расствора л.с, " +
             "\nБ - тип присоединения, по рукавную головку ГР-50";
     }

@@ -3,13 +3,13 @@ package main.java.Firebarrells;
 import main.java.Equipments;
 import java.time.LocalDate;
 
-/**Класс FireBarrells объединяет в себе все пожарные стволы
+/**Класс FireBarrels объединяет в себе все пожарные стволы
  * и их  параметры */
 public abstract class FireBarrels implements Equipments {
 
-    protected static int count = 0;
+    protected static int count;
 
-    protected int id = 0; /*идентификатор*/
+    protected int id; /*идентификатор*/
     protected int deviceNumber; // номер
     protected String deviceName; // название
     protected String deviceTU; // пример
@@ -50,7 +50,14 @@ public abstract class FireBarrels implements Equipments {
                 .concat(manufacturer)
                 .concat("\nДата выпуска: ")
                 .concat(String.valueOf(dateOfmanufacture))
-                .concat("\nДата испытания: " + testDate);
+                .concat("\nДата испытания: " + testDate)
+                .concat("\nРабочее давление: " + workingPressure)
+                .concat("\nРасход воды/расствора: " + waterConsumption)
+                .concat("\nДальность водяной струи: " + waterJetrange)
+                .concat("\nДальность водяной, расспыленной струи: " + waterSprayJetRange)
+                .concat("\nДальность пенной струи: " + foamJetRange)
+                .concat("\nКратность пены: " + foamMultiplicity)
+                .concat("\nВес: " + deviceWeight);
     }
 
 }
