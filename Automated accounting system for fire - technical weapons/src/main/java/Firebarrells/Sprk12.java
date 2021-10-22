@@ -13,10 +13,11 @@ public class Sprk12 extends FireBarrels{
         count++;
         id += FireBarrels.count;
         deviceNumber = 12;
+        inventoryNumber = "1522";
         deviceName = "СПРК-12А";
-        deviceTU = "TU 888 888888 88"; // TODO: доделать через регулярку
+        deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку
         deviceType = 'Б';
-        manufacturer = "ТрансНефть";
+        manufacturer = sprkManufacturerText;
 
         workingPressure = "0.7";
         waterConsumption = "2,4,6,8,10,12";
@@ -24,8 +25,11 @@ public class Sprk12 extends FireBarrels{
         waterSprayJetRange = 20;
         foamJetRange = 26;
         foamMultiplicity = 7.0;
+        curtainAngle = sprkCurtainAngleText;
+        curtainDiameter = sprkCurtainDiameterText;
 
         deviceWeight = 3.5;
+        sizes = "320*130*290";
 
         // TODO: доделать установку и обработку даты
         dateOfmanufacture = LocalDate.now();
@@ -33,9 +37,9 @@ public class Sprk12 extends FireBarrels{
     }
 
     @Override
-    public String getDisplayInfo() {
+    public String getDeviceInformation() {
         return deviceName + " : Ствол пожарный, ручной, комбинированный," +
                 "\n12 - максимальный расход воды/расствора л.с, " +
-                "\nА - тип присоединения, по рукавную головку ГР-70";
+                "\nА - тип присоединения, по рукавную головку ГР-80";
     }
 }

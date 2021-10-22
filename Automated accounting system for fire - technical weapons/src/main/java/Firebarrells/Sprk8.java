@@ -13,19 +13,22 @@ public class Sprk8 extends FireBarrels{
         count++;
         id += FireBarrels.count;
         deviceNumber = 8;
+        inventoryNumber = "1222";
         deviceName = "СПРК-8Б";
-        deviceTU = "TU 888 888888 88"; // TODO: доделать через регулярку
+        deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку?
         deviceType = 'Б';
-        manufacturer = "ТрансНефть";
-
+        manufacturer = sprkManufacturerText;
         workingPressure = "0.7";
         waterConsumption = "2,4,6,8";
         waterJetrange = 40;
         waterSprayJetRange = 15;
         foamJetRange = 18;
         foamMultiplicity = 7.0;
+        curtainAngle = sprkCurtainAngleText;
+        curtainDiameter = sprkCurtainDiameterText;
 
         deviceWeight = 2.5;
+        sizes = "290*130*280";
 
         // TODO: доделать установку и обработку даты
         dateOfmanufacture = LocalDate.now();
@@ -33,7 +36,7 @@ public class Sprk8 extends FireBarrels{
     }
 
     @Override
-    public String getDisplayInfo() {
+    public String getDeviceInformation() {
     return deviceName + " : Ствол пожарный, ручной, комбинированный," +
             "\n8 - максимальный расход воды/расствора л.с, " +
             "\nБ - тип присоединения, по рукавную головку ГР-50";
