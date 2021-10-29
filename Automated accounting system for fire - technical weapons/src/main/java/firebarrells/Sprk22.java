@@ -1,4 +1,4 @@
-package main.java.Firebarrells;
+package main.java.firebarrells;
 
 import java.time.LocalDate;
 
@@ -12,7 +12,7 @@ public class Sprk22 extends FireBarrels{
     public Sprk22() {
         count++;
         id += FireBarrels.count;
-        deviceNumber = 22;
+        deviceNumber = 0;
         inventoryNumber = "12000";
         deviceName = "СПРК-22А-А";
         deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку
@@ -36,13 +36,15 @@ public class Sprk22 extends FireBarrels{
         testDate = LocalDate.now();
     }
 
-    //TODO дописать описание ствола - "А-"
+
     @Override
     public String getDeviceInformation() {
         return deviceName + " : Ствол пожарный, ручной, комбинированный," +
                 "\n22 - максимальный расход воды/расствора л.с, " +
                 "\nА - тип присоединения, по рукавную головку ГР-70" +
                 "\nА - автоматическое изменение диаметра впрыска и" +
-                "\nподдержание постоянного давления на впрыске ";
+                "\n\tподдержание постоянного давления на впрыске ";
     }
+
+
 }

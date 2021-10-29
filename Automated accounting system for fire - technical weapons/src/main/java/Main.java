@@ -1,21 +1,39 @@
 package main.java;
-import main.java.Firebarrells.*;
+import main.java.firebarrells.*;
+import main.java.factory.FireBarrelsCreator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+        List<Equipments> mainList = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0){
+                FireBarrelsCreator.getInstance().createDevice(new Sprk22());
+            }else {
+                FireBarrelsCreator.getInstance().createDevice(new Sprk8());
+            }
+        }
+
+        mainList.addAll(FireBarrelsCreator.getInstance().getFireBarrelsList());
+        mainList.stream().forEach(System.out::println);
+
+        System.out.println("\nРазмер списка: " + mainList.size());
+        System.out.println("Счетчик стволов: " + FireBarrels.getCount());
 
 
-        //FireBarrels sprk = new Sprk8();
-        //FireBarrels sprk = new Sprk12();
-        //FireBarrels sprk = new Sprk19();
-       FireBarrels sprk = new Sprk22();
 
-        System.out.println(sprk.allInformationAboutTheDevice());
-        System.out.println();
 
-        String s = sprk.getDeviceInformation();
-        System.out.println(s);
+
+
+
+
+
+
+
     }
 
 

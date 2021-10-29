@@ -1,4 +1,4 @@
-package main.java.Firebarrells;
+package main.java.firebarrells;
 
 import java.time.LocalDate;
 
@@ -12,7 +12,7 @@ public class Sprk12 extends FireBarrels{
     public Sprk12(){
         count++;
         id += FireBarrels.count;
-        deviceNumber = 12;
+        deviceNumber = 0;
         inventoryNumber = "1522";
         deviceName = "СПРК-12А";
         deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку
@@ -42,4 +42,6 @@ public class Sprk12 extends FireBarrels{
                 "\n12 - максимальный расход воды/расствора л.с, " +
                 "\nА - тип присоединения, по рукавную головку ГР-80";
     }
+
+
 }

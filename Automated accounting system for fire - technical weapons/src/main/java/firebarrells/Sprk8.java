@@ -1,4 +1,4 @@
-package main.java.Firebarrells;
+package main.java.firebarrells;
 
 import java.time.LocalDate;
 
@@ -12,7 +12,7 @@ public class Sprk8 extends FireBarrels{
     public Sprk8(){
         count++;
         id += FireBarrels.count;
-        deviceNumber = 8;
+        deviceNumber = 0;
         inventoryNumber = "1222";
         deviceName = "СПРК-8Б";
         deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку?
@@ -33,6 +33,7 @@ public class Sprk8 extends FireBarrels{
         // TODO: доделать установку и обработку даты
         dateOfmanufacture = LocalDate.now();
         testDate = LocalDate.now();
+        nextTestDate = testDate;
     }
 
     @Override
@@ -41,4 +42,6 @@ public class Sprk8 extends FireBarrels{
             "\n8 - максимальный расход воды/расствора л.с, " +
             "\nБ - тип присоединения, по рукавную головку ГР-50";
     }
+
+
 }

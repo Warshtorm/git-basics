@@ -4,5 +4,7 @@ package main.java;
 public interface Equipments {
 
 
+
+
     String getDeviceInformation();
 }
