@@ -9,19 +9,19 @@ import java.time.format.DateTimeFormatter;
  * Класс FireBarrels объединяет в себе все пожарные стволы
  * их  параметры и методы
  */
-public abstract class FireBarrels implements Equipments {
+public abstract class FireBarrels implements Equipments, IFirebarrels {
 
     /** период до следующего ТО, месяцев*/
     private int nextTOPeriod = 6;
 
     private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-    protected String sprkManufacturerText = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
+    protected final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
             "\n182100, Псковская область, город Великие Луки, улица Гоголя дом 2 ";
-    protected String sprkCurtainAngleText = "0 - 120";
+    protected final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
     protected int sprkCurtainDiameterText = 3;
     protected static int count; // счетчик, пока непонятно для чего
 
-    protected int id; /*идентификатор*/ // TODO некорректно работает подсчет ID у стволов
+    protected int id; /*идентификатор*/
     protected int deviceNumber; // номер
     protected String inventoryNumber; // инвентарный номер
     protected String deviceName; // название
@@ -62,7 +62,7 @@ public abstract class FireBarrels implements Equipments {
         return "Номер: ".concat(Integer.toString(deviceNumber))
                 .concat("\nИнвентарный номер: ").concat(inventoryNumber)
                 .concat("\nНазвание: ").concat(deviceName)
-                .concat("\nЗавод изготовитель: ").concat(sprkManufacturerText)
+                .concat("\nЗавод изготовитель: ").concat(SPRK_MANUFACTURER_TEXT)
                 .concat("\n" + deviceTU)
                 .concat("\nДата выпуска: ").concat(String.valueOf(dateOfmanufacture))
                 .concat("\nРабочее давление, мПа: ").concat(workingPressure)
@@ -85,6 +85,18 @@ public abstract class FireBarrels implements Equipments {
                 .concat(" №: ").concat(String.valueOf(deviceNumber));
     }
 
+    public void setNextTestDate(LocalDate nextTestDate) {
+        this.nextTestDate = nextTestDate;
+    }
+
+    public void setTestDate(LocalDate testDate) {
+        this.testDate = testDate;
+    }
+
+    public void setDeviceNumber(int deviceNumber){
+        this.deviceNumber = deviceNumber;
+    }
+
     public String getDeviceName() {
         return deviceName;
     }
@@ -101,17 +113,8 @@ public abstract class FireBarrels implements Equipments {
         return deviceNumber;
     }
 
-    public void setTestDate(LocalDate testDate) {
-        this.testDate = testDate;
-    }
-
-
     public String getTestDate() {
         return testDate.format(dateFormatter);
-    }
-
-    public void setNextTestDate(LocalDate nextTestDate) {
-        this.nextTestDate = nextTestDate;
     }
 
     public String getNextTestDate() {

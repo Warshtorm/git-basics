@@ -1,22 +1,23 @@
 package main.java.factory;
 
 import main.java.Equipments;
+import main.java.firebarrells.FireBarrels;
+import main.java.firebarrells.IFirebarrels;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FireBarrelsCreator implements EquipmentFactory {
+public class FireBarrelsCreator implements IEquipmentFactory {
 
     private static FireBarrelsCreator instance;
-    private List<Equipments> fireBarrelsList = new ArrayList<>();
+    private List<FireBarrels> fireBarrelsList = new ArrayList<>();
+    /** список содержащий пожарные стволы */
+    public List<FireBarrels> getFireBarrelsList() {
+        return new ArrayList<>(fireBarrelsList);
+    }
 
     private FireBarrelsCreator(){
 
-    }
-
-    /** список содержащий пожарные стволы */
-    public List<Equipments> getFireBarrelsList() {
-        return new ArrayList<>(fireBarrelsList);
     }
 
     public static FireBarrelsCreator getInstance() {
@@ -28,10 +29,9 @@ public class FireBarrelsCreator implements EquipmentFactory {
 
 
     @Override
-    public List<Equipments> createDevice(Equipments device) {
+    public void createDevice(Equipments device) {
         if (!device.equals(null)){
-            fireBarrelsList.add(device);
+            fireBarrelsList.add((FireBarrels) device);
         }
-        return fireBarrelsList;
     }
 }

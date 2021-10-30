@@ -17,7 +17,7 @@ public class Sprk12 extends FireBarrels{
         deviceName = "СПРК-12А";
         deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку
         deviceType = 'Б';
-        manufacturer = sprkManufacturerText;
+        manufacturer = SPRK_MANUFACTURER_TEXT;
 
         workingPressure = "0.7";
         waterConsumption = "2,4,6,8,10,12";
@@ -25,7 +25,7 @@ public class Sprk12 extends FireBarrels{
         waterSprayJetRange = 20;
         foamJetRange = 26;
         foamMultiplicity = 7.0;
-        curtainAngle = sprkCurtainAngleText;
+        curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
         curtainDiameter = sprkCurtainDiameterText;
 
         deviceWeight = 3.5;

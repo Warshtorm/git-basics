@@ -17,7 +17,7 @@ public class Sprk19 extends FireBarrels {
         deviceName = "СПРК-19А-АД";
         deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку
         deviceType = 'Б';
-        manufacturer = sprkManufacturerText;
+        manufacturer = SPRK_MANUFACTURER_TEXT;
 
         workingPressure = "0.7/0.4";
         waterConsumption = "4.5-19/4.5-14";
@@ -25,7 +25,7 @@ public class Sprk19 extends FireBarrels {
         waterSprayJetRange = 20;
         foamJetRange = 26;
         foamMultiplicity = 7.0;
-        curtainAngle = sprkCurtainAngleText;
+        curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
         curtainDiameter = sprkCurtainDiameterText;
 
         deviceWeight = 3.5;

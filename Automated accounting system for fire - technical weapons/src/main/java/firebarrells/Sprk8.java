@@ -17,14 +17,14 @@ public class Sprk8 extends FireBarrels{
         deviceName = "СПРК-8Б";
         deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку?
         deviceType = 'Б';
-        manufacturer = sprkManufacturerText;
+        manufacturer = SPRK_MANUFACTURER_TEXT;
         workingPressure = "0.7";
         waterConsumption = "2,4,6,8";
         waterJetrange = 40;
         waterSprayJetRange = 15;
         foamJetRange = 18;
         foamMultiplicity = 7.0;
-        curtainAngle = sprkCurtainAngleText;
+        curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
         curtainDiameter = sprkCurtainDiameterText;
 
         deviceWeight = 2.5;
@@ -42,6 +42,7 @@ public class Sprk8 extends FireBarrels{
             "\n8 - максимальный расход воды/расствора л.с, " +
             "\nБ - тип присоединения, по рукавную головку ГР-50";
     }
+
 
 
 }

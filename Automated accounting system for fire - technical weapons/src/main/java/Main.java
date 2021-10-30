@@ -1,25 +1,27 @@
 package main.java;
 import main.java.firebarrells.*;
 import main.java.factory.FireBarrelsCreator;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<Equipments> mainList = new ArrayList<>();
+        List<FireBarrels> mainList = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
-            if (i % 2 == 0){
-                FireBarrelsCreator.getInstance().createDevice(new Sprk22());
-            }else {
-                FireBarrelsCreator.getInstance().createDevice(new Sprk8());
-            }
+        for (int i = 0; i < 1; i++) {
+                FireBarrelsCreator.getInstance().createDevice(new Sprk8(1001 + i));
+
         }
 
         mainList.addAll(FireBarrelsCreator.getInstance().getFireBarrelsList());
-        mainList.stream().forEach(System.out::println);
+        //mainList.stream().forEach(System.out::println);
+
+        System.out.println(mainList.get(0).allInformationAboutTheDevice());
+        System.out.println();
+        System.out.println(mainList.get(0).getDeviceInformation());
+
+
 
         System.out.println("\nРазмер списка: " + mainList.size());
         System.out.println("Счетчик стволов: " + FireBarrels.getCount());
