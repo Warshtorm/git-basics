@@ -9,13 +9,13 @@ public class Main {
     public static void main(String[] args) {
         List<FireBarrels> mainList = new ArrayList<>();
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
                 FireBarrelsCreator.getInstance().createDevice(new Sprk8(1001 + i));
 
         }
 
         mainList.addAll(FireBarrelsCreator.getInstance().getFireBarrelsList());
-        //mainList.stream().forEach(System.out::println);
+        mainList.stream().forEach(System.out::println);
 
         System.out.println(mainList.get(0).allInformationAboutTheDevice());
         System.out.println();

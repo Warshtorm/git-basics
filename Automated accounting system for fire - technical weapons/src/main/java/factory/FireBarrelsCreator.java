@@ -2,8 +2,6 @@ package main.java.factory;
 
 import main.java.Equipments;
 import main.java.firebarrells.FireBarrels;
-import main.java.firebarrells.IFirebarrels;
-
 import java.util.ArrayList;
 import java.util.List;
 

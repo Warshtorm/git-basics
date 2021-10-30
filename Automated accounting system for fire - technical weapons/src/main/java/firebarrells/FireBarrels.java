@@ -9,10 +9,10 @@ import java.time.format.DateTimeFormatter;
  * Класс FireBarrels объединяет в себе все пожарные стволы
  * их  параметры и методы
  */
-public abstract class FireBarrels implements Equipments, IFirebarrels {
+public abstract class FireBarrels implements Equipments{
 
     /** период до следующего ТО, месяцев*/
-    private int nextTOPeriod = 6;
+    public final int NEXT_TO_PERIOD = 6;
 
     private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     protected final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
@@ -118,7 +118,7 @@ public abstract class FireBarrels implements Equipments, IFirebarrels {
     }
 
     public String getNextTestDate() {
-        nextTestDate = testDate.plusMonths(nextTOPeriod);
+        nextTestDate = testDate.plusMonths(NEXT_TO_PERIOD);
         return nextTestDate.format(dateFormatter);
     }
 }
