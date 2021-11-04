@@ -2,7 +2,7 @@ package main.java.firebarrells;
 
 import java.time.LocalDate;
 
-public class Sprk19 extends FireBarrels {
+public class Sprk19 extends Firebarrels {
 
     public Sprk19(int deviceNumber) {
         this();
@@ -11,11 +11,11 @@ public class Sprk19 extends FireBarrels {
 
     public Sprk19() {
         count++;
-        id += FireBarrels.count;
+        id += Firebarrels.count;
         deviceNumber = 0;
         inventoryNumber = "41552";
         deviceName = "СПРК-19А-АД";
-        deviceTU = "ТУ 4854-032-00139181-2011"; // TODO: доделать через регулярку
+        deviceTU = SPRK_DEFAULT_TU_TEXT;
         deviceType = 'Б';
         manufacturer = SPRK_MANUFACTURER_TEXT;
 
@@ -31,9 +31,9 @@ public class Sprk19 extends FireBarrels {
         deviceWeight = 3.5;
         sizes = "320*130*290";
 
-        // TODO: доделать установку и обработку даты
-        dateOfmanufacture = LocalDate.now();
+        dateOfManufacture = LocalDate.now();
         testDate = LocalDate.now();
+        lastTestDate = testDate;
     }
 
     @Override

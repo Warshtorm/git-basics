@@ -1,8 +1,12 @@
 package main.java;
 
-/**Интерфейс Equipments объединяет в себе все устройства*/
-@FunctionalInterface
-public interface Equipments {
+public abstract class Equipments implements Equipment {
 
-    String getDeviceInformation();
+    protected int id;
+    protected int deviceNumber;
+    protected String inventoryNumber;
+    protected String deviceName;
+
+
+
 }

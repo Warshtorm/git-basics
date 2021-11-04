@@ -1,61 +1,42 @@
 package main.java.firebarrells;
-
 import main.java.Equipments;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+public abstract class Firebarrels extends Equipments {
 
-/**
- * Класс FireBarrels объединяет в себе все пожарные стволы
- * их  параметры и методы
- */
-public abstract class FireBarrels implements Equipments{
-
-    /** период до следующего ТО, месяцев*/
-    public final int NEXT_TO_PERIOD = 6;
+    public final int PERIOD_IN_MONTHS = 6;
 
     private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-    protected final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
+    public final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
             "\n182100, Псковская область, город Великие Луки, улица Гоголя дом 2 ";
-    protected final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
+    public final String SPRK_DEFAULT_TU_TEXT = "ТУ 4854-032-00139181-2011";
+    public final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
     protected int sprkCurtainDiameterText = 3;
+
     protected static int count; // счетчик, пока непонятно для чего
 
-    protected int id; /*идентификатор*/
-    protected int deviceNumber; // номер
-    protected String inventoryNumber; // инвентарный номер
-    protected String deviceName; // название
-    protected String deviceTU; // пример
-    protected char deviceType; // тип: пример Тип - А, Тип - В
+
+    protected String deviceTU;
+    protected char deviceType;
     protected String manufacturer;
 
-    /*Рабочие харрактеристики*/
-    /** рабочее давление, мПа (1мПа = 10 атмосфер) */
     protected String workingPressure;
-    /** расход воды / расствора, л.с */
     protected String waterConsumption;
-    /** дальность водяной струи, Mетров */
     protected int waterJetrange; //
-    /** дальность водяной, расспыленной струи, Mетров */
     protected int waterSprayJetRange;
-    /** дальность пенной струи, Mетров */
     protected int foamJetRange;
-    /** кратность пены */
     protected double foamMultiplicity;
-    /** угол защитной завесы в градусах */
     protected String curtainAngle;
     protected int curtainDiameter;
 
-    /*физические харрактеристики*/
-    protected double deviceWeight; // масса, кг
-    protected String sizes; // размеры
+    protected double deviceWeight;
+    protected String sizes;
 
-    /*дата изготовления, ремонта (предыдущего ремонта), обслуживания (предыдущего обслуживания)
-     * и последующие*/
-    protected LocalDate dateOfmanufacture; // дата изготовления
-    protected LocalDate testDate; // дата испытания
-    protected LocalDate previousTestDate; // дата последнего испытания
-    protected LocalDate nextTestDate; // дата следующего испытания
+    protected LocalDate dateOfManufacture;
+    protected LocalDate testDate;
+    protected LocalDate lastTestDate;
+    protected LocalDate nextTestDate;
 
 
     public String allInformationAboutTheDevice() {
@@ -64,7 +45,7 @@ public abstract class FireBarrels implements Equipments{
                 .concat("\nНазвание: ").concat(deviceName)
                 .concat("\nЗавод изготовитель: ").concat(SPRK_MANUFACTURER_TEXT)
                 .concat("\n" + deviceTU)
-                .concat("\nДата выпуска: ").concat(String.valueOf(dateOfmanufacture))
+                .concat("\nДата выпуска: ").concat(String.valueOf(dateOfManufacture))
                 .concat("\nРабочее давление, мПа: ").concat(workingPressure)
                 .concat("\nРасход воды/расствора, литра(ов): ").concat(waterConsumption)
                 .concat("\nУгол защиты, градуса(ов): ").concat(curtainAngle)
@@ -97,6 +78,23 @@ public abstract class FireBarrels implements Equipments{
         this.deviceNumber = deviceNumber;
     }
 
+    public void setInventoryNumber(String inventoryNumber) {
+        this.inventoryNumber = inventoryNumber;
+    }
+
+    //TODO сделать ввод ТУ через регулярное выражение
+    public void setDeviceTU(String deviceTU) {
+        this.deviceTU = deviceTU;
+    }
+
+    public void setDateOfManufacture(LocalDate dateOfManufacture) {
+        this.dateOfManufacture = dateOfManufacture;
+    }
+
+    public void setLastTestDate(LocalDate lastTestDate) {
+        this.lastTestDate = lastTestDate;
+    }
+
     public String getDeviceName() {
         return deviceName;
     }
@@ -118,7 +116,75 @@ public abstract class FireBarrels implements Equipments{
     }
 
     public String getNextTestDate() {
-        nextTestDate = testDate.plusMonths(NEXT_TO_PERIOD);
+        nextTestDate = testDate.plusMonths(PERIOD_IN_MONTHS);
         return nextTestDate.format(dateFormatter);
+    }
+
+    public int getSprkCurtainDiameterText() {
+        return sprkCurtainDiameterText;
+    }
+
+    public String getInventoryNumber() {
+        return inventoryNumber;
+    }
+
+    public String getDeviceTU() {
+        return deviceTU;
+    }
+
+    public char getDeviceType() {
+        return deviceType;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public String getWorkingPressure() {
+        return workingPressure;
+    }
+
+    public String getWaterConsumption() {
+        return waterConsumption;
+    }
+
+    public int getWaterJetrange() {
+        return waterJetrange;
+    }
+
+    public int getWaterSprayJetRange() {
+        return waterSprayJetRange;
+    }
+
+    public int getFoamJetRange() {
+        return foamJetRange;
+    }
+
+    public double getFoamMultiplicity() {
+        return foamMultiplicity;
+    }
+
+    public String getCurtainAngle() {
+        return curtainAngle;
+    }
+
+    public int getCurtainDiameter() {
+        return curtainDiameter;
+    }
+
+    public double getDeviceWeight() {
+        return deviceWeight;
+    }
+
+    public String getSizes() {
+        return sizes;
+    }
+
+    public LocalDate getDateOfManufacture() {
+        return dateOfManufacture;
+    }
+
+    public LocalDate getLastTestDate() {
+        return lastTestDate;
     }
 }
