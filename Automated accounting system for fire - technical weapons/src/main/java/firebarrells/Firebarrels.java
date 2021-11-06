@@ -1,26 +1,23 @@
 package main.java.firebarrells;
 import main.java.Equipments;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public abstract class Firebarrels extends Equipments {
+    protected static int count; // счетчик, пока непонятно для чего
+    public final int SERVICE_PERIOD_IN_MONTHS = 6;
+    public final static String SPRK_8_TEXT = "СПРК-8Б";
+    public final static String SPRK_12_TEXT = "СПРК-12А";
+    public final static String SPRK_19_TEXT = "СПРК-19А-АД";
+    public final static String SPRK_22_TEXT = "СПРК-22А-А";
 
-    public final int PERIOD_IN_MONTHS = 6;
-
-    private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     public final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
             "\n182100, Псковская область, город Великие Луки, улица Гоголя дом 2 ";
     public final String SPRK_DEFAULT_TU_TEXT = "ТУ 4854-032-00139181-2011";
     public final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
-    protected int sprkCurtainDiameterText = 3;
-
-    protected static int count; // счетчик, пока непонятно для чего
+    protected final int SPRK_CURTAIN_DIAMETER_TEXT = 3;
 
 
-    protected String deviceTU;
-    protected char deviceType;
-    protected String manufacturer;
-
+    protected char firebarrelType;
     protected String workingPressure;
     protected String waterConsumption;
     protected int waterJetrange; //
@@ -29,15 +26,6 @@ public abstract class Firebarrels extends Equipments {
     protected double foamMultiplicity;
     protected String curtainAngle;
     protected int curtainDiameter;
-
-    protected double deviceWeight;
-    protected String sizes;
-
-    protected LocalDate dateOfManufacture;
-    protected LocalDate testDate;
-    protected LocalDate lastTestDate;
-    protected LocalDate nextTestDate;
-
 
     public String allInformationAboutTheDevice() {
         return "Номер: ".concat(Integer.toString(deviceNumber))
@@ -55,7 +43,7 @@ public abstract class Firebarrels extends Equipments {
                 .concat("\nДальность пенной струи, метра(ов): ").concat(String.valueOf(foamJetRange))
                 .concat("\nКратность пены: ").concat(String.valueOf(foamMultiplicity))
                 .concat("\nВес, кг : ").concat(String.valueOf(deviceWeight))
-                .concat("\nРазмеры: ").concat(sizes);
+                .concat("\nРазмеры: ").concat(deviceSizes);
 
     }
 
@@ -66,12 +54,12 @@ public abstract class Firebarrels extends Equipments {
                 .concat(" №: ").concat(String.valueOf(deviceNumber));
     }
 
-    public void setNextTestDate(LocalDate nextTestDate) {
-        this.nextTestDate = nextTestDate;
+    public void setNextServiceDate(LocalDate nextServiceDate) {
+        this.nextServiceDate = nextServiceDate;
     }
 
-    public void setTestDate(LocalDate testDate) {
-        this.testDate = testDate;
+    public void setCurrentServiceDate(LocalDate currentServiceDate) {
+        this.currentServiceDate = currentServiceDate;
     }
 
     public void setDeviceNumber(int deviceNumber){
@@ -84,15 +72,17 @@ public abstract class Firebarrels extends Equipments {
 
     //TODO сделать ввод ТУ через регулярное выражение
     public void setDeviceTU(String deviceTU) {
-        this.deviceTU = deviceTU;
+        if (!deviceTU.equals(null)) {
+            this.deviceTU = deviceTU;
+        }
     }
 
     public void setDateOfManufacture(LocalDate dateOfManufacture) {
         this.dateOfManufacture = dateOfManufacture;
     }
 
-    public void setLastTestDate(LocalDate lastTestDate) {
-        this.lastTestDate = lastTestDate;
+    public void setPreviousServiceDate(LocalDate previousServiceDate) {
+        this.previousServiceDate = previousServiceDate;
     }
 
     public String getDeviceName() {
@@ -111,19 +101,6 @@ public abstract class Firebarrels extends Equipments {
         return deviceNumber;
     }
 
-    public String getTestDate() {
-        return testDate.format(dateFormatter);
-    }
-
-    public String getNextTestDate() {
-        nextTestDate = testDate.plusMonths(PERIOD_IN_MONTHS);
-        return nextTestDate.format(dateFormatter);
-    }
-
-    public int getSprkCurtainDiameterText() {
-        return sprkCurtainDiameterText;
-    }
-
     public String getInventoryNumber() {
         return inventoryNumber;
     }
@@ -132,8 +109,8 @@ public abstract class Firebarrels extends Equipments {
         return deviceTU;
     }
 
-    public char getDeviceType() {
-        return deviceType;
+    public char getFirebarrelType() {
+        return firebarrelType;
     }
 
     public String getManufacturer() {
@@ -176,15 +153,30 @@ public abstract class Firebarrels extends Equipments {
         return deviceWeight;
     }
 
-    public String getSizes() {
-        return sizes;
+    public String getDeviceSizes() {
+        return deviceSizes;
     }
 
     public LocalDate getDateOfManufacture() {
         return dateOfManufacture;
     }
 
-    public LocalDate getLastTestDate() {
-        return lastTestDate;
+    public String getPreviousServiceDate() {
+        return previousServiceDate.format(dateFormatter);
     }
+
+    public String getCurrentServiceDate() {
+        if (currentServiceDate.equals(nextServiceDate)){
+            previousServiceDate = currentServiceDate;
+            currentServiceDate = nextServiceDate;
+        }
+        return currentServiceDate.format(dateFormatter);
+    }
+
+    public String getNextServiceDate() {
+        nextServiceDate = currentServiceDate.plusMonths(SERVICE_PERIOD_IN_MONTHS);
+        return nextServiceDate.format(dateFormatter);
+    }
+
+
 }

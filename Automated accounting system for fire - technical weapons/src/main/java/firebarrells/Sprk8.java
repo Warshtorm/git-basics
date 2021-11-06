@@ -14,9 +14,9 @@ public class Sprk8 extends Firebarrels {
         id += Firebarrels.count;
         deviceNumber = 0;
         inventoryNumber = "1222";
-        deviceName = "СПРК-8Б";
+        deviceName = SPRK_8_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
-        deviceType = 'Б';
+        firebarrelType = 'Б';
         manufacturer = SPRK_MANUFACTURER_TEXT;
         workingPressure = "0.7";
         waterConsumption = "2,4,6,8";
@@ -25,15 +25,15 @@ public class Sprk8 extends Firebarrels {
         foamJetRange = 18;
         foamMultiplicity = 7.0;
         curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
-        curtainDiameter = sprkCurtainDiameterText;
+        curtainDiameter = SPRK_CURTAIN_DIAMETER_TEXT;
 
         deviceWeight = 2.5;
-        sizes = "290*130*280";
+        deviceSizes = "290*130*280";
 
-        dateOfManufacture = LocalDate.now();
-        testDate = LocalDate.now();
-        nextTestDate = testDate;
-        lastTestDate = testDate;
+        dateOfManufacture = currentServiceDate;
+        currentServiceDate = LocalDate.now();
+        previousServiceDate = currentServiceDate;
+
     }
 
     @Override

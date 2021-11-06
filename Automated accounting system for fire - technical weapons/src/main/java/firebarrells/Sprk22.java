@@ -14,9 +14,9 @@ public class Sprk22 extends Firebarrels {
         id += Firebarrels.count;
         deviceNumber = 0;
         inventoryNumber = "12000";
-        deviceName = "СПРК-22А-А";
+        deviceName = SPRK_22_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
-        deviceType = 'Б';
+        firebarrelType = 'Б';
         manufacturer = SPRK_MANUFACTURER_TEXT;
 
         workingPressure = "0.7";
@@ -26,14 +26,14 @@ public class Sprk22 extends Firebarrels {
         foamJetRange = 26;
         foamMultiplicity = 7.0;
         curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
-        curtainDiameter = sprkCurtainDiameterText;
+        curtainDiameter = SPRK_CURTAIN_DIAMETER_TEXT;
 
         deviceWeight = 3.5;
-        sizes = "320*130*290";
+        deviceSizes = "320*130*290";
 
-        dateOfManufacture = LocalDate.now();
-        testDate = LocalDate.now();
-        lastTestDate = testDate;
+        dateOfManufacture = currentServiceDate;
+        currentServiceDate = LocalDate.now();
+        previousServiceDate = currentServiceDate;
     }
 
 
