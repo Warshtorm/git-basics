@@ -3,6 +3,7 @@ package main.java;
 import java.time.LocalDate;
 
 public abstract class Equipments implements Equipment {
+    public final int SERVICE_PERIOD_IN_MONTHS = 6;
 
     protected int id;
     protected int deviceNumber;
@@ -19,6 +20,7 @@ public abstract class Equipments implements Equipment {
     protected LocalDate previousServiceDate;
     protected LocalDate currentServiceDate;
     protected LocalDate nextServiceDate;
+
 
 
 

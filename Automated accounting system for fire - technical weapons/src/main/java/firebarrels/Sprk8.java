@@ -1,4 +1,4 @@
-package main.java.firebarrells;
+package main.java.firebarrels;
 
 import java.time.LocalDate;
 

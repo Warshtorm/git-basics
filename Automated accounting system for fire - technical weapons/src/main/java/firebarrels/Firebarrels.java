@@ -1,10 +1,10 @@
-package main.java.firebarrells;
+package main.java.firebarrels;
 import main.java.Equipments;
 import java.time.LocalDate;
 
 public abstract class Firebarrels extends Equipments {
     protected static int count; // счетчик, пока непонятно для чего
-    public final int SERVICE_PERIOD_IN_MONTHS = 6;
+
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
     public final static String SPRK_19_TEXT = "СПРК-19А-АД";
@@ -49,9 +49,7 @@ public abstract class Firebarrels extends Equipments {
 
     @Override
     public String toString(){
-        return "ID: ".concat(String.valueOf(id))
-                .concat(" - ").concat(deviceName)
-                .concat(" №: ").concat(String.valueOf(deviceNumber));
+        return "Firebarrels{" + "ID = " + id + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
     }
 
     public void setNextServiceDate(LocalDate nextServiceDate) {
@@ -70,7 +68,6 @@ public abstract class Firebarrels extends Equipments {
         this.inventoryNumber = inventoryNumber;
     }
 
-    //TODO сделать ввод ТУ через регулярное выражение
     public void setDeviceTU(String deviceTU) {
         if (!deviceTU.equals(null)) {
             this.deviceTU = deviceTU;

@@ -1,26 +1,26 @@
-package main.java.firebarrells;
+package main.java.firebarrels;
 
 import java.time.LocalDate;
 
-public class Sprk22 extends Firebarrels {
+public class Sprk19 extends Firebarrels {
 
-    public Sprk22(int deviceNumber) {
+    public Sprk19(int deviceNumber) {
         this();
         this.deviceNumber = deviceNumber;
     }
 
-    public Sprk22() {
+    public Sprk19() {
         count++;
         id += Firebarrels.count;
         deviceNumber = 0;
-        inventoryNumber = "12000";
-        deviceName = SPRK_22_TEXT;
+        inventoryNumber = "41552";
+        deviceName = SPRK_19_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
         firebarrelType = 'Б';
         manufacturer = SPRK_MANUFACTURER_TEXT;
 
-        workingPressure = "0.7";
-        waterConsumption = "3.0-22";
+        workingPressure = "0.7/0.4";
+        waterConsumption = "4.5-19/4.5-14";
         waterJetrange = 50;
         waterSprayJetRange = 20;
         foamJetRange = 26;
@@ -36,14 +36,14 @@ public class Sprk22 extends Firebarrels {
         previousServiceDate = currentServiceDate;
     }
 
-
     @Override
     public String getDeviceInformation() {
         return deviceName + " : Ствол пожарный, ручной, комбинированный," +
-                "\n22 - максимальный расход воды/расствора л.с, " +
+                "\n19 - максимальный расход воды/расствора л.с, " +
                 "\nА - тип присоединения, по рукавную головку ГР-70" +
-                "\nА - автоматическое изменение диаметра впрыска и" +
-                "\n\tподдержание постоянного давления на впрыске ";
+                "\nА - автоматическое изменение диаметра впрыска и " +
+                "\n\tподдержание постоянного давления на впрыске " +
+                "\nД - двойной диапазон рабочего давления";
     }
 
 
