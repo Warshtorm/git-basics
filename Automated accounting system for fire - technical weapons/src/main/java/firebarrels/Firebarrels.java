@@ -3,7 +3,7 @@ import main.java.Equipments;
 import java.time.LocalDate;
 
 public abstract class Firebarrels extends Equipments {
-    protected static int count; // счетчик, пока непонятно для чего
+    protected static int firebarrelsCount; // счетчик, пока непонятно для чего
 
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
@@ -16,10 +16,6 @@ public abstract class Firebarrels extends Equipments {
     public final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
     protected final int SPRK_CURTAIN_DIAMETER_TEXT = 3;
 
-
-    protected char firebarrelType;
-    protected String workingPressure;
-    protected String waterConsumption;
     protected int waterJetrange; //
     protected int waterSprayJetRange;
     protected int foamJetRange;
@@ -28,23 +24,24 @@ public abstract class Firebarrels extends Equipments {
     protected int curtainDiameter;
 
     public String allInformationAboutTheDevice() {
-        return "Номер: ".concat(Integer.toString(deviceNumber))
-                .concat("\nИнвентарный номер: ").concat(inventoryNumber)
-                .concat("\nНазвание: ").concat(deviceName)
-                .concat("\nЗавод изготовитель: ").concat(SPRK_MANUFACTURER_TEXT)
+        return NUMBER_TEXT + ": ".concat(Integer.toString(deviceNumber))
+                .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(inventoryNumber)
+                .concat("\n" + DEVICE_NAME_TEXT + ": ").concat(deviceName)
+                .concat("\n" + MANUFACTURER_TEXT + ": ").concat(manufacturer)
+                .concat("\n" + CLASS_DEVICE_TEXT + ": ").concat(classDevice)
+                .concat("\n" + TYPE_DEVICE_TEXT + ": ").concat(typeDevice)
                 .concat("\n" + deviceTU)
-                .concat("\nДата выпуска: ").concat(String.valueOf(dateOfManufacture))
-                .concat("\nРабочее давление, мПа: ").concat(workingPressure)
-                .concat("\nРасход воды/расствора, литра(ов): ").concat(waterConsumption)
-                .concat("\nУгол защиты, градуса(ов): ").concat(curtainAngle)
-                .concat("\nДиаметр факела защитной завесы, метра(ов) : ").concat(String.valueOf(curtainDiameter))
-                .concat("\nДальность водяной струи, метра(ов): ").concat(String.valueOf(waterJetrange))
-                .concat("\nДальность водяной, расспыленной струи, метра(ов): ").concat(String.valueOf(waterSprayJetRange))
-                .concat("\nДальность пенной струи, метра(ов): ").concat(String.valueOf(foamJetRange))
-                .concat("\nКратность пены: ").concat(String.valueOf(foamMultiplicity))
-                .concat("\nВес, кг : ").concat(String.valueOf(deviceWeight))
-                .concat("\nРазмеры: ").concat(deviceSizes);
-
+                .concat("\n" + DATE_OF_MANUFACTURE_TEXT + ": ").concat(String.valueOf(getDateOfManufacture()))
+                .concat("\n" + WORKING_PRESSURE_TEXT + ": ").concat(workingPressure)
+                .concat("\n" + WATER_CONSUMPTION_TEXT + ": ").concat(waterConsumption)
+                .concat("\n" + CURTAIN_ANGLE_TEXT + ": ").concat(curtainAngle)
+                .concat("\n" + CURTAIN_DIAMETR_TEXT + ": ").concat(String.valueOf(curtainDiameter))
+                .concat("\n" + WATER_JETRANGE_TEXT + ": ").concat(String.valueOf(waterJetrange))
+                .concat("\n" + WATER_SPRAY_JET_RANGE_TEXT + ": ").concat(String.valueOf(waterSprayJetRange))
+                .concat("\n" + FOAM_JET_RANGE_TEXT + ": ").concat(String.valueOf(foamJetRange))
+                .concat("\n" + FOAM_MULTIPLICITY_TEXT + ": ").concat(String.valueOf(foamMultiplicity))
+                .concat("\n" + DEVICE_WEIGHT_TEXT + ": ").concat(String.valueOf(deviceWeight))
+                .concat("\n" + DEVICE_SIZE_TEXT + ": ").concat(deviceSizes);
     }
 
     @Override
@@ -86,8 +83,8 @@ public abstract class Firebarrels extends Equipments {
         return deviceName;
     }
 
-    public static int getCount(){
-        return count;
+    public static int getFirebarrelsCount(){
+        return firebarrelsCount;
     }
 
     public int getId() {
@@ -106,8 +103,8 @@ public abstract class Firebarrels extends Equipments {
         return deviceTU;
     }
 
-    public char getFirebarrelType() {
-        return firebarrelType;
+    public String getTypeDevice() {
+        return typeDevice;
     }
 
     public String getManufacturer() {
@@ -152,27 +149,6 @@ public abstract class Firebarrels extends Equipments {
 
     public String getDeviceSizes() {
         return deviceSizes;
-    }
-
-    public LocalDate getDateOfManufacture() {
-        return dateOfManufacture;
-    }
-
-    public String getPreviousServiceDate() {
-        return previousServiceDate.format(dateFormatter);
-    }
-
-    public String getCurrentServiceDate() {
-        if (currentServiceDate.equals(nextServiceDate)){
-            previousServiceDate = currentServiceDate;
-            currentServiceDate = nextServiceDate;
-        }
-        return currentServiceDate.format(dateFormatter);
-    }
-
-    public String getNextServiceDate() {
-        nextServiceDate = currentServiceDate.plusMonths(SERVICE_PERIOD_IN_MONTHS);
-        return nextServiceDate.format(dateFormatter);
     }
 
 

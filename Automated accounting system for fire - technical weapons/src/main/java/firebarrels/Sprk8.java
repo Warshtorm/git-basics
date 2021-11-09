@@ -1,7 +1,5 @@
 package main.java.firebarrels;
 
-import java.time.LocalDate;
-
 public class Sprk8 extends Firebarrels {
 
     public Sprk8(int deviceNumber){
@@ -10,13 +8,14 @@ public class Sprk8 extends Firebarrels {
     }
 
     public Sprk8(){
-        count++;
-        id += Firebarrels.count;
+        firebarrelsCount++;
+        id += Firebarrels.firebarrelsCount;
         deviceNumber = 0;
         inventoryNumber = "1222";
         deviceName = SPRK_8_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
-        firebarrelType = 'Б';
+        typeDevice = "ручной";
+        classDevice = "Б";
         manufacturer = SPRK_MANUFACTURER_TEXT;
         workingPressure = "0.7";
         waterConsumption = "2,4,6,8";
@@ -30,10 +29,9 @@ public class Sprk8 extends Firebarrels {
         deviceWeight = 2.5;
         deviceSizes = "290*130*280";
 
-        dateOfManufacture = currentServiceDate;
-        currentServiceDate = LocalDate.now();
-        previousServiceDate = currentServiceDate;
-
+        dateOfManufacture = getCurrentServiceDate();
+        currentServiceDate = getCurrentServiceDate();
+        previousServiceDate = getPreviousServiceDate();
     }
 
     @Override

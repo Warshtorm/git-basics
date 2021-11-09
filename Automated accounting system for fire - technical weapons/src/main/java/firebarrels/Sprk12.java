@@ -10,13 +10,14 @@ public class Sprk12 extends Firebarrels {
     }
 
     public Sprk12(){
-        count++;
-        id += Firebarrels.count;
+        firebarrelsCount++;
+        id += Firebarrels.firebarrelsCount;
         deviceNumber = 0;
         inventoryNumber = "1522";
         deviceName = SPRK_12_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
-        firebarrelType = 'Б';
+        typeDevice = "ручной";
+        classDevice = "Б";
         manufacturer = SPRK_MANUFACTURER_TEXT;
 
         workingPressure = "0.7";
@@ -31,9 +32,9 @@ public class Sprk12 extends Firebarrels {
         deviceWeight = 3.5;
         deviceSizes = "320*130*290";
 
-        dateOfManufacture = currentServiceDate;
-        currentServiceDate = LocalDate.now();
-        previousServiceDate = currentServiceDate;
+        dateOfManufacture = getCurrentServiceDate();
+        currentServiceDate = getCurrentServiceDate();
+        previousServiceDate = getPreviousServiceDate();
     }
 
     @Override

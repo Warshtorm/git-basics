@@ -2,6 +2,8 @@ package main.java;
 
 import main.java.firebarrels.*;
 import main.java.factory.FirebarrelsConveyor;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,10 +23,17 @@ public class Main {
             if (!inputName.equals("exit")) {
                 addDevice(inputName, countDevice);
                 List<Firebarrels> fb = FirebarrelsConveyor.getInstance().getFireBarrelsList();
-                System.out.println("fb: " + fb.get(0));
+                for (int i = 0; i < fb.size(); i++) {
+                    System.out.println("fb: " + fb.get(i));
 
-                System.out.println("Счетчик стволов: " + Firebarrels.getCount());
-                System.out.println("------------------------------------------");
+                    System.out.println("Счетчик стволов: " + Firebarrels.getFirebarrelsCount());
+                    System.out.println("------------------------------------------");
+                    System.out.println(fb.get(i).allInformationAboutTheDevice());
+                    System.out.println("дата " + fb.get(i).getNextServiceDate());
+                }
+
+
+
             } else {
                 break;
             }
