@@ -1,11 +1,9 @@
 package main.java.factory;
 
-import main.java.Equipment;
-
-import java.time.format.DateTimeFormatter;
+import main.java.EquipInfo;
 
 @FunctionalInterface
 public interface Factory {
 
-    void create(Equipment device);
+    void create(EquipInfo device);
 }

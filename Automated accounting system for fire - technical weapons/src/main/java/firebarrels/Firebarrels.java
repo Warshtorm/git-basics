@@ -3,7 +3,6 @@ import main.java.Equipments;
 import java.time.LocalDate;
 
 public abstract class Firebarrels extends Equipments {
-    protected static int firebarrelsCount; // счетчик, пока непонятно для чего
 
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
@@ -84,7 +83,7 @@ public abstract class Firebarrels extends Equipments {
     }
 
     public static int getFirebarrelsCount(){
-        return firebarrelsCount;
+        return equipmentsCount;
     }
 
     public int getId() {

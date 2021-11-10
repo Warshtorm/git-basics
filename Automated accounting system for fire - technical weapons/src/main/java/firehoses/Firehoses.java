@@ -3,7 +3,6 @@ package main.java.firehoses;
 import main.java.Equipments;
 
 public abstract class Firehoses extends Equipments {
-    protected static int hosesCount; // счетчик, пока непонятно для чего
 
     public final static String PRESSURE_HOSE_51_TEXT = "Рукав напорный ДУ:51";
     public final static String PRESSURE_HOSE_66_TEXT = "Рукав напорный ДУ:66";

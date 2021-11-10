@@ -1,6 +1,6 @@
 package main.java.factory;
 
-import main.java.Equipment;
+import main.java.EquipInfo;
 import main.java.firehoses.Firehoses;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class FirehosesConveyor implements Factory {
     }
 
     @Override
-    public void create(Equipment device) {
+    public void create(EquipInfo device) {
         if (!device.equals(null)){
             fireHosesList.add((Firehoses) device);
         }

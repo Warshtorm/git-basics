@@ -8,8 +8,8 @@ public class Sprk8 extends Firebarrels {
     }
 
     public Sprk8(){
-        firebarrelsCount++;
-        id += Firebarrels.firebarrelsCount;
+        equipmentsCount++;
+        id += Firebarrels.equipmentsCount;
         deviceNumber = 0;
         inventoryNumber = "1222";
         deviceName = SPRK_8_TEXT;

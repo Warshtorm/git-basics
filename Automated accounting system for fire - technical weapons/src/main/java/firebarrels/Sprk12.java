@@ -1,7 +1,5 @@
 package main.java.firebarrels;
 
-import java.time.LocalDate;
-
 public class Sprk12 extends Firebarrels {
 
     public Sprk12(int deviceNumber){
@@ -10,8 +8,8 @@ public class Sprk12 extends Firebarrels {
     }
 
     public Sprk12(){
-        firebarrelsCount++;
-        id += Firebarrels.firebarrelsCount;
+        equipmentsCount++;
+        id += Firebarrels.equipmentsCount;
         deviceNumber = 0;
         inventoryNumber = "1522";
         deviceName = SPRK_12_TEXT;

@@ -23,17 +23,15 @@ public class Main {
             if (!inputName.equals("exit")) {
                 addDevice(inputName, countDevice);
                 List<Firebarrels> fb = FirebarrelsConveyor.getInstance().getFireBarrelsList();
-                for (int i = 0; i < fb.size(); i++) {
-                    System.out.println("fb: " + fb.get(i));
+
+                    System.out.println("fb: " + fb.get(0));
 
                     System.out.println("Счетчик стволов: " + Firebarrels.getFirebarrelsCount());
                     System.out.println("------------------------------------------");
-                    System.out.println(fb.get(i).allInformationAboutTheDevice());
-                    System.out.println("дата " + fb.get(i).getNextServiceDate());
-                }
+                    System.out.println(fb.get(0).allInformationAboutTheDevice());
+                    System.out.println("дата " + fb.get(0).getNextServiceDate());
 
-
-
+                System.out.println(getDeviceInfo(fb.get(0)));
             } else {
                 break;
             }
@@ -62,6 +60,10 @@ public class Main {
             }
         }
 
+    }
+
+    public static String getDeviceInfo(EquipInfo equipInfo){
+        return equipInfo.getDeviceInformation();
     }
 
 

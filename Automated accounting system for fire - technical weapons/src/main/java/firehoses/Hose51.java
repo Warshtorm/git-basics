@@ -5,8 +5,8 @@ package main.java.firehoses;
 public class Hose51 extends Firehoses{
 
     public Hose51(){
-        hosesCount++;
-        id += Firehoses.hosesCount;
+        equipmentsCount++;
+        id += Firehoses.equipmentsCount;
         deviceNumber = 0;
         inventoryNumber = "1222";
         deviceName = PRESSURE_HOSE_51_TEXT;
@@ -25,6 +25,6 @@ public class Hose51 extends Firehoses{
 
     @Override
     public String getDeviceInformation() {
-        return null;
+        return "Рукав напорный, ДУ 51";
     }
 }
