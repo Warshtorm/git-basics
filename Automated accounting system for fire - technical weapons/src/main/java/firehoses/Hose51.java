@@ -6,17 +6,27 @@ public class Hose51 extends Firehoses{
 
     public Hose51(){
         equipmentsCount++;
-        id += Firehoses.equipmentsCount;
+        deviceId += Firehoses.equipmentsCount;
         deviceNumber = 0;
-        inventoryNumber = "1222";
+        deviceInventoryNumber = "1222";
         deviceName = PRESSURE_HOSE_51_TEXT;
         deviceTU = "None";
-        classDevice = "напорный";
-        manufacturer = "None";
+        deviceType = "напорный";
+        deviceManufacturer = "None";
+
+        waterSkipping = 11;
+        deviceWaterConsumption = "2.04";
+        volume = 40;
+        resistanceOfOneHose = 0.13;
+        lossOfPressureInOneHose = 13.5;
+        deviceWorkingPressure = "1";
+        testPressure = 20;
+        destructivePressure = 35;
+        speedOfTheWaterMovementOfHose = "1 - 3";
 
 
-        deviceWeight = 0.0;
-        deviceSizes = "None";
+        deviceWeight = 10   ;
+        deviceLength = 20;
 
         dateOfManufacture = getDateOfManufacture();
         currentServiceDate = getCurrentServiceDate();
@@ -25,6 +35,10 @@ public class Hose51 extends Firehoses{
 
     @Override
     public String getDeviceInformation() {
-        return "Рукав напорный, ДУ 51";
+        return "Рукав напорный \"\"Стандарт\"\", \n51 мм - под рукавную головку ГР-50";
     }
+
+
+
+
 }

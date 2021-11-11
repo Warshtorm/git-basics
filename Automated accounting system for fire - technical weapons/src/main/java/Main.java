@@ -1,9 +1,10 @@
 package main.java;
 
+import main.java.factory.FirehosesConveyor;
 import main.java.firebarrels.*;
 import main.java.factory.FirebarrelsConveyor;
-
-import java.time.LocalDate;
+import main.java.firehoses.Firehoses;
+import main.java.firehoses.Hose51;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,15 +24,14 @@ public class Main {
             if (!inputName.equals("exit")) {
                 addDevice(inputName, countDevice);
                 List<Firebarrels> fb = FirebarrelsConveyor.getInstance().getFireBarrelsList();
-
-                    System.out.println("fb: " + fb.get(0));
-
-                    System.out.println("Счетчик стволов: " + Firebarrels.getFirebarrelsCount());
+                List<Firehoses> fh = FirehosesConveyor.getInstance().getFirehosesList();
+                    fh.get(0).setDeviceTU("  127766111");
+                    System.out.println("fb: " + fh.get(0));
+                    System.out.println("Колличество устройств: " + Firehoses.getFireHosesCount());
                     System.out.println("------------------------------------------");
-                    System.out.println(fb.get(0).allInformationAboutTheDevice());
-                    System.out.println("дата " + fb.get(0).getNextServiceDate());
-
-                System.out.println(getDeviceInfo(fb.get(0)));
+                    System.out.println(fh.get(0).allInformationAboutTheDevice());
+                    System.out.println("дата " + fh.get(0).getNextServiceDate());
+                    System.out.println(getDeviceInfo(fh.get(0)));
             } else {
                 break;
             }
@@ -41,15 +41,12 @@ public class Main {
     }
 
 
-
-
-
-
-
     public static void addDevice(String e, int count) {
         int num = FirebarrelsConveyor.getInstance().getFireBarrelsList().size() + 1;
         for (int i = 0; i < count; i++) {
-            if (e.equals("sprk8")) {
+            if (e.equals("du51")) {
+                FirehosesConveyor.getInstance().create(new Hose51());
+            } else if (e.equals("sprk8")) {
                 FirebarrelsConveyor.getInstance().create(new Sprk8(num + i));
             } else if (e.equals("sprk12")) {
                 FirebarrelsConveyor.getInstance().create(new Sprk12(num + i));

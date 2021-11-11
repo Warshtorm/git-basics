@@ -20,8 +20,9 @@ public interface EquipInfo {
      String FOAM_MULTIPLICITY_TEXT = "Кратность пены";
      String DEVICE_WEIGHT_TEXT = "Вес, кг";
      String DEVICE_SIZE_TEXT = "Размер";
+     String DEVICE_LENGHT_TEXT = "Длина, метра(ов)";
      String NONE_MANUFACTURER_TEXT = "none";
-     String NONE_TU_TEXT = "none";
+     String NONE_TU_TEXT = "  none";
 
      String getDeviceInformation();
 }

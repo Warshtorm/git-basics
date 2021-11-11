@@ -9,16 +9,17 @@ public class Sprk8 extends Firebarrels {
 
     public Sprk8(){
         equipmentsCount++;
-        id += Firebarrels.equipmentsCount;
+        deviceId += Firebarrels.equipmentsCount;
         deviceNumber = 0;
-        inventoryNumber = "1222";
+        deviceInventoryNumber = "1222";
         deviceName = SPRK_8_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
-        typeDevice = "ручной";
-        classDevice = "Б";
-        manufacturer = SPRK_MANUFACTURER_TEXT;
-        workingPressure = "0.7";
-        waterConsumption = "2,4,6,8";
+        deviceType = "ручной";
+        deviceClass = "Б";
+        deviceManufacturer = SPRK_MANUFACTURER_TEXT;
+
+        deviceWorkingPressure = "0.7";
+        deviceWaterConsumption = "2,4,6,8";
         waterJetrange = 40;
         waterSprayJetRange = 15;
         foamJetRange = 18;

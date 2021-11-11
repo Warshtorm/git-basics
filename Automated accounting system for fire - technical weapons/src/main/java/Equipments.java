@@ -6,19 +6,20 @@ import java.time.format.DateTimeFormatter;
 public abstract class Equipments implements EquipInfo {
     protected static int equipmentsCount; // счетчик, пока непонятно для чего
 
-    protected int id;
+    protected int deviceId;
     protected int deviceNumber;
-    protected String inventoryNumber;
+    protected String deviceInventoryNumber;
     protected String deviceName;
     protected String deviceTU;
-    protected String manufacturer;
-    protected String typeDevice;
-    protected String classDevice;
-    protected String workingPressure;
-    protected String waterConsumption;
+    protected String deviceManufacturer;
+    protected String deviceType;
+    protected String deviceClass;
+    protected String deviceWorkingPressure;
+    protected String deviceWaterConsumption;
 
     protected double deviceWeight;
     protected String deviceSizes;
+    protected int deviceLength;
 
     protected LocalDate dateOfManufacture;
     protected LocalDate previousServiceDate;
@@ -51,7 +52,21 @@ public abstract class Equipments implements EquipInfo {
         return nextServiceDate;
     }
 
+    public void setDeviceTU(String deviceTU) {
+        if (!deviceTU.equals(null)) {
+            this.deviceTU = deviceTU;
+        }
+    }
 
+    public String getDeviceManufacturer() {
+        return deviceManufacturer;
+    }
+
+    //TODO доработать возврат ТУ
+    public String getDeviceTU() {
+        StringBuilder sb = new StringBuilder();
+        return sb.append(deviceTU).replace(0,2,"TU").toString();
+    }
 
 
 }

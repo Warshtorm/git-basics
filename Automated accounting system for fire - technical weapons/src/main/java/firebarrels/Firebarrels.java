@@ -8,7 +8,6 @@ public abstract class Firebarrels extends Equipments {
     public final static String SPRK_12_TEXT = "СПРК-12А";
     public final static String SPRK_19_TEXT = "СПРК-19А-АД";
     public final static String SPRK_22_TEXT = "СПРК-22А-А";
-
     public final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
             "\n182100, Псковская область, город Великие Луки, улица Гоголя дом 2 ";
     public final String SPRK_DEFAULT_TU_TEXT = "ТУ 4854-032-00139181-2011";
@@ -24,15 +23,15 @@ public abstract class Firebarrels extends Equipments {
 
     public String allInformationAboutTheDevice() {
         return NUMBER_TEXT + ": ".concat(Integer.toString(deviceNumber))
-                .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(inventoryNumber)
+                .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(deviceInventoryNumber)
                 .concat("\n" + DEVICE_NAME_TEXT + ": ").concat(deviceName)
-                .concat("\n" + MANUFACTURER_TEXT + ": ").concat(manufacturer)
-                .concat("\n" + CLASS_DEVICE_TEXT + ": ").concat(classDevice)
-                .concat("\n" + TYPE_DEVICE_TEXT + ": ").concat(typeDevice)
+                .concat("\n" + MANUFACTURER_TEXT + ": ").concat(deviceManufacturer)
+                .concat("\n" + CLASS_DEVICE_TEXT + ": ").concat(deviceClass)
+                .concat("\n" + TYPE_DEVICE_TEXT + ": ").concat(deviceType)
                 .concat("\n" + deviceTU)
                 .concat("\n" + DATE_OF_MANUFACTURE_TEXT + ": ").concat(String.valueOf(getDateOfManufacture()))
-                .concat("\n" + WORKING_PRESSURE_TEXT + ": ").concat(workingPressure)
-                .concat("\n" + WATER_CONSUMPTION_TEXT + ": ").concat(waterConsumption)
+                .concat("\n" + WORKING_PRESSURE_TEXT + ": ").concat(deviceWorkingPressure)
+                .concat("\n" + WATER_CONSUMPTION_TEXT + ": ").concat(deviceWaterConsumption)
                 .concat("\n" + CURTAIN_ANGLE_TEXT + ": ").concat(curtainAngle)
                 .concat("\n" + CURTAIN_DIAMETR_TEXT + ": ").concat(String.valueOf(curtainDiameter))
                 .concat("\n" + WATER_JETRANGE_TEXT + ": ").concat(String.valueOf(waterJetrange))
@@ -45,7 +44,7 @@ public abstract class Firebarrels extends Equipments {
 
     @Override
     public String toString(){
-        return "Firebarrels{" + "ID = " + id + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
+        return "Firebarrels{" + "ID = " + deviceId + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
     }
 
     public void setNextServiceDate(LocalDate nextServiceDate) {
@@ -61,14 +60,9 @@ public abstract class Firebarrels extends Equipments {
     }
 
     public void setInventoryNumber(String inventoryNumber) {
-        this.inventoryNumber = inventoryNumber;
+        this.deviceInventoryNumber = inventoryNumber;
     }
 
-    public void setDeviceTU(String deviceTU) {
-        if (!deviceTU.equals(null)) {
-            this.deviceTU = deviceTU;
-        }
-    }
 
     public void setDateOfManufacture(LocalDate dateOfManufacture) {
         this.dateOfManufacture = dateOfManufacture;
@@ -87,7 +81,7 @@ public abstract class Firebarrels extends Equipments {
     }
 
     public int getId() {
-        return id;
+        return deviceId;
     }
 
     public int getDeviceNumber() {
@@ -95,27 +89,20 @@ public abstract class Firebarrels extends Equipments {
     }
 
     public String getInventoryNumber() {
-        return inventoryNumber;
-    }
-
-    public String getDeviceTU() {
-        return deviceTU;
+        return deviceInventoryNumber;
     }
 
     public String getTypeDevice() {
-        return typeDevice;
+        return deviceType;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
-    }
 
     public String getWorkingPressure() {
-        return workingPressure;
+        return deviceWorkingPressure;
     }
 
     public String getWaterConsumption() {
-        return waterConsumption;
+        return deviceWaterConsumption;
     }
 
     public int getWaterJetrange() {
