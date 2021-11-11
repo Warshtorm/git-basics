@@ -12,7 +12,7 @@ public class Hose51 extends Firehoses{
         deviceName = PRESSURE_HOSE_51_TEXT;
         deviceTU = "None";
         deviceType = "напорный";
-        deviceManufacturer = "None";
+        deviceManufacturer = getDeviceTU();
 
         waterSkipping = 11;
         deviceWaterConsumption = "2.04";

@@ -64,8 +64,8 @@ public abstract class Equipments implements EquipInfo {
 
     //TODO доработать возврат ТУ
     public String getDeviceTU() {
-        StringBuilder sb = new StringBuilder();
-        return sb.append(deviceTU).replace(0,2,"TU").toString();
+
+        return deviceTU + " TU";
     }
 
 
