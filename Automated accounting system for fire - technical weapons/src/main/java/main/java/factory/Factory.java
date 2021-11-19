@@ -1,9 +1,8 @@
 package main.java.factory;
 
-import main.java.EquipInfo;
+import main.java.Equip;
 
 @FunctionalInterface
 public interface Factory {
-
-    void create(EquipInfo device);
+    Equip createDevice(String device);
 }

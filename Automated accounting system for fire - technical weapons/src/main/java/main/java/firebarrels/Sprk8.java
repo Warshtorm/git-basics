@@ -8,8 +8,8 @@ public class Sprk8 extends Firebarrels {
     }
 
     public Sprk8(){
-        equipmentsCount++;
-        deviceId += Firebarrels.equipmentsCount;
+        count++;
+        deviceId += Firebarrels.count;
         deviceNumber = 0;
         deviceInventoryNumber = "1222";
         deviceName = SPRK_8_TEXT;
@@ -41,7 +41,4 @@ public class Sprk8 extends Firebarrels {
             "\n8 - максимальный расход воды/расствора л.с, " +
             "\nБ - тип присоединения, по рукавную головку ГР-50";
     }
-
-
-
 }

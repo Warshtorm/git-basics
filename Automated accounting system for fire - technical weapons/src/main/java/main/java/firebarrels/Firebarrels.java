@@ -1,8 +1,9 @@
 package main.java.firebarrels;
 import main.java.Equipments;
+
 import java.time.LocalDate;
 
-public abstract class Firebarrels extends Equipments {
+public abstract class Firebarrels extends Equipments{
 
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
@@ -72,30 +73,9 @@ public abstract class Firebarrels extends Equipments {
         this.previousServiceDate = previousServiceDate;
     }
 
-    public String getDeviceName() {
-        return deviceName;
-    }
-
     public static int getFirebarrelsCount(){
-        return equipmentsCount;
+        return count;
     }
-
-    public int getId() {
-        return deviceId;
-    }
-
-    public int getDeviceNumber() {
-        return deviceNumber;
-    }
-
-    public String getInventoryNumber() {
-        return deviceInventoryNumber;
-    }
-
-    public String getTypeDevice() {
-        return deviceType;
-    }
-
 
     public String getWorkingPressure() {
         return deviceWorkingPressure;
@@ -128,14 +108,5 @@ public abstract class Firebarrels extends Equipments {
     public int getCurtainDiameter() {
         return curtainDiameter;
     }
-
-    public double getDeviceWeight() {
-        return deviceWeight;
-    }
-
-    public String getDeviceSizes() {
-        return deviceSizes;
-    }
-
 
 }

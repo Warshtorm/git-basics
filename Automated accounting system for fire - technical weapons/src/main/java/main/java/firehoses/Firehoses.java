@@ -76,7 +76,7 @@ public abstract class Firehoses extends Equipments {
     }
 
     public static int getFireHosesCount(){
-        return equipmentsCount;
+        return count;
     }
 
     public int getId() {
@@ -91,9 +91,6 @@ public abstract class Firehoses extends Equipments {
         return deviceInventoryNumber;
     }
 
-    public String getDeviceTU() {
-        return deviceTU;
-    }
 
     public String getTypeDevice() {
         return deviceType;
@@ -111,8 +108,6 @@ public abstract class Firehoses extends Equipments {
         return deviceWaterConsumption;
     }
 
-    public double getDeviceWeight() {
-        return deviceWeight;
-    }
+
 
 }

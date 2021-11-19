@@ -1,7 +1,7 @@
 package main.java;
 
 @FunctionalInterface
-public interface EquipInfo {
+public interface Equip {
      int SERVICE_PERIOD_IN_MONTHS = 6;
      String NUMBER_TEXT = "Номер";
      String INVENTORY_NUMBER_TEXT = "Инвентарный номер";

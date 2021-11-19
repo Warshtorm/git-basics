@@ -5,8 +5,8 @@ package main.java.firehoses;
 public class Hose51 extends Firehoses{
 
     public Hose51(){
-        equipmentsCount++;
-        deviceId += Firehoses.equipmentsCount;
+        count++;
+        deviceId += Firehoses.count;
         deviceNumber = 0;
         deviceInventoryNumber = "1222";
         deviceName = PRESSURE_HOSE_51_TEXT;

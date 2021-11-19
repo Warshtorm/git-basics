@@ -3,8 +3,8 @@ package main.java;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public abstract class Equipments implements EquipInfo {
-    protected static int equipmentsCount; // счетчик, пока непонятно для чего
+public abstract class Equipments implements Equip {
+    protected static int count; // счетчик, пока непонятно для чего
 
     protected int deviceId;
     protected int deviceNumber;
@@ -27,6 +27,26 @@ public abstract class Equipments implements EquipInfo {
     protected LocalDate nextServiceDate;
     protected DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
+    public int getId() {
+        return deviceId;
+    }
+
+    public int getDeviceNumber() {
+        return deviceNumber;
+    }
+
+    public String getInventoryNumber() {
+        return deviceInventoryNumber;
+    }
+
+    public String getDeviceName() {
+        return deviceName;
+    }
+
+    public String getTypeDevice() {
+        return deviceType;
+    }
+
     public LocalDate getDateOfManufacture() {
         if (dateOfManufacture == null){
             dateOfManufacture = LocalDate.now();
@@ -39,8 +59,10 @@ public abstract class Equipments implements EquipInfo {
     }
 
     public LocalDate getCurrentServiceDate() {
+        if (currentServiceDate == null) {
             currentServiceDate = LocalDate.now();
-         if (currentServiceDate.equals(nextServiceDate)){
+        }
+        if (currentServiceDate.equals(nextServiceDate)) {
             previousServiceDate = currentServiceDate;
             currentServiceDate = nextServiceDate;
         }
@@ -53,19 +75,23 @@ public abstract class Equipments implements EquipInfo {
     }
 
     public void setDeviceTU(String deviceTU) {
-        if (!deviceTU.equals(null)) {
-            this.deviceTU = deviceTU;
-        }
+        this.deviceTU = deviceTU;
     }
 
     public String getDeviceManufacturer() {
         return deviceManufacturer;
     }
 
-    //TODO доработать возврат ТУ
     public String getDeviceTU() {
+        return deviceTU += " TU" ;
+    }
 
-        return deviceTU;
+    public double getDeviceWeight() {
+        return deviceWeight;
+    }
+
+    public String getDeviceSizes() {
+        return deviceSizes;
     }
 
 
