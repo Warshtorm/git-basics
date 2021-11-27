@@ -1,8 +1,8 @@
-/*
 package main.java.factory;
 
-import main.java.Equip;
 import main.java.firehoses.Firehoses;
+import main.java.firehoses.Hose51;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,9 +27,11 @@ public class FirehosesConveyor implements Factory {
     }
 
     @Override
-    public Equip create(Equip device) {
-        return device;
+    public Firehoses create(String device) {
+        return switch (device) {
+            case "sprk8" -> new Hose51();
 
+            default -> throw new RuntimeException("Объекта " + device + " не существует, или неверный ввод! ");
+        };
     }
 }
-*/

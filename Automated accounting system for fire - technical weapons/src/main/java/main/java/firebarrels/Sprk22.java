@@ -14,7 +14,7 @@ public class Sprk22 extends Firebarrels {
         deviceInventoryNumber = "12000";
         deviceName = SPRK_22_TEXT;
         deviceTU = SPRK_DEFAULT_TU_TEXT;
-        deviceType = "ручной";
+        deviceType = BARREL_DEVICE_TYPE_TEXT;
         deviceClass = "Б";
         deviceManufacturer = SPRK_MANUFACTURER_TEXT;
 

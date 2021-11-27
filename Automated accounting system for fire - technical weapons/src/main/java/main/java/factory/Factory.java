@@ -4,5 +4,5 @@ import main.java.Equip;
 
 @FunctionalInterface
 public interface Factory {
-    Equip createDevice(String device);
+    Equip create(String device);
 }

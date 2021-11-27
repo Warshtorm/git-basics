@@ -1,6 +1,6 @@
 package main.java;
 
-@FunctionalInterface
+//@FunctionalInterface
 public interface Equip {
      int SERVICE_PERIOD_IN_MONTHS = 6;
      String NUMBER_TEXT = "Номер";
@@ -25,4 +25,5 @@ public interface Equip {
      String NONE_TU_TEXT = "  none";
 
      String getDeviceInformation();
+
 }

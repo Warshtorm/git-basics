@@ -1,31 +1,28 @@
 package main.java.firehoses;
 
-
-// TODO доработать поля и методы
-public class Hose51 extends Firehoses{
-
-    public Hose51(){
+public class Hose66 extends Firehoses{
+    public Hose66(){
         count++;
         deviceId += Firehoses.count;
         deviceNumber = 0;
         deviceInventoryNumber = "1222";
-        deviceName = HOSE_51_TEXT;
+        deviceName = HOSE_66_TEXT;
         deviceTU = "none";
         deviceType = "напорный";
         deviceManufacturer = "none";
 
-        waterSkipping = 11.0;
-        deviceWaterConsumption = "2.04";
-        volume = 40;
-        resistanceOfOneHose = 0.13;
-        lossOfPressureInOneHose = 13.5;
-        deviceWorkingPressure = "1.6";
+        waterSkipping = 17.0;
+        deviceWaterConsumption = "3.42";
+        volume = 70;
+        resistanceOfOneHose = 0.035;
+        lossOfPressureInOneHose = 9.9;
+        deviceWorkingPressure = "16";
         testPressure = 20;
         destructivePressure = 35;
         speedOfTheWaterMovementOfHose = "1 - 3";
 
 
-        deviceWeight = 9   ;
+        deviceWeight = 11;
         deviceLength = 20;
 
         dateOfManufacture = getDateOfManufacture();
@@ -35,10 +32,6 @@ public class Hose51 extends Firehoses{
 
     @Override
     public String getDeviceInformation() {
-        return "Рукав напорный \"\"Стандарт\"\", \n51 мм - под рукавную головку ГР-50";
+        return "Рукав напорный \"\"Стандарт\"\", \n77 мм - под рукавную головку ГР-80";
     }
-
-
-
-
 }

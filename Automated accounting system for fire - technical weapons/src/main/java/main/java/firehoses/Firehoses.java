@@ -6,13 +6,13 @@ import java.time.LocalDate;
 // TODO доработать поля и методы
 public abstract class Firehoses extends Equipments {
 
-    public final static String PRESSURE_HOSE_51_TEXT = "Рукав напорный ДУ:51";
-    public final static String PRESSURE_HOSE_66_TEXT = "Рукав напорный ДУ:66";
-    public final static String PRESSURE_HOSE_77_TEXT = "Рукав напорный ДУ:77";
-    public final static String PRESSURE_HOSE_89_TEXT = "Рукав напорный ДУ:89";
-    public final static String PRESSURE_HOSE_150_TEXT = "Рукав напорный ДУ:150";
+    public final static String HOSE_51_TEXT = "Рукав напорный ДУ:51";
+    public final static String HOSE_66_TEXT = "Рукав напорный ДУ:66";
+    public final static String HOSE_77_TEXT = "Рукав напорный ДУ:77";
+    public final static String HOSE_89_TEXT = "Рукав напорный ДУ:89";
+    public final static String HOSE_150_TEXT = "Рукав напорный ДУ:150";
 
-    protected int waterSkipping;
+    protected double waterSkipping;
     protected int volume;
     protected double resistanceOfOneHose;
     protected double lossOfPressureInOneHose;
@@ -58,9 +58,7 @@ public abstract class Firehoses extends Equipments {
     }
 
     public void setDeviceTU(String deviceTU) {
-        if (!deviceTU.equals(null)) {
-            this.deviceTU = deviceTU;
-        }
+        this.deviceTU = deviceTU;
     }
 
     public void setDateOfManufacture(LocalDate dateOfManufacture) {
@@ -107,6 +105,7 @@ public abstract class Firehoses extends Equipments {
     public String getWaterConsumption() {
         return deviceWaterConsumption;
     }
+
 
 
 

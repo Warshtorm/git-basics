@@ -9,7 +9,8 @@ public abstract class Firebarrels extends Equipments{
     public final static String SPRK_12_TEXT = "СПРК-12А";
     public final static String SPRK_19_TEXT = "СПРК-19А-АД";
     public final static String SPRK_22_TEXT = "СПРК-22А-А";
-    public final String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
+    public final static String BARREL_DEVICE_TYPE_TEXT = "ручной пожарный ствол";
+    public final static String SPRK_MANUFACTURER_TEXT = "Великолукский завод \"ТРАНСНЕФТЕМАШ\", Россия, " +
             "\n182100, Псковская область, город Великие Луки, улица Гоголя дом 2 ";
     public final String SPRK_DEFAULT_TU_TEXT = "ТУ 4854-032-00139181-2011";
     public final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
@@ -109,4 +110,10 @@ public abstract class Firebarrels extends Equipments{
         return curtainDiameter;
     }
 
+
+
+
+
 }
+
+
