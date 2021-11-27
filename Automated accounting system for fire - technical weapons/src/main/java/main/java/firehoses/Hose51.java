@@ -1,10 +1,8 @@
 package main.java.firehoses;
 
+public class Hose51 extends Firehoses {
 
-// TODO доработать поля и методы
-public class Hose51 extends Firehoses{
-
-    public Hose51(){
+    public Hose51() {
         count++;
         deviceId += Firehoses.count;
         deviceNumber = 0;
@@ -25,7 +23,7 @@ public class Hose51 extends Firehoses{
         speedOfTheWaterMovementOfHose = "1 - 3";
 
 
-        deviceWeight = 9   ;
+        deviceWeight = 9;
         deviceLength = 20;
 
         dateOfManufacture = getDateOfManufacture();
@@ -35,10 +33,10 @@ public class Hose51 extends Firehoses{
 
     @Override
     public String getDeviceInformation() {
-        return "Рукав напорный \"\"Стандарт\"\", \n51 мм - под рукавную головку ГР-50";
+        return "Рукав напорный \"\"Стандарт\"\", \n51 мм - под рукавную головку ГР-50" +
+                "\n Используются пожарной техникой, мотопомпами, и главное назначение - " +
+                "\n подача воды пенообразователей под давлением на расстояние.";
     }
-
-
 
 
 }

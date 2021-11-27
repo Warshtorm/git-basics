@@ -1,78 +1,66 @@
 package main.java;
-
-import main.java.factory.FirehosesConveyor;
-import main.java.firebarrels.*;
-import main.java.factory.FireBarrelsConveyor;
-import main.java.firehoses.Firehoses;
 import java.util.*;
 
 
 public class Main {
-    public static List<Firebarrels> barrelList = new ArrayList<>();
-    public static List<Firehoses> hosesList = new ArrayList<>();
+    public static final String ADD = "add";
+    public static final String LIST = "list";
+    public static final String HELP = "help";
+    public static final String DEL = "del";
+    public static final String INFO = "info";
+    public static final String EXIT = "exit";
+    public static final String EXIT_PROGRAMM_MESSAGE = "\"Завершение работы программы..........\"";
 
     public static void main(String[] args) {
         Scanner scaner = new Scanner(System.in);
-
 
         while (true) {
             System.out.print("Enter command: ");
             String command = scaner.nextLine();
             String[] tokens = command.split("\\s+", 2);
-            Equip device;
 
-            if (tokens[0].equals("add")) {
+            if (tokens[0].equals(ADD)) {
+                    Storage.add(tokens[1]);
 
-                device = addFireBarrel(tokens[1]);
-                System.out.println("added: " + device);
-
-            } else if (tokens[0].equals("list")) {
+            } else if (tokens[0].equals(LIST)) {
                 getListOfDevices();
 
-            } else if (tokens[0].equals("help")) {
+            } else if (tokens[0].equals(HELP)) {
                 getListOfHelpCommands();
 
-            } else if (tokens[0].equals("rm")) {
+            } else if (tokens[0].equals(DEL)) {
                 System.out.println("not work !");
 
-            } else if (tokens[0].equals("info")) {
+            } else if (tokens[0].equals(INFO)) {
                 System.out.println("not work");
 
-            } else if (tokens[0].equals("exit")) {
-                System.out.println("Завершение работы программы..........");
+            } else if (tokens[0].equals(EXIT)) {
+                System.out.println(EXIT_PROGRAMM_MESSAGE);
                 scaner.close();
                 break;
+            }else {
+                System.out.println("команда " + "\"" + tokens[0] + "\"" + " отсутствует ...");
+                getListOfHelpCommands();
             }
         }
 
     }
 
 
-    public static Firebarrels addFireBarrel(String device) {
-        Firebarrels barrel = FireBarrelsConveyor.getInstance().create(device);
-        barrelList.add(barrel);
-        return barrel;
+    public static void getListOfDevices() {
+        System.out.println("Список стволов: " + Storage.getFirebarrelList());
+        System.out.println("Колличество: " + Storage.getFirebarrelList().size() + "\n");
+
+        System.out.println("Список рукавов: " + Storage.getFirehosesList());
+        System.out.println("Колличество: " + Storage.getFirehosesList().size() + "\n");
     }
 
-    public static Firehoses addFireHoses(String device) {
-        Firehoses hoses = FirehosesConveyor.getInstance().create(device);
-        hosesList.add(hoses);
-        return hoses;
-    }
-
-    public static void getListOfDevices(){
-        System.out.println("Список устройств: " + barrelList);
-        System.out.println("Колличество устройств: " + barrelList.size() + "\n");
-    }
-
-    public static void getListOfHelpCommands(){
-        System.out.println("add sprk8 - добавить устройство, " +
+    public static void getListOfHelpCommands() {
+        System.out.println("Список команд: " +
+                "\nadd \"название устройства\" - добавить устройство, " +
                 "\nlist - список устройств, rm - удалить, " +
                 "\ninfo - информация об устройстве, exit - выход из программы...");
     }
-
-
-
 
 
 }

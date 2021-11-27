@@ -17,7 +17,7 @@ public abstract class Firehoses extends Equipments {
     protected double resistanceOfOneHose;
     protected double lossOfPressureInOneHose;
     protected int testPressure;
-    protected int destructivePressure;
+    protected double destructivePressure; // mPa
     protected String speedOfTheWaterMovementOfHose;
 
 

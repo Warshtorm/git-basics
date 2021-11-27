@@ -14,7 +14,7 @@ public abstract class Equipments implements Equip {
     protected String deviceManufacturer;
     protected String deviceType;
     protected String deviceClass;
-    protected String deviceWorkingPressure;
+    protected String deviceWorkingPressure; //mPa
     protected String deviceWaterConsumption;
 
     protected double deviceWeight;

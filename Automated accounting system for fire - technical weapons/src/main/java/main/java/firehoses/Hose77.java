@@ -1,7 +1,7 @@
 package main.java.firehoses;
 
-public class Hose77 extends Firehoses{
-    public Hose77(){
+public class Hose77 extends Firehoses {
+    public Hose77() {
         count++;
         deviceId += Firehoses.count;
         deviceNumber = 0;
@@ -22,7 +22,7 @@ public class Hose77 extends Firehoses{
         speedOfTheWaterMovementOfHose = "1 - 3";
 
 
-        deviceWeight = 13   ;
+        deviceWeight = 13;
         deviceLength = 20;
 
         dateOfManufacture = getDateOfManufacture();

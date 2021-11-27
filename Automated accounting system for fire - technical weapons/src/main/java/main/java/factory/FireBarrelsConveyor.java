@@ -21,7 +21,7 @@ public class FireBarrelsConveyor implements Factory {
             case "sprk12" -> new Sprk12();
             case "sprk19" -> new Sprk19();
             case "sprk22" -> new Sprk22();
-            default -> throw new IllegalArgumentException("Объекта " + device);
+            default -> throw new IllegalArgumentException();
         };
     }
 }
