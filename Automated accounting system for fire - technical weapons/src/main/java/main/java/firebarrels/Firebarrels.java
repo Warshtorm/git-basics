@@ -57,10 +57,6 @@ public abstract class Firebarrels extends Equipments{
         this.currentServiceDate = currentServiceDate;
     }
 
-    public void setDeviceNumber(int deviceNumber){
-        this.deviceNumber = deviceNumber;
-    }
-
     public void setInventoryNumber(String inventoryNumber) {
         this.deviceInventoryNumber = inventoryNumber;
     }

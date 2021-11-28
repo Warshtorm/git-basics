@@ -74,10 +74,6 @@ public abstract class Equipments implements Equip {
         return nextServiceDate;
     }
 
-    public void setDeviceTU(String deviceTU) {
-        this.deviceTU = deviceTU;
-    }
-
     public String getDeviceManufacturer() {
         return deviceManufacturer;
     }
@@ -92,6 +88,14 @@ public abstract class Equipments implements Equip {
 
     public String getDeviceSizes() {
         return deviceSizes;
+    }
+
+    public void setDeviceNumber(int deviceNumber){
+        this.deviceNumber = deviceNumber;
+    }
+
+    public void setDeviceTU(String deviceTU) {
+        this.deviceTU = deviceTU;
     }
 
 
