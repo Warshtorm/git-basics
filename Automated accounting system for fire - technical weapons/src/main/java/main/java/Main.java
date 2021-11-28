@@ -59,12 +59,9 @@ public class Main {
 
     //TODO реализовать список устройств через MAP
     public static void getListOfDevices() {
-        /*System.out.println("\nСписок устройств: \n" + Storage.getStorageList().toString()
+        System.out.println("\nСписок устройств: \n" + Storage.getStorageList().toString()
                 .replaceAll("}, ","\n").replaceAll("\\[", "")
-                .replaceAll("\\]",""));*/
-        for (int i = 0; i < Storage.getStorageList().size(); i++){
-            System.out.println("Устройства: " + Storage.getStorageList().get(i));
-        }
+                .replaceAll("\\]",""));
         System.out.println("Колличество: " + Storage.getStorageList().size() + "\n");
     }
 
