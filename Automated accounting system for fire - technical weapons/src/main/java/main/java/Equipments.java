@@ -95,4 +95,5 @@ public abstract class Equipments implements Equip {
     }
 
 
+
 }

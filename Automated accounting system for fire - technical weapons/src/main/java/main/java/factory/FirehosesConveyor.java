@@ -13,7 +13,7 @@ public class FirehosesConveyor implements Factory {
         return instance;
     }
 
-
+    //TODO что с эксепшеном?
     @Override
     public Firehoses create(String device) throws IllegalArgumentException{
         return switch (device) {

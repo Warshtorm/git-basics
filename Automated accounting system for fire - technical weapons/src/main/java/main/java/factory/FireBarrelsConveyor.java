@@ -14,6 +14,7 @@ public class FireBarrelsConveyor implements Factory {
         return instance;
     }
 
+    //TODO что с эксепшеном?
     @Override
     public Firebarrels create(String device) throws IllegalArgumentException{
         return switch (device) {

@@ -1,6 +1,6 @@
 package main.java;
-import java.util.*;
 
+import java.util.*;
 
 public class Main {
     public static final String ADD = "add";
@@ -16,43 +16,47 @@ public class Main {
 
         while (true) {
             System.out.print("Enter command: ");
-            String command = scaner.nextLine();
-            String[] tokens = command.split("\\s+", 2);
+            try {
+                String command = scaner.nextLine();
+                String[] tokens = command.split("\\s+", 2);
 
-            if (tokens[0].equals(ADD)) {
+                if (tokens[0].equals(ADD)) {
                     Storage.add(tokens[1]);
 
-            } else if (tokens[0].equals(LIST)) {
-                getListOfDevices();
+                } else if (tokens[0].equals(LIST)) {
+                    getListOfDevices();
 
-            } else if (tokens[0].equals(HELP)) {
-                getListOfHelpCommands();
+                } else if (tokens[0].equals(HELP)) {
+                    getListOfHelpCommands();
 
-            } else if (tokens[0].equals(DEL)) {
-                System.out.println("not work !");
+                } else if (tokens[0].equals(DEL)) {
+                    System.out.println("not work !");
 
-            } else if (tokens[0].equals(INFO)) {
-                System.out.println("not work");
+                } else if (tokens[0].equals(INFO)) {
+                    System.out.println("not work");
 
-            } else if (tokens[0].equals(EXIT)) {
-                System.out.println(EXIT_PROGRAMM_MESSAGE);
-                scaner.close();
-                break;
-            }else {
-                System.out.println("команда " + "\"" + tokens[0] + "\"" + " отсутствует ...");
-                getListOfHelpCommands();
+                } else if (tokens[0].equals(EXIT) || tokens[0].equals("0")) {
+                    System.out.println(EXIT_PROGRAMM_MESSAGE);
+                    scaner.close();
+                    break;
+                } else {
+                    System.out.println("команда " + "\"" + tokens[0] + "\"" + " отсутствует ...\n");
+                    getListOfHelpCommands();
+                }
+            } catch (ArrayIndexOutOfBoundsException exception) {
+                System.out.println("Input Error!");
             }
+
         }
 
     }
 
-
+    //TODO реализовать список устройств через MAP
     public static void getListOfDevices() {
-        System.out.println("Список стволов: " + Storage.getFirebarrelList());
-        System.out.println("Колличество: " + Storage.getFirebarrelList().size() + "\n");
-
-        System.out.println("Список рукавов: " + Storage.getFirehosesList());
-        System.out.println("Колличество: " + Storage.getFirehosesList().size() + "\n");
+        System.out.println("\nСписок устройств: \n" + Storage.getStorageList().toString()
+                .replaceAll("}, ","\n").replaceAll("\\[", "")
+                .replaceAll("\\]",""));
+        System.out.println("Колличество: " + Storage.getStorageList().size() + "\n");
     }
 
     public static void getListOfHelpCommands() {
