@@ -3,7 +3,7 @@ package main.java;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public abstract class Equipments implements Equip {
+public abstract class Equipment implements Equip {
     protected static int count; // счетчик, пока непонятно для чего
 
     protected int deviceId;

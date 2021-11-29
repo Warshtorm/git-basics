@@ -1,9 +1,9 @@
 package main.java.firehoses;
 
-public class Hose77 extends Firehoses {
+public class Hose77 extends Firehose {
     public Hose77() {
         count++;
-        deviceId += Firehoses.count;
+        deviceId += Firehose.count;
         deviceNumber = 0;
         deviceInventoryNumber = "1222";
         deviceName = HOSE_77_TEXT;

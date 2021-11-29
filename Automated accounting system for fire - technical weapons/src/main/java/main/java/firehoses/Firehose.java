@@ -1,10 +1,10 @@
 package main.java.firehoses;
 
-import main.java.Equipments;
+import main.java.Equipment;
 import java.time.LocalDate;
 
 // TODO доработать поля и методы
-public abstract class Firehoses extends Equipments {
+public  class Firehose extends Equipment {
 
     public final static String HOSE_51_TEXT = "Рукав напорный ДУ:51";
     public final static String HOSE_66_TEXT = "Рукав напорный ДУ:66";
@@ -107,6 +107,8 @@ public abstract class Firehoses extends Equipments {
     }
 
 
-
-
+    @Override
+    public String getDeviceInformation() {
+        return null;
+    }
 }

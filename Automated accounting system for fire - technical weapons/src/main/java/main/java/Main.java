@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Main {
     public static final String ADD = "add";
-    public static final String ADD_ALL = "addall";
     public static final String LIST = "list";
     public static final String HELP = "help";
     public static final String DEL = "del";

@@ -1,6 +1,6 @@
 package main.java.firebarrels;
 
-public class Sprk8 extends Firebarrels {
+public class Sprk8 extends Firebarrel {
 
     public Sprk8(int deviceNumber){
     this();
@@ -9,7 +9,7 @@ public class Sprk8 extends Firebarrels {
 
     public Sprk8(){
         count++;
-        deviceId += Firebarrels.count;
+        deviceId += Firebarrel.count;
         deviceNumber = 0;
         deviceInventoryNumber = "1222";
         deviceName = SPRK_8_TEXT;

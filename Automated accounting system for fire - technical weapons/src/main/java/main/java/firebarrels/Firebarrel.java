@@ -1,9 +1,9 @@
 package main.java.firebarrels;
-import main.java.Equipments;
+import main.java.Equipment;
 
 import java.time.LocalDate;
 
-public abstract class Firebarrels extends Equipments{
+public class Firebarrel extends Equipment {
 
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
@@ -107,9 +107,10 @@ public abstract class Firebarrels extends Equipments{
     }
 
 
-
-
-
+    @Override
+    public String getDeviceInformation() {
+        return null;
+    }
 }
 
 
