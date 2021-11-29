@@ -1,7 +1,6 @@
 package main.java;
 
 import main.java.factory.Conveyor;
-import main.java.firebarrels.EnumBarrel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +14,10 @@ public class Storage {
     private static Equipment equip;
 
     public static void add(String input) throws ArrayIndexOutOfBoundsException {
-        System.out.println(ENTER_DEVICE_MESSAGE);
-        int inputNumbers = scanner.nextInt();
 
-        if (EnumBarrel.isMatch(input)) {
+        if (EnumValue.isMatch(input)) {
+            System.out.println(ENTER_DEVICE_MESSAGE);
+            int inputNumbers = scanner.nextInt();
             equip = Conveyor.getInstance().create(input);
             equip.setDeviceNumber(inputNumbers);
             storageList.add(equip);
@@ -29,16 +28,17 @@ public class Storage {
     // TODO провести рефакторинг метода
     public static void add(String input, int count) throws IllegalArgumentException {
 
-        System.out.println(ENTER_DEVICES_MESSAGE + count);
-        String inputNumbers = scanner.nextLine();
-        String[] element = inputNumbers.split("\\s+");
+        if (EnumValue.isMatch(input)) {
+            System.out.println(ENTER_DEVICES_MESSAGE + count);
+            String inputNumbers = scanner.nextLine();
+            String[] element = inputNumbers.split("\\s+");
 
-        if (EnumBarrel.isMatch(input) && count == element.length) {
-
-            for (int i = 0; i < count; i++) {
-                equip = Conveyor.getInstance().create(input);
-                equip.setDeviceNumber(Integer.parseInt(element[i]));
-                storageList.add(equip);
+            if (count == element.length) {
+                for (int i = 0; i < count; i++) {
+                    equip = Conveyor.getInstance().create(input);
+                    equip.setDeviceNumber(Integer.parseInt(element[i]));
+                    storageList.add(equip);
+                }
             }
         } else throw new IllegalArgumentException();
     }

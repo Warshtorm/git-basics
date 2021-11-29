@@ -22,14 +22,8 @@ public class Conveyor implements Factory {
     //TODO что с эксепшеном?
     @Override
     public Equipment create(String input) throws IllegalArgumentException{
-        /*return switch (device) {
-            case "sprk8" -> new Sprk8();
-            case "sprk12" -> new Sprk12();
-            case "sprk19" -> new Sprk19();
-            case "sprk22" -> new Sprk22();
-            default -> throw new IllegalArgumentException();
-        };*/
-        Equipment equipment = switch (input) {
+
+        return switch (input) {
             case "sprk8" -> new Sprk8();
             case "sprk12" -> new Sprk12();
             case "sprk19" -> new Sprk19();
@@ -40,6 +34,6 @@ public class Conveyor implements Factory {
             case "du150" -> new Hose150();
             default -> throw new IllegalArgumentException();
         };
-        return equipment;
+
     }
 }

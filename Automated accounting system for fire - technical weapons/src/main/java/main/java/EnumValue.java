@@ -1,6 +1,6 @@
-package main.java.firebarrels;
+package main.java;
 
-public enum EnumBarrel{
+public enum EnumValue {
     SPRK8("sprk8"),
     SPRK12("sprk12"),
     SPRK19("sprk19"),
@@ -12,13 +12,13 @@ public enum EnumBarrel{
 
     private String translater;
 
-    EnumBarrel(String translater) {
+    EnumValue(String translater) {
         this.translater = translater;
     }
 
     public static boolean isMatch(String str){
-        for (int i = 0; i < EnumBarrel.values().length; i++ ){
-            if (str.equals(EnumBarrel.values()[i].translater)){
+        for (int i = 0; i < EnumValue.values().length; i++ ){
+            if (str.equals(EnumValue.values()[i].translater)){
                 return true;
             }
         }
