@@ -1,6 +1,6 @@
 package main.java;
 
-public enum EnumValue {
+public enum EnumDevices {
     SPRK8("sprk8"),
     SPRK12("sprk12"),
     SPRK19("sprk19"),
@@ -12,13 +12,13 @@ public enum EnumValue {
 
     private String translater;
 
-    EnumValue(String translater) {
+    EnumDevices(String translater) {
         this.translater = translater;
     }
 
     public static boolean isMatch(String str){
-        for (int i = 0; i < EnumValue.values().length; i++ ){
-            if (str.equals(EnumValue.values()[i].translater)){
+        for (int i = 0; i < EnumDevices.values().length; i++ ){
+            if (str.equals(EnumDevices.values()[i].translater)){
                 return true;
             }
         }

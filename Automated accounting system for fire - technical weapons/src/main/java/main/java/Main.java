@@ -43,13 +43,13 @@ public class Main {
                     scaner.close();
                     break;
                 } else {
-                    System.out.println("команда " + "\"" + tokens[0] + "\"" + " отсутствует ...\n");
+                    System.out.println("Команда " + "\"" + tokens[0] + "\"" + " введена не корректно или отсутствует ...\n");
                     getListOfHelpCommands();
                 }
             } catch (ArrayIndexOutOfBoundsException exception) {
                 System.out.println("Input Error!");
             }catch (IllegalArgumentException exception){
-                System.out.println("Ошибка ввода аргумента!...");
+                System.out.println("Ошибка ввода аргумента");
             }
 
         }
@@ -67,8 +67,9 @@ public class Main {
     public static void getListOfHelpCommands() {
         System.out.println("Список команд: " +
                 "\nadd \"название устройства\" - добавить устройство, " +
-                "\nlist - список устройств, rm - удалить, " +
-                "\ninfo - информация об устройстве, exit - выход из программы...");
+                "\nadd \"название устройства\"  \"колличество\" - добавить несколько устройств, " +
+                "\nlist - список устройств, \ndelete - удалить, " +
+                "\ninfo - информация об устройстве, \nexit или \"0\" - выход из программы...");
     }
 
 
