@@ -1,4 +1,6 @@
 package main.java.firebarrels;
+import lombok.Getter;
+import lombok.Setter;
 import main.java.Equipment;
 
 import java.time.LocalDate;
@@ -15,6 +17,7 @@ public class Firebarrel extends Equipment {
     public final String SPRK_DEFAULT_TU_TEXT = "ТУ 4854-032-00139181-2011";
     public final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
     protected final int SPRK_CURTAIN_DIAMETER_TEXT = 3;
+
 
     protected int waterJetrange; //
     protected int waterSprayJetRange;
@@ -49,62 +52,11 @@ public class Firebarrel extends Equipment {
         return "Firebarrels{" + "ID = " + deviceId + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
     }
 
-    public void setNextServiceDate(LocalDate nextServiceDate) {
-        this.nextServiceDate = nextServiceDate;
-    }
-
-    public void setCurrentServiceDate(LocalDate currentServiceDate) {
-        this.currentServiceDate = currentServiceDate;
-    }
-
-    public void setInventoryNumber(String inventoryNumber) {
-        this.deviceInventoryNumber = inventoryNumber;
-    }
-
-
-    public void setDateOfManufacture(LocalDate dateOfManufacture) {
-        this.dateOfManufacture = dateOfManufacture;
-    }
-
-    public void setPreviousServiceDate(LocalDate previousServiceDate) {
-        this.previousServiceDate = previousServiceDate;
-    }
 
     public static int getFirebarrelsCount(){
         return count;
     }
 
-    public String getWorkingPressure() {
-        return deviceWorkingPressure;
-    }
-
-    public String getWaterConsumption() {
-        return deviceWaterConsumption;
-    }
-
-    public int getWaterJetrange() {
-        return waterJetrange;
-    }
-
-    public int getWaterSprayJetRange() {
-        return waterSprayJetRange;
-    }
-
-    public int getFoamJetRange() {
-        return foamJetRange;
-    }
-
-    public double getFoamMultiplicity() {
-        return foamMultiplicity;
-    }
-
-    public String getCurtainAngle() {
-        return curtainAngle;
-    }
-
-    public int getCurtainDiameter() {
-        return curtainDiameter;
-    }
 
 
     @Override

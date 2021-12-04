@@ -1,61 +1,43 @@
 package main.java;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public abstract class Equipment implements Equip {
     protected static int count; // счетчик, пока непонятно для чего
-
-    protected int deviceId;
-    protected int deviceNumber;
-    protected String deviceInventoryNumber;
-    protected String deviceName;
-    protected String deviceTU;
-    protected String deviceManufacturer;
-    protected String deviceType;
-    protected String deviceClass;
-    protected String deviceWorkingPressure; //mPa
-    protected String deviceWaterConsumption;
-
-    protected double deviceWeight;
-    protected String deviceSizes;
-    protected int deviceLength;
-
-    protected LocalDate dateOfManufacture;
-    protected LocalDate previousServiceDate;
-    protected LocalDate currentServiceDate;
-    protected LocalDate nextServiceDate;
     protected DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
-    public int getId() {
-        return deviceId;
-    }
+    @Setter @Getter protected int deviceId;
+    @Setter @Getter protected int deviceNumber;
+    @Setter @Getter protected String deviceInventoryNumber;
+    @Setter @Getter protected String deviceName;
+    @Setter @Getter protected String deviceTU;
+    @Setter @Getter protected String deviceManufacturer;
+    @Setter @Getter protected String deviceType;
+    @Setter @Getter protected String deviceClass;
 
-    public int getDeviceNumber() {
-        return deviceNumber;
-    }
+    @Setter @Getter protected String deviceWorkingPressure; //mPa
+    @Setter @Getter protected String deviceWaterConsumption;
 
-    public String getInventoryNumber() {
-        return deviceInventoryNumber;
-    }
+    @Setter @Getter protected double deviceWeight;
+    @Setter @Getter protected String deviceSizes;
+    @Setter @Getter protected int deviceLength;
 
-    public String getDeviceName() {
-        return deviceName;
-    }
+    protected LocalDate dateOfManufacture;
+    @Setter @Getter protected LocalDate previousServiceDate;
+    protected LocalDate currentServiceDate;
+    protected LocalDate nextServiceDate;
 
-    public String getTypeDevice() {
-        return deviceType;
-    }
+
 
     public LocalDate getDateOfManufacture() {
         if (dateOfManufacture == null){
             dateOfManufacture = LocalDate.now();
         }
         return dateOfManufacture;
-    }
-
-    public LocalDate getPreviousServiceDate() {
-        return previousServiceDate;
     }
 
     public LocalDate getCurrentServiceDate() {
@@ -73,31 +55,5 @@ public abstract class Equipment implements Equip {
         nextServiceDate = currentServiceDate.plusMonths(SERVICE_PERIOD_IN_MONTHS);
         return nextServiceDate;
     }
-
-    public String getDeviceManufacturer() {
-        return deviceManufacturer;
-    }
-
-    public String getDeviceTU() {
-        return deviceTU += " TU" ;
-    }
-
-    public double getDeviceWeight() {
-        return deviceWeight;
-    }
-
-    public String getDeviceSizes() {
-        return deviceSizes;
-    }
-
-    public void setDeviceNumber(int deviceNumber){
-        this.deviceNumber = deviceNumber;
-    }
-
-    public void setDeviceTU(String deviceTU) {
-        this.deviceTU = deviceTU;
-    }
-
-
 
 }

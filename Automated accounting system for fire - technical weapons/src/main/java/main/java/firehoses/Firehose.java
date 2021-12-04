@@ -1,7 +1,6 @@
 package main.java.firehoses;
 
 import main.java.Equipment;
-import java.time.LocalDate;
 
 // TODO доработать поля и методы
 public  class Firehose extends Equipment {
@@ -39,71 +38,6 @@ public  class Firehose extends Equipment {
     @Override
     public String toString(){
         return "Firehoses{" + "ID = " + deviceId + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
-    }
-
-    public void setNextServiceDate(LocalDate nextServiceDate) {
-        this.nextServiceDate = nextServiceDate;
-    }
-
-    public void setCurrentServiceDate(LocalDate currentServiceDate) {
-        this.currentServiceDate = currentServiceDate;
-    }
-
-    public void setDeviceNumber(int deviceNumber){
-        this.deviceNumber = deviceNumber;
-    }
-
-    public void setInventoryNumber(String inventoryNumber) {
-        this.deviceInventoryNumber = inventoryNumber;
-    }
-
-    public void setDeviceTU(String deviceTU) {
-        this.deviceTU = deviceTU;
-    }
-
-    public void setDateOfManufacture(LocalDate dateOfManufacture) {
-        this.dateOfManufacture = dateOfManufacture;
-    }
-
-    public void setPreviousServiceDate(LocalDate previousServiceDate) {
-        this.previousServiceDate = previousServiceDate;
-    }
-
-    public String getDeviceName() {
-        return deviceName;
-    }
-
-    public static int getFireHosesCount(){
-        return count;
-    }
-
-    public int getId() {
-        return deviceId;
-    }
-
-    public int getDeviceNumber() {
-        return deviceNumber;
-    }
-
-    public String getInventoryNumber() {
-        return deviceInventoryNumber;
-    }
-
-
-    public String getTypeDevice() {
-        return deviceType;
-    }
-
-    public String getManufacturer() {
-        return deviceManufacturer;
-    }
-
-    public String getWorkingPressure() {
-        return deviceWorkingPressure;
-    }
-
-    public String getWaterConsumption() {
-        return deviceWaterConsumption;
     }
 
 
