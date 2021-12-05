@@ -1,6 +1,6 @@
 package main.java.factory;
 
-import main.java.Equip;
+import main.java.equipments.Equip;
 
 @FunctionalInterface
 public interface Factory {

@@ -1,6 +1,6 @@
 package main.java.firehoses;
 
-import main.java.Equipment;
+import main.java.equipments.Equipment;
 
 // TODO доработать поля и методы
 public  class Firehose extends Equipment {

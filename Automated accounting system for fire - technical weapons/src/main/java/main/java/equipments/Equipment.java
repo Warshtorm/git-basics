@@ -1,7 +1,8 @@
-package main.java;
+package main.java.equipments;
 
 import lombok.Getter;
 import lombok.Setter;
+import main.java.equipments.Equip;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

@@ -1,9 +1,5 @@
 package main.java.firebarrels;
-import lombok.Getter;
-import lombok.Setter;
-import main.java.Equipment;
-
-import java.time.LocalDate;
+import main.java.equipments.Equipment;
 
 public class Firebarrel extends Equipment {
 

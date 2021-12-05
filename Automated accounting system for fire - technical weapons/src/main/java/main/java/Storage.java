@@ -1,5 +1,7 @@
 package main.java;
 
+import main.java.equipments.EnumDevices;
+import main.java.equipments.Equipment;
 import main.java.factory.Conveyor;
 import java.util.*;
 
@@ -14,34 +16,45 @@ public class Storage {
 
         if (EnumDevices.isMatch(device)) {
             System.out.println(ENTER_DEVICE_MESSAGE);
-            String inputNumbers = scanner.nextLine();
-            String[] element = inputNumbers.split("\\s+");
+            String inputNumber = scanner.nextLine();
+            String[] element = getElementFrom(device);
+
             if (element.length == 1) {
                 equip = Conveyor.getInstance().create(device);
-                equip.setDeviceNumber(Integer.parseInt(inputNumbers));
+                equip.setDeviceNumber(Integer.parseInt(inputNumber));
                 storageList.add(equip);
             }else {
-                System.out.println("Ошибка ввода: Введен больше чем один номер!!!");
+                System.out.println("Ошибка ввода: Введен больше чем один номер устройства!!!");
             }
         } else throw new IllegalArgumentException();
     }
 
-    // TODO провести рефакторинг метода
-    public static void add(String device, int count) throws IllegalArgumentException {
-         if (EnumDevices.isMatch(device)) {
-            System.out.println(ENTER_DEVICES_MESSAGE + count);
-            String inputNumbers = scanner.nextLine();
-            String[] element = inputNumbers.split("\\s+");
 
-            if (count == element.length) {
-                for (int i = 0; i < count; i++) {
+    public static void add(String device, int numbers) throws IllegalArgumentException {
+
+        if (EnumDevices.isMatch(device)) {
+            System.out.println(ENTER_DEVICES_MESSAGE + numbers);
+            String[] element = getElementFrom(device, numbers);
+
+            if (numbers == element.length) {
+                for (int i = 0; i < numbers; i++) {
                     equip = Conveyor.getInstance().create(device);
                     equip.setDeviceNumber(Integer.parseInt(element[i]));
                     storageList.add(equip);
                 }
-            } else System.out.println("Ошибка ввода : Запрос - " + count + ",введено - " + element.length);
+            } else System.out.println("Ошибка ввода : Запрос - " + numbers + ",введено - " + element.length);
 
         } else throw new IllegalArgumentException();
+    }
+
+    public static String[] getElementFrom(String str, int num){
+        Scanner scanner = new Scanner(System.in);
+        String inputNumbers = scanner.nextLine();
+        return inputNumbers.split("\\s+");
+    }
+
+    public static String[] getElementFrom(String str){
+        return str.split("\\s+");
     }
 
     public static ArrayList<Equipment> getStorageList() {

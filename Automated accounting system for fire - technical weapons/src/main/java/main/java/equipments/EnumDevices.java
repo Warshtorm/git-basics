@@ -1,4 +1,4 @@
-package main.java;
+package main.java.equipments;
 
 public enum EnumDevices {
     SPRK8("sprk8"),

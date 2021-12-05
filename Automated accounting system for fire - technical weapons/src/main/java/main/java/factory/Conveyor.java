@@ -1,6 +1,6 @@
 package main.java.factory;
 
-import main.java.Equipment;
+import main.java.equipments.Equipment;
 import main.java.firebarrels.*;
 import main.java.firehoses.Hose150;
 import main.java.firehoses.Hose51;

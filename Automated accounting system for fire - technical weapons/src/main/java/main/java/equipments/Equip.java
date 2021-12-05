@@ -1,4 +1,4 @@
-package main.java;
+package main.java.equipments;
 
 @FunctionalInterface
 public interface Equip {
