@@ -20,6 +20,9 @@ public  class Firehose extends Equipment {
     protected String speedOfTheWaterMovementOfHose;
 
 
+    public String getDeviceInformation() {
+        return null;
+    }
 
     public String allInformationAboutTheDevice() {
         return NUMBER_TEXT + ": ".concat(Integer.toString(deviceNumber))
@@ -41,8 +44,5 @@ public  class Firehose extends Equipment {
     }
 
 
-    @Override
-    public String getDeviceInformation() {
-        return null;
-    }
+
 }

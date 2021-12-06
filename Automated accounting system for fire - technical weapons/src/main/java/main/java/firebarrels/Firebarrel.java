@@ -1,4 +1,5 @@
 package main.java.firebarrels;
+
 import main.java.equipments.Equipment;
 
 public class Firebarrel extends Equipment {
@@ -22,6 +23,20 @@ public class Firebarrel extends Equipment {
     protected String curtainAngle;
     protected int curtainDiameter;
 
+    @Override
+    public String toString() {
+        return "Firebarrels{" + "ID = " + deviceId + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
+    }
+
+    public static int getFirebarrelsCount() {
+        return count;
+    }
+
+    public void getDeviceInformation() {
+
+    }
+
+    @Override
     public String allInformationAboutTheDevice() {
         return NUMBER_TEXT + ": ".concat(Integer.toString(deviceNumber))
                 .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(deviceInventoryNumber)
@@ -41,23 +56,6 @@ public class Firebarrel extends Equipment {
                 .concat("\n" + FOAM_MULTIPLICITY_TEXT + ": ").concat(String.valueOf(foamMultiplicity))
                 .concat("\n" + DEVICE_WEIGHT_TEXT + ": ").concat(String.valueOf(deviceWeight))
                 .concat("\n" + DEVICE_SIZE_TEXT + ": ").concat(deviceSizes);
-    }
-
-    @Override
-    public String toString(){
-        return "Firebarrels{" + "ID = " + deviceId + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
-    }
-
-
-    public static int getFirebarrelsCount(){
-        return count;
-    }
-
-
-
-    @Override
-    public String getDeviceInformation() {
-        return null;
     }
 }
 

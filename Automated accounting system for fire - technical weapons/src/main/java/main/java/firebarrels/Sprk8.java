@@ -33,13 +33,14 @@ public class Sprk8 extends Firebarrel {
         dateOfManufacture = getCurrentServiceDate();
         currentServiceDate = getCurrentServiceDate();
         previousServiceDate = getPreviousServiceDate();
+
     }
 
     @Override
-    public String getDeviceInformation() {
-    return deviceName + " : Ствол пожарный, ручной, комбинированный," +
+    public void getDeviceInformation() {
+        System.out.println(deviceName + " : Ствол пожарный, ручной, комбинированный," +
             "\n8 - максимальный расход воды/расствора л.с, " +
-            "\nБ - тип присоединения, по рукавную головку ГР-50";
+            "\nБ - тип присоединения, по рукавную головку ГР-50");
     }
 
 

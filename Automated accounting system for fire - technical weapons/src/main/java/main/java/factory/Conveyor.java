@@ -10,14 +10,15 @@ import main.java.firehoses.Hose77;
 
 public class Conveyor implements Factory {
 
-    private static Conveyor instance;
+    //TODO нужен ли singletone?
+    /*private static Conveyor instance;
 
     public static Conveyor getInstance() {
         if (instance == null) {
             instance = new Conveyor();
         }
         return instance;
-    }
+    }*/
 
     //TODO что с эксепшеном?
     @Override

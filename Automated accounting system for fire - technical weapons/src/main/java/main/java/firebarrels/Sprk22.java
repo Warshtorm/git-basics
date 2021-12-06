@@ -37,12 +37,12 @@ public class Sprk22 extends Firebarrel {
 
 
     @Override
-    public String getDeviceInformation() {
-        return deviceName + " : Ствол пожарный, ручной, комбинированный," +
+    public void getDeviceInformation() {
+        System.out.println(deviceName + " : Ствол пожарный, ручной, комбинированный," +
                 "\n22 - максимальный расход воды/расствора л.с, " +
                 "\nА - тип присоединения, по рукавную головку ГР-70" +
                 "\nА - автоматическое изменение диаметра впрыска и" +
-                "\n\tподдержание постоянного давления на впрыске ";
+                "\n\tподдержание постоянного давления на впрыске ");
     }
 
 

@@ -4,18 +4,21 @@ import java.util.*;
 
 public class Main {
     public static final String ADD = "add";
+    public static final String DELETE = "del";
     public static final String LIST = "list";
     public static final String HELP = "help";
     public static final String DEL = "del";
     public static final String INFO = "info";
     public static final String EXIT = "exit";
-    public static final String EXIT_PROGRAMM_MESSAGE = "\"Завершение работы программы..........\"";
+    public static final String IN_DEVELOPMENT = "функционал находится в разработке...\n";
+    public static final String ARGUMENT_INPUT_ERROR = "Ошибка ввода аргумента\n";
+    public static final String EXIT_PROGRAMM_MESSAGE = "\"Завершение работы программы...\"";
 
     public static void main(String[] args) {
         Scanner scaner = new Scanner(System.in);
 
         while (true) {
-            System.out.print("Enter command: ");
+            System.out.print("\nEnter command: ");
             try {
                 String command = scaner.nextLine();
                 String[] tokens = command.split("\\s+", 3);
@@ -27,16 +30,17 @@ public class Main {
                     Storage.add(tokens[1], Integer.parseInt(tokens[2]));
 
                 } else if (tokens[0].equals(LIST)) {
-                    getListOfDevices();
+                    Storage.getListOfDevices();
+
+                } else if (tokens[0].equals(DELETE)) {
+                    Storage.delete(Integer.parseInt(tokens[1]));
 
                 } else if (tokens[0].equals(HELP)) {
                     getListOfHelpCommands();
 
-                } else if (tokens[0].equals(DEL)) {
-                    System.out.println("not work !");
-
                 } else if (tokens[0].equals(INFO)) {
-                    System.out.println("not work");
+                    String showInfo = Storage.deviceInfo(tokens[1]);
+                    System.out.println(showInfo);
 
                 } else if (tokens[0].equals(EXIT) || tokens[0].equals("0")) {
                     System.out.println(EXIT_PROGRAMM_MESSAGE);
@@ -46,29 +50,20 @@ public class Main {
                     System.out.println("Команда " + "\"" + tokens[0] + "\"" + " введена не корректно или отсутствует ...\n");
                     getListOfHelpCommands();
                 }
-            } catch (ArrayIndexOutOfBoundsException exception) {
-                System.out.println("Input Error!");
-            }catch (IllegalArgumentException exception){
-                System.out.println("Ошибка ввода аргумента");
+            } catch (IllegalArgumentException exception) {
+                System.out.println(ARGUMENT_INPUT_ERROR);
             }
 
         }
 
     }
 
-    //TODO реализовать список устройств через MAP
-    public static void getListOfDevices() {
-        System.out.println("\nСписок устройств: \n" + Storage.getStorageList().toString()
-                .replaceAll("}, ","\n").replaceAll("\\[", "")
-                .replaceAll("\\]",""));
-        System.out.println("Колличество: " + Storage.getStorageList().size() + "\n");
-    }
-
     public static void getListOfHelpCommands() {
         System.out.println("Список команд: " +
                 "\nadd \"название устройства\" - добавить устройство, " +
                 "\nadd \"название устройства\"  \"колличество\" - добавить несколько устройств, " +
-                "\nlist - список устройств, \ndelete - удалить, " +
+                "\ndel \"номер устройства\" - удалить устройство, " +
+                "\nlist - список устройств," +
                 "\ninfo - информация об устройстве, \nexit или \"0\" - выход из программы...");
     }
 

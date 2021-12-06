@@ -36,10 +36,10 @@ public class Sprk12 extends Firebarrel {
     }
 
     @Override
-    public String getDeviceInformation() {
-        return deviceName + " : Ствол пожарный, ручной, комбинированный," +
+    public void getDeviceInformation() {
+        System.out.println(deviceName + " : Ствол пожарный, ручной, комбинированный," +
                 "\n12 - максимальный расход воды/расствора л.с, " +
-                "\nА - тип присоединения, по рукавную головку ГР-80";
+                "\nА - тип присоединения, по рукавную головку ГР-80");
     }
 
 
