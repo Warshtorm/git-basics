@@ -11,14 +11,14 @@ import main.java.firehoses.Hose77;
 public class Conveyor implements Factory {
 
     //TODO нужен ли singletone?
-    /*private static Conveyor instance;
+    private static Conveyor instance;
 
     public static Conveyor getInstance() {
         if (instance == null) {
             instance = new Conveyor();
         }
         return instance;
-    }*/
+    }
 
     //TODO что с эксепшеном?
     @Override

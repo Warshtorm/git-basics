@@ -82,8 +82,7 @@ public class Storage {
 
 
     public static Equipment create(String device) {
-        Factory factory = new Conveyor();
-        return factory.create(device);
+        return Conveyor.getInstance().create(device);
     }
 
 
