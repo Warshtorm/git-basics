@@ -1,29 +1,29 @@
-package main.java.firehoses;
+package main.java.equipments.firehoses;
 
 public class Hose66 extends Firehose {
     public Hose66() {
         count++;
-        deviceId += Firehose.count;
-        deviceNumber = 0;
-        deviceInventoryNumber = "1222";
-        deviceName = HOSE_66_TEXT;
-        deviceTU = "none";
-        deviceType = "напорный";
-        deviceManufacturer = "none";
+        id += Firehose.count;
+        number = 0;
+        inventoryNumber = "1222";
+        name = HOSE_66_TEXT;
+        tu = "none";
+        type = "напорный";
+        manufacturer = "none";
 
         waterSkipping = 17.0;
-        deviceWaterConsumption = "3.42";
+        waterConsumption = "3.42";
         volume = 70;
         resistanceOfOneHose = 0.035;
         lossOfPressureInOneHose = 9.9;
-        deviceWorkingPressure = "1,6";
+        workingPressure = "1,6";
         testPressure = 20;
         destructivePressure = 2.0;
         speedOfTheWaterMovementOfHose = "1 - 3";
 
 
-        deviceWeight = 11;
-        deviceLength = 20;
+        weight = 11;
+        length = 20;
 
         dateOfManufacture = getDateOfManufacture();
         currentServiceDate = getCurrentServiceDate();
@@ -31,9 +31,9 @@ public class Hose66 extends Firehose {
     }
 
     @Override
-    public String getDeviceInformation() {
-        return "Рукав напорный \"\"Стандарт\"\", \n66 мм - предназначены для передвижной " +
+    public void getDeviceInformation() {
+        System.out.println("Рукав напорный \"\"Стандарт\"\", \n66 мм - предназначены для передвижной " +
                 "\nпожарной техники с целью подачи воды и водных растворов пенопреобразователей" +
-                "\n на расстояние под давлением 1,6 мПа";
+                "\n на расстояние под давлением 1,6 мПа");
     }
 }

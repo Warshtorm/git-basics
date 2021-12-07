@@ -24,6 +24,7 @@ public interface Equip {
      String NONE_TEXT = "none";
 
 
-     String allInformationAboutTheDevice();
+     void allInformationAboutTheDevice();
+     void getDeviceInformation();
 
 }

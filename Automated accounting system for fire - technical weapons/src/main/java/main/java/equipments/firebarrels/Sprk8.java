@@ -1,25 +1,25 @@
-package main.java.firebarrels;
+package main.java.equipments.firebarrels;
 
 public class Sprk8 extends Firebarrel {
 
     public Sprk8(int deviceNumber){
     this();
-    this.deviceNumber = deviceNumber;
+    this.number = deviceNumber;
     }
 
     public Sprk8(){
         count++;
-        deviceId += Firebarrel.count;
-        deviceNumber = 0;
-        deviceInventoryNumber = "1222";
-        deviceName = SPRK_8_TEXT;
-        deviceTU = SPRK_DEFAULT_TU_TEXT;
-        deviceType = BARREL_DEVICE_TYPE_TEXT;
-        deviceClass = "Б";
-        deviceManufacturer = SPRK_MANUFACTURER_TEXT;
+        id += Firebarrel.count;
+        number = 0;
+        inventoryNumber = "1222";
+        name = SPRK_8_TEXT;
+        tu = SPRK_DEFAULT_TU_TEXT;
+        type = BARREL_DEVICE_TYPE_TEXT;
+        clas = "Б";
+        manufacturer = SPRK_MANUFACTURER_TEXT;
 
-        deviceWorkingPressure = "0.7";
-        deviceWaterConsumption = "2,4,6,8";
+        workingPressure = "0.7";
+        waterConsumption = "2,4,6,8";
         waterJetrange = 40;
         waterSprayJetRange = 15;
         foamJetRange = 18;
@@ -27,8 +27,8 @@ public class Sprk8 extends Firebarrel {
         curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
         curtainDiameter = SPRK_CURTAIN_DIAMETER_TEXT;
 
-        deviceWeight = 2.5;
-        deviceSizes = "290*130*280";
+        weight = 2.5;
+        sizes = "290*130*280";
 
         dateOfManufacture = getCurrentServiceDate();
         currentServiceDate = getCurrentServiceDate();
@@ -38,7 +38,7 @@ public class Sprk8 extends Firebarrel {
 
     @Override
     public void getDeviceInformation() {
-        System.out.println(deviceName + " : Ствол пожарный, ручной, комбинированный," +
+        System.out.println(name + " : Ствол пожарный, ручной, комбинированный," +
             "\n8 - максимальный расход воды/расствора л.с, " +
             "\nБ - тип присоединения, по рукавную головку ГР-50");
     }

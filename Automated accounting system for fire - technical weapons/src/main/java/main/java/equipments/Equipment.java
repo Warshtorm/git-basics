@@ -11,21 +11,21 @@ public abstract class Equipment implements Equip {
     protected static int count; // счетчик, пока непонятно для чего
     protected DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
-    @Setter @Getter protected int deviceId;
-    @Setter @Getter protected int deviceNumber;
-    @Setter @Getter protected String deviceInventoryNumber;
-    @Setter @Getter protected String deviceName;
-    @Setter @Getter protected String deviceTU;
-    @Setter @Getter protected String deviceManufacturer;
-    @Setter @Getter protected String deviceType;
-    @Setter @Getter protected String deviceClass;
+    @Setter @Getter protected int id;
+    @Setter @Getter protected int number;
+    @Setter @Getter protected String inventoryNumber;
+    @Setter @Getter protected String name;
+    @Setter @Getter protected String tu;
+    @Setter @Getter protected String manufacturer;
+    @Setter @Getter protected String type;
+    @Setter @Getter protected String clas;
 
-    @Setter @Getter protected String deviceWorkingPressure; //mPa
-    @Setter @Getter protected String deviceWaterConsumption;
+    @Setter @Getter protected String workingPressure; //mPa
+    @Setter @Getter protected String waterConsumption;
 
-    @Setter @Getter protected double deviceWeight;
-    @Setter @Getter protected String deviceSizes;
-    @Setter @Getter protected int deviceLength;
+    @Setter @Getter protected double weight;
+    @Setter @Getter protected String sizes;
+    @Setter @Getter protected int length;
 
     protected LocalDate dateOfManufacture;
     @Setter @Getter protected LocalDate previousServiceDate;

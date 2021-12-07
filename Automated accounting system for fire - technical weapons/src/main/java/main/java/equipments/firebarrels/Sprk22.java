@@ -1,25 +1,25 @@
-package main.java.firebarrels;
+package main.java.equipments.firebarrels;
 
 public class Sprk22 extends Firebarrel {
 
     public Sprk22(int deviceNumber) {
         this();
-        this.deviceNumber = deviceNumber;
+        this.number = deviceNumber;
     }
 
     public Sprk22() {
         count++;
-        deviceId += Firebarrel.count;
-        deviceNumber = 0;
-        deviceInventoryNumber = "12000";
-        deviceName = SPRK_22_TEXT;
-        deviceTU = SPRK_DEFAULT_TU_TEXT;
-        deviceType = BARREL_DEVICE_TYPE_TEXT;
-        deviceClass = "Б";
-        deviceManufacturer = SPRK_MANUFACTURER_TEXT;
+        id += Firebarrel.count;
+        number = 0;
+        inventoryNumber = "12000";
+        name = SPRK_22_TEXT;
+        tu = SPRK_DEFAULT_TU_TEXT;
+        type = BARREL_DEVICE_TYPE_TEXT;
+        clas = "Б";
+        manufacturer = SPRK_MANUFACTURER_TEXT;
 
-        deviceWorkingPressure = "0.7";
-        deviceWaterConsumption = "3.0-22";
+        workingPressure = "0.7";
+        waterConsumption = "3.0-22";
         waterJetrange = 50;
         waterSprayJetRange = 20;
         foamJetRange = 26;
@@ -27,8 +27,8 @@ public class Sprk22 extends Firebarrel {
         curtainAngle = SPRK_CURTAIN_ANGLE_TEXT;
         curtainDiameter = SPRK_CURTAIN_DIAMETER_TEXT;
 
-        deviceWeight = 3.5;
-        deviceSizes = "320*130*290";
+        weight = 3.5;
+        sizes = "320*130*290";
 
         dateOfManufacture = getCurrentServiceDate();
         currentServiceDate = getCurrentServiceDate();
@@ -38,7 +38,7 @@ public class Sprk22 extends Firebarrel {
 
     @Override
     public void getDeviceInformation() {
-        System.out.println(deviceName + " : Ствол пожарный, ручной, комбинированный," +
+        System.out.println(name + " : Ствол пожарный, ручной, комбинированный," +
                 "\n22 - максимальный расход воды/расствора л.с, " +
                 "\nА - тип присоединения, по рукавную головку ГР-70" +
                 "\nА - автоматическое изменение диаметра впрыска и" +

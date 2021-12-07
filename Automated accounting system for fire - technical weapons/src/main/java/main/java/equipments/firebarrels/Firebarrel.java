@@ -1,4 +1,4 @@
-package main.java.firebarrels;
+package main.java.equipments.firebarrels;
 
 import main.java.equipments.Equipment;
 
@@ -25,37 +25,40 @@ public class Firebarrel extends Equipment {
 
     @Override
     public String toString() {
-        return "Firebarrels{" + "ID = " + deviceId + ", number = " + deviceNumber + ", Name = " + deviceName + '}';
+        return "Firebarrels{" + "ID = " + id + ", number = " + number + ", Name = " + name + '}';
     }
 
     public static int getFirebarrelsCount() {
         return count;
     }
 
-    public void getDeviceInformation() {
 
-    }
 
     @Override
-    public String allInformationAboutTheDevice() {
-        return NUMBER_TEXT + ": ".concat(Integer.toString(deviceNumber))
-                .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(deviceInventoryNumber)
-                .concat("\n" + DEVICE_NAME_TEXT + ": ").concat(deviceName)
-                .concat("\n" + MANUFACTURER_TEXT + ": ").concat(deviceManufacturer)
-                .concat("\n" + CLASS_DEVICE_TEXT + ": ").concat(deviceClass)
-                .concat("\n" + TYPE_DEVICE_TEXT + ": ").concat(deviceType)
-                .concat("\n" + deviceTU)
+    public void allInformationAboutTheDevice() {
+        System.out.println(NUMBER_TEXT + ": ".concat(Integer.toString(number))
+                .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(inventoryNumber)
+                .concat("\n" + DEVICE_NAME_TEXT + ": ").concat(name)
+                .concat("\n" + MANUFACTURER_TEXT + ": ").concat(manufacturer)
+                .concat("\n" + CLASS_DEVICE_TEXT + ": ").concat(clas)
+                .concat("\n" + TYPE_DEVICE_TEXT + ": ").concat(type)
+                .concat("\n" + tu)
                 .concat("\n" + DATE_OF_MANUFACTURE_TEXT + ": ").concat(String.valueOf(getDateOfManufacture()))
-                .concat("\n" + WORKING_PRESSURE_TEXT + ": ").concat(deviceWorkingPressure)
-                .concat("\n" + WATER_CONSUMPTION_TEXT + ": ").concat(deviceWaterConsumption)
+                .concat("\n" + WORKING_PRESSURE_TEXT + ": ").concat(workingPressure)
+                .concat("\n" + WATER_CONSUMPTION_TEXT + ": ").concat(waterConsumption)
                 .concat("\n" + CURTAIN_ANGLE_TEXT + ": ").concat(curtainAngle)
                 .concat("\n" + CURTAIN_DIAMETR_TEXT + ": ").concat(String.valueOf(curtainDiameter))
                 .concat("\n" + WATER_JETRANGE_TEXT + ": ").concat(String.valueOf(waterJetrange))
                 .concat("\n" + WATER_SPRAY_JET_RANGE_TEXT + ": ").concat(String.valueOf(waterSprayJetRange))
                 .concat("\n" + FOAM_JET_RANGE_TEXT + ": ").concat(String.valueOf(foamJetRange))
                 .concat("\n" + FOAM_MULTIPLICITY_TEXT + ": ").concat(String.valueOf(foamMultiplicity))
-                .concat("\n" + DEVICE_WEIGHT_TEXT + ": ").concat(String.valueOf(deviceWeight))
-                .concat("\n" + DEVICE_SIZE_TEXT + ": ").concat(deviceSizes);
+                .concat("\n" + DEVICE_WEIGHT_TEXT + ": ").concat(String.valueOf(weight))
+                .concat("\n" + DEVICE_SIZE_TEXT + ": ").concat(sizes));
+    }
+
+    @Override
+    public void getDeviceInformation() {
+
     }
 }
 

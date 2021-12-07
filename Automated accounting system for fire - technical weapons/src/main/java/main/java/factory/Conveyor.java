@@ -1,16 +1,15 @@
 package main.java.factory;
 
 import main.java.equipments.Equipment;
-import main.java.firebarrels.*;
-import main.java.firehoses.Hose150;
-import main.java.firehoses.Hose51;
-import main.java.firehoses.Hose66;
-import main.java.firehoses.Hose77;
+import main.java.equipments.firebarrels.*;
+import main.java.equipments.firehoses.Hose150;
+import main.java.equipments.firehoses.Hose51;
+import main.java.equipments.firehoses.Hose66;
+import main.java.equipments.firehoses.Hose77;
 
 
 public class Conveyor implements Factory {
 
-    //TODO нужен ли singletone?
     private static Conveyor instance;
 
     public static Conveyor getInstance() {

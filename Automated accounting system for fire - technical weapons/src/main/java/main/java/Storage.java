@@ -3,7 +3,6 @@ package main.java;
 import main.java.equipments.EnumDevices;
 import main.java.equipments.Equipment;
 import main.java.factory.Conveyor;
-import main.java.factory.Factory;
 
 import java.util.*;
 
@@ -11,25 +10,25 @@ public class Storage {
     public static final String ENTER_DEVICE_MESSAGE = "Введите номер устройства ";
     public static final String ENTER_DEVICES_MESSAGE = "Введите номера устройств через пробел, максимум: ";
     public static final String DEVICES_LIST_EMTY = "Список устройств пуст...\n";
-    public static final String NOT_FOUND = "Устройство не найдено...\n";
+    public static final String DEVICE_NOT_FOUND = "Устройство не найдено...\n";
     private static final ArrayList<Equipment> storageList = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
-    private static Equipment equip;
+    private static Equipment device;
 
 
     //TODO доработать метод getElementFrom(){};
-    public static void add(String device) throws IllegalArgumentException {
+    public static void add(String input) throws IllegalArgumentException {
 
-        if (EnumDevices.isMatch(device)) {
+        if (EnumDevices.isMatch(input)) {
             System.out.println(ENTER_DEVICE_MESSAGE);
             String inputNumber = scanner.nextLine();
-            String[] element = getElementFrom(device);
-
+            String[] element = getElementFrom(input);
 
             if (element.length == 1) {
-                equip = create(device);
-                equip.setDeviceNumber(Integer.parseInt(inputNumber));
-                storageList.add(equip);
+                device = createFrom(input);
+                device.setNumber(Integer.parseInt(inputNumber));
+                storageList.add(device);
+
             } else {
                 System.out.println("Ошибка ввода: Введен больше чем один номер устройства!!!");
             }
@@ -37,37 +36,41 @@ public class Storage {
     }
 
 
-    public static void add(String device, int numbers) throws IllegalArgumentException {
+    public static void add(String input, int inputNumbers) throws IllegalArgumentException {
 
-        if (EnumDevices.isMatch(device)) {
-            System.out.println(ENTER_DEVICES_MESSAGE + numbers);
-            String[] element = getElementFrom(device, numbers);
+        if (EnumDevices.isMatch(input)) {
+            System.out.println(ENTER_DEVICES_MESSAGE + inputNumbers);
+            String[] element = getElementFrom(input, inputNumbers);
 
-            if (numbers == element.length) {
-                for (int i = 0; i < numbers; i++) {
-                    equip = create(device);
-                    equip.setDeviceNumber(Integer.parseInt(element[i]));
-                    storageList.add(equip);
+            if (inputNumbers == element.length) {
+                for (int i = 0; i < inputNumbers; i++) {
+                    device = createFrom(input);
+                    device.setNumber(Integer.parseInt(element[i]));
+                    storageList.add(device);
                 }
-            } else System.out.println("Ошибка ввода : Запрос - " + numbers + ",введено - " + element.length);
+            } else System.out.println("Ошибка ввода : Запрос - " + inputNumbers + ",введено - " + element.length);
 
         } else throw new IllegalArgumentException();
     }
 
 
     public static void delete(int deviceId) {
-        storageList.removeIf(element -> element.getDeviceId() == deviceId);
+        storageList.removeIf(element -> element.getId() == deviceId);
     }
 
-    public static String deviceInfo(String deviceId) {
+
+    public static void deviceInfo(String deviceId) throws ArrayIndexOutOfBoundsException{
         if (deviceId.length() != 0) {
             for (Equipment element : storageList) {
-                if (element.getDeviceId() == Integer.parseInt(deviceId)) {
-                    return element.allInformationAboutTheDevice();
+                if (element.getId() == Integer.parseInt(deviceId)) {
+                     element.allInformationAboutTheDevice();
+                     element.getDeviceInformation();
+                }else {
+                    System.out.println(DEVICE_NOT_FOUND);
                 }
             }
-        }
-        return NOT_FOUND;
+        }else throw new ArrayIndexOutOfBoundsException();
+
     }
 
 
@@ -81,7 +84,7 @@ public class Storage {
     }
 
 
-    public static Equipment create(String device) {
+    public static Equipment createFrom(String device) {
         return Conveyor.getInstance().create(device);
     }
 

@@ -39,8 +39,7 @@ public class Main {
                     getListOfHelpCommands();
 
                 } else if (tokens[0].equals(INFO)) {
-                    String showInfo = Storage.deviceInfo(tokens[1]);
-                    System.out.println(showInfo);
+                    Storage.deviceInfo(tokens[1]);
 
                 } else if (tokens[0].equals(EXIT) || tokens[0].equals("0")) {
                     System.out.println(EXIT_PROGRAMM_MESSAGE);
@@ -50,8 +49,11 @@ public class Main {
                     System.out.println("Команда " + "\"" + tokens[0] + "\"" + " введена не корректно или отсутствует ...\n");
                     getListOfHelpCommands();
                 }
+
             } catch (IllegalArgumentException exception) {
                 System.out.println(ARGUMENT_INPUT_ERROR);
+            }catch (ArrayIndexOutOfBoundsException exception){
+                System.out.println("Введите аргумент поиска...");
             }
 
         }
