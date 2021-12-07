@@ -1,5 +1,7 @@
 package main.java.equipments.firebarrels;
 
+import lombok.Getter;
+import lombok.Setter;
 import main.java.equipments.Equipment;
 
 public class Firebarrel extends Equipment {
@@ -16,12 +18,12 @@ public class Firebarrel extends Equipment {
     protected final int SPRK_CURTAIN_DIAMETER_TEXT = 3;
 
 
-    protected int waterJetrange; //
-    protected int waterSprayJetRange;
-    protected int foamJetRange;
-    protected double foamMultiplicity;
-    protected String curtainAngle;
-    protected int curtainDiameter;
+    @Getter @Setter protected int waterJetrange; //
+    @Getter @Setter protected int waterSprayJetRange;
+    @Getter @Setter protected int foamJetRange;
+    @Getter @Setter protected double foamMultiplicity;
+    @Getter @Setter protected String curtainAngle;
+    @Getter @Setter protected int curtainDiameter;
 
     @Override
     public String toString() {

@@ -7,7 +7,6 @@ public class Main {
     public static final String DELETE = "del";
     public static final String LIST = "list";
     public static final String HELP = "help";
-    public static final String DEL = "del";
     public static final String INFO = "info";
     public static final String EXIT = "exit";
     public static final String IN_DEVELOPMENT = "функционал находится в разработке...\n";
