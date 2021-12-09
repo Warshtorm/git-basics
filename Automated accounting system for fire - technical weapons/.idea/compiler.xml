@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Automated accounting system for fire - technical weapons" />
+        <module name="AutomatedAccountingSystemForFireTechnicalWeapons" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Automated accounting system for fire - technical weapons" target="14" />
+      <module name="AutomatedAccountingSystemForFireTechnicalWeapons" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Automated accounting system for fire - technical weapons" options="" />
+      <module name="AutomatedAccountingSystemForFireTechnicalWeapons" options="" />
     </option>
   </component>
 </project>
