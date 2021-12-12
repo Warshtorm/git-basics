@@ -16,8 +16,10 @@ public abstract class Equipment implements Equip{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    protected static int count; // счетчик, пока непонятно для чего
     protected int number;
     protected String name;
+    protected String inventoryNumber;
     protected String tu;
     protected String manufacturer;
     protected String type;

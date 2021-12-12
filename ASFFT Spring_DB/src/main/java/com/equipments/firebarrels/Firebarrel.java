@@ -3,7 +3,6 @@ package com.equipments.firebarrels;
 import com.equipments.Equipment;
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 
 @Getter
@@ -32,7 +31,7 @@ public class Firebarrel extends Equipment {
 
     public Firebarrel(String name){
         this();
-        super.name = name;
+        this.name = name;
     }
 
     @Override
@@ -54,7 +53,24 @@ public class Firebarrel extends Equipment {
 
     @Override
     public void allInformationAboutTheDevice() {
-
+        System.out.println(NUMBER_TEXT + ": ".concat(Integer.toString(number))
+                .concat("\n" + INVENTORY_NUMBER_TEXT + ": ").concat(inventoryNumber)
+                .concat("\n" + DEVICE_NAME_TEXT + ": ").concat(name)
+                .concat("\n" + MANUFACTURER_TEXT + ": ").concat(manufacturer)
+                .concat("\n" + CLASS_DEVICE_TEXT + ": ").concat(clas)
+                .concat("\n" + TYPE_DEVICE_TEXT + ": ").concat(type)
+                .concat("\n" + tu)
+                .concat("\n" + DATE_OF_MANUFACTURE_TEXT + ": ").concat(String.valueOf(getDateOfManufacture()))
+                .concat("\n" + WORKING_PRESSURE_TEXT + ": ").concat(workingPressure)
+                .concat("\n" + WATER_CONSUMPTION_TEXT + ": ").concat(waterConsumption)
+                .concat("\n" + CURTAIN_ANGLE_TEXT + ": ").concat(curtainAngle)
+                .concat("\n" + CURTAIN_DIAMETR_TEXT + ": ").concat(String.valueOf(curtainDiameter))
+                .concat("\n" + WATER_JETRANGE_TEXT + ": ").concat(String.valueOf(waterJetrange))
+                .concat("\n" + WATER_SPRAY_JET_RANGE_TEXT + ": ").concat(String.valueOf(waterSprayJetRange))
+                .concat("\n" + FOAM_JET_RANGE_TEXT + ": ").concat(String.valueOf(foamJetRange))
+                .concat("\n" + FOAM_MULTIPLICITY_TEXT + ": ").concat(String.valueOf(foamMultiplicity))
+                .concat("\n" + DEVICE_WEIGHT_TEXT + ": ").concat(String.valueOf(weight))
+                .concat("\n" + DEVICE_SIZE_TEXT + ": ").concat(sizes));
     }
 
     @Override
