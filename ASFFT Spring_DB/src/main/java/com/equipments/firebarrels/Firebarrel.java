@@ -1,7 +1,13 @@
-package com.students;
+package com.equipments.firebarrels;
+
+import com.equipments.Equipment;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
 public class Firebarrel extends Equipment {
     public final static String SPRK_8_TEXT = "СПРК-8Б";
@@ -29,66 +35,6 @@ public class Firebarrel extends Equipment {
         super.name = name;
     }
 
-    public String getSPRK_DEFAULT_TU_TEXT() {
-        return SPRK_DEFAULT_TU_TEXT;
-    }
-
-    public String getSPRK_CURTAIN_ANGLE_TEXT() {
-        return SPRK_CURTAIN_ANGLE_TEXT;
-    }
-
-    public int getSPRK_CURTAIN_DIAMETER_TEXT() {
-        return SPRK_CURTAIN_DIAMETER_TEXT;
-    }
-
-    public int getWaterJetrange() {
-        return waterJetrange;
-    }
-
-    public void setWaterJetrange(int waterJetrange) {
-        this.waterJetrange = waterJetrange;
-    }
-
-    public int getWaterSprayJetRange() {
-        return waterSprayJetRange;
-    }
-
-    public void setWaterSprayJetRange(int waterSprayJetRange) {
-        this.waterSprayJetRange = waterSprayJetRange;
-    }
-
-    public int getFoamJetRange() {
-        return foamJetRange;
-    }
-
-    public void setFoamJetRange(int foamJetRange) {
-        this.foamJetRange = foamJetRange;
-    }
-
-    public double getFoamMultiplicity() {
-        return foamMultiplicity;
-    }
-
-    public void setFoamMultiplicity(double foamMultiplicity) {
-        this.foamMultiplicity = foamMultiplicity;
-    }
-
-    public String getCurtainAngle() {
-        return curtainAngle;
-    }
-
-    public void setCurtainAngle(String curtainAngle) {
-        this.curtainAngle = curtainAngle;
-    }
-
-    public int getCurtainDiameter() {
-        return curtainDiameter;
-    }
-
-    public void setCurtainDiameter(int curtainDiameter) {
-        this.curtainDiameter = curtainDiameter;
-    }
-
     @Override
     public String toString() {
         return "Firebarrel{" +
@@ -104,5 +50,15 @@ public class Firebarrel extends Equipment {
                 ", number=" + number +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public void allInformationAboutTheDevice() {
+
+    }
+
+    @Override
+    public void getDeviceInformation() {
+
     }
 }

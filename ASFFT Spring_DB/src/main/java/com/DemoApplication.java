@@ -1,7 +1,7 @@
 package com;
 
-import com.students.Firebarrel;
-import com.students.EquipmentRepository;
+import com.equipments.firebarrels.Firebarrel;
+import com.equipments.EquipmentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

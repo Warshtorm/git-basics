@@ -1,5 +1,6 @@
-package com.students;
+package com.equipments;
 
+import com.equipments.firebarrels.Firebarrel;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
