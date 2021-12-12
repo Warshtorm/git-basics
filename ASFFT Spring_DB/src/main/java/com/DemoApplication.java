@@ -2,6 +2,7 @@ package com;
 
 import com.equipments.firebarrels.Firebarrel;
 import com.equipments.EquipmentRepository;
+import com.equipments.firebarrels.devicetemplates.Sprk8;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -35,7 +36,7 @@ public class DemoApplication {
 						System.out.println("Programm is closing ... ");
 						break;
 					}else if(input.equals("sprk8")){
-						equipmentRepository.save(new Firebarrel("Sprk8B"));
+						equipmentRepository.save(new Sprk8());
 					}
 					else if (input.equals("del")){
 						if (equipmentRepository.count() != 0) {

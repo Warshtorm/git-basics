@@ -9,6 +9,9 @@ import javax.persistence.*;
 @Setter
 @Entity
 public class Firebarrel extends Equipment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
     public final static String SPRK_19_TEXT = "СПРК-19А-АД";
@@ -20,12 +23,12 @@ public class Firebarrel extends Equipment {
     public final String SPRK_CURTAIN_ANGLE_TEXT = "0 - 120";
     protected final int SPRK_CURTAIN_DIAMETER_TEXT = 3;
 
-    private int waterJetrange; //
-    private int waterSprayJetRange;
-    private int foamJetRange;
-    private double foamMultiplicity;
-    private String curtainAngle;
-    private int curtainDiameter;
+    protected int waterJetrange; //
+    protected int waterSprayJetRange;
+    protected int foamJetRange;
+    protected double foamMultiplicity;
+    protected String curtainAngle;
+    protected int curtainDiameter;
 
     public Firebarrel(){}
 
