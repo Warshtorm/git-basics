@@ -1,8 +1,7 @@
-package com.models.firebarrels.devicetemplates;
+package com.models.firebarrels.fb_templates;
 
 import com.models.firebarrels.Firebarrel;
 import javax.persistence.Entity;
-
 
 @Entity
 public class Sprk8 extends Firebarrel {
