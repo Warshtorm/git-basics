@@ -1,4 +1,4 @@
-package com.equipments;
+package com.models;
 
 public interface Equip {
     int SERVICE_PERIOD_IN_MONTHS = 6;

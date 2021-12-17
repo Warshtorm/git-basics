@@ -1,6 +1,6 @@
-package com.equipments.firebarrels.devicetemplates;
+package com.models.firebarrels.devicetemplates;
 
-import com.equipments.firebarrels.Firebarrel;
+import com.models.firebarrels.Firebarrel;
 import javax.persistence.Entity;
 
 

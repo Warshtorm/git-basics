@@ -1,6 +1,6 @@
-package com.equipments;
+package com.models;
 
-import com.equipments.firebarrels.Firebarrel;
+import com.models.firebarrels.Firebarrel;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 

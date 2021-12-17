@@ -16,7 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Automated accounting system for fire - technical weapons" options="" />
+      <module name="Automated accounting system for fire - technical weapons" options="-parameters" />
     </option>
   </component>
 </project>

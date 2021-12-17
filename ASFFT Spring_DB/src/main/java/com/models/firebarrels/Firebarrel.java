@@ -1,6 +1,6 @@
-package com.equipments.firebarrels;
+package com.models.firebarrels;
 
-import com.equipments.Equipment;
+import com.models.Equipment;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
@@ -12,6 +12,7 @@ public class Firebarrel extends Equipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     public final static String SPRK_8_TEXT = "СПРК-8Б";
     public final static String SPRK_12_TEXT = "СПРК-12А";
     public final static String SPRK_19_TEXT = "СПРК-19А-АД";
@@ -32,8 +33,9 @@ public class Firebarrel extends Equipment {
 
     public Firebarrel(){}
 
-    public Firebarrel(String name){
+    public Firebarrel(String name, int number){
         this();
+        this.number = number;
         this.name = name;
     }
 
