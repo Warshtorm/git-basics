@@ -6,28 +6,30 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+@Setter
+@Getter
 public abstract class Equipment implements Equip {
     protected static int count; // счетчик, пока непонятно для чего
     protected DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
-    @Setter @Getter protected int id;
-    @Setter @Getter protected int number;
-    @Setter @Getter protected String inventoryNumber;
-    @Setter @Getter protected String name;
-    @Setter @Getter protected String tu;
-    @Setter @Getter protected String manufacturer;
-    @Setter @Getter protected String type;
-    @Setter @Getter protected String clas;
+     protected int id;
+     protected int number;
+     protected String inventoryNumber;
+     protected String name;
+     protected String tu;
+    protected String manufacturer;
+     protected String type;
+     protected String clas;
 
-    @Setter @Getter protected String workingPressure; //mPa
-    @Setter @Getter protected String waterConsumption;
+     protected String workingPressure; //mPa
+     protected String waterConsumption;
 
-    @Setter @Getter protected double weight;
-    @Setter @Getter protected String sizes;
-    @Setter @Getter protected int length;
+     protected double weight;
+     protected String sizes;
+     protected int length;
 
     protected LocalDate dateOfManufacture;
-    @Setter @Getter protected LocalDate previousServiceDate;
+     protected LocalDate previousServiceDate;
     protected LocalDate currentServiceDate;
     protected LocalDate nextServiceDate;
 

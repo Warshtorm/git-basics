@@ -1,8 +1,12 @@
 package com.equipments.firehoses;
 
 import com.equipments.Equipment;
+import lombok.Getter;
+import lombok.Setter;
 
 // TODO доработать поля и методы
+@Setter
+@Getter
 public  class Firehose extends Equipment {
 
     public final static String HOSE_51_TEXT = "Рукав напорный ДУ:51";

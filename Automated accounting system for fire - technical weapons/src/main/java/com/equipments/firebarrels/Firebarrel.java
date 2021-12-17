@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import com.equipments.Equipment;
 
+@Setter
+@Getter
 public class Firebarrel extends Equipment {
 
     public final static String SPRK_8_TEXT = "СПРК-8Б";
@@ -18,12 +20,12 @@ public class Firebarrel extends Equipment {
     protected final int SPRK_CURTAIN_DIAMETER_TEXT = 3;
 
 
-    @Getter @Setter protected int waterJetrange; //
-    @Getter @Setter protected int waterSprayJetRange;
-    @Getter @Setter protected int foamJetRange;
-    @Getter @Setter protected double foamMultiplicity;
-    @Getter @Setter protected String curtainAngle;
-    @Getter @Setter protected int curtainDiameter;
+     protected int waterJetrange; //
+     protected int waterSprayJetRange;
+     protected int foamJetRange;
+     protected double foamMultiplicity;
+     protected String curtainAngle;
+     protected int curtainDiameter;
 
     @Override
     public String toString() {
