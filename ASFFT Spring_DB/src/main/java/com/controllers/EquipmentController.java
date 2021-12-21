@@ -1,24 +1,29 @@
 package com.controllers;
 
+import com.models.Equipment;
 import com.repositorys.EquipmentRepository;
+import com.services.EquipmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/equipment")
+@RequestMapping("/equipments")
 public class EquipmentController {
 
-    private final EquipmentRepository equipmentRepository;
+    private final EquipmentService equipmentService;
 
 
-    public EquipmentController(EquipmentRepository equipmentRepository) {
-        this.equipmentRepository = equipmentRepository;
+
+    public EquipmentController(EquipmentService equipmentService) {
+        this.equipmentService = equipmentService;
     }
 
-    @GetMapping
-    public ResponseEntity getAllEquipments(){
-        return ResponseEntity.ok(equipmentRepository.findAll());
+    @GetMapping(path = "list")
+    public List<Equipment> getAllEquipments(){
+        return equipmentService.list();
     }
 }
