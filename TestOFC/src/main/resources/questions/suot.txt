@@ -1,7 +1,4 @@
-package com.company;
 
-public class Suot extends Questions {
-    public Suot() {
         arraySuot[0] = "ЛПДС Апрельская - Линейная Перекачиваемая Диспетчерская Станция ";
         arraySuot[1] = "ЛПДС Апрельская - Линейная Производственно - Диспетчерская Станция";
         arraySuot[2] = "Диаметр нефтепровода Холмогоры-Клин - Ду 1200 ";
@@ -38,5 +35,4 @@ public class Suot extends Questions {
         arraySuot[33] = "";
         arraySuot[34] = "";
         arraySuot[35] = "";
-    }
-}
+
