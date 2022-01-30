@@ -1,20 +1,33 @@
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Parser {
 
-    public String getJsonFile(String dataFile) {
-        StringBuilder builder = new StringBuilder();
-        try {
-            List<String> lines = Files.readAllLines(Paths.get(dataFile), StandardCharsets.UTF_8);
-            lines.forEach(builder::append);
-        } catch (Exception ex) {
-            ex.printStackTrace();
+public class Parser {
+    private List<String> questions = new ArrayList<>();
+
+    public void readFile(String dataFile) {
+
+        try(FileReader reader = new FileReader(dataFile))
+        {
+            BufferedReader buffer = new BufferedReader(reader);
+
+            String line;
+            while((line = buffer.readLine()) != null) {
+                questions.add(line.replaceAll("/", "\n"));
+            }
+            buffer.close();
         }
-        return builder.toString();
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
     }
 
 
+    public List<String> getQuestions() {
+        return questions;
+    }
 }
