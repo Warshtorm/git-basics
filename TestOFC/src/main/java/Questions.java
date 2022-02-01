@@ -3,30 +3,31 @@ import java.util.*;
 class Questions {
     private static final String PTV_DATA_FILE = "src/main/resources/ptv.txt";
     private static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
-    private int enterAresponse;
     private int correctAnswerCount = 0;
     private int wrongAnswerCount = 0;
-    private int numIndex = 0;
     private static int questionsNumTitle = 0;
+    private final int NUMBER_OF_QUESTIONS = 10;
 
     List<String> questions = new ArrayList<>();
     Parser parser = new Parser();
     Scanner scanner = new Scanner(System.in);
     Random random = new Random();
+    int inputAnswer;
 
 
     public void beginTestPtv() {
         parser.readFile(PTV_DATA_FILE);
-        List<String> array = new ArrayList<>(getRandomElementIn(parser.getQuestions()));
+        List<String> array = new ArrayList<>(getARandomItemToTheListFrom(parser.getQuestions()));
 
-        for (int i = 0; i < array.size(); i++){
-            System.out.println("Вопрос : " + (i+1) + " " + array.get(i) + isTrue(array.get(i)));
-//            if (isTrue(array.get(i))){
-//                System.out.print("true");
-//            }else {
-//                System.out.print("false");
-//            }
+        for (int i = 0; i < array.size(); i++) {
+            System.out.println("Вопрос : " + (i + 1) + " " + array.get(i));
+            System.out.print("Введите ответ: ");
+            inputAnswer = scanner.nextInt();
+            String answer = getAnswer(array.get(i), inputAnswer);
+            System.out.println(answer);
         }
+        String writeResult = getresultTest();
+        System.out.println(writeResult);
     }
 
 //    public void beginTestSuot() {
@@ -43,8 +44,8 @@ class Questions {
 //        }
 //    }
 
-    public List<String> getRandomElementIn(List<String> arrayList) {
-        for (int i = 0; i < 10; i++){
+    public List<String> getARandomItemToTheListFrom(List<String> arrayList) {
+        for (int i = 0; i < NUMBER_OF_QUESTIONS; i++) {
             int index = random.nextInt(arrayList.size());
             questions.add(arrayList.get(index));
             arrayList.remove(index);
@@ -52,15 +53,27 @@ class Questions {
         return questions;
     }
 
-    public boolean isTrue(String str){
-        if (str.lastIndexOf('+') > 0){
-            return true;
+    public String getAnswer(String str, int inputAnswer) {
+        int index = str.lastIndexOf('+');
+        if (index > 0 & inputAnswer == 1 || index < 0 & inputAnswer == 0) {
+            correctAnswerCount++;
+            return  "верно ";
+        } else if (index > 0 & inputAnswer == 0 || index < 0 & inputAnswer == 1) {
+            wrongAnswerCount++;
+            return  "не верно ";
         }
-        return false;
+        return "";
     }
 
+    public String getresultTest() {
+        return "Ответов : " + " Правильных - " + correctAnswerCount +
+                ", " + "Не правильных - " + wrongAnswerCount;
+    }
 
 }
+
+
+
 
 
 
