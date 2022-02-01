@@ -9,25 +9,25 @@ class Questions {
     private int numIndex = 0;
     private static int questionsNumTitle = 0;
 
-    String[] questions = new String[10];
-
+    List<String> questions = new ArrayList<>();
     Parser parser = new Parser();
     Scanner scanner = new Scanner(System.in);
     Random random = new Random();
 
+
     public void beginTestPtv() {
         parser.readFile(PTV_DATA_FILE);
-        getElementIn(parser.getQuestions());
+        List<String> array = new ArrayList<>(getRandomElementIn(parser.getQuestions()));
 
-
-//        for (int i = 0; i < 10; ++i) {
-//            numIndex = random.nextInt(questions.size());
-//            System.out.println("Array" + questions);
-//            questionsNumTitle++;  // номер вопроса
-//            System.out.println("Вопрос №  " + questionsNumTitle + "\n");
-//            System.out.println(parser.getQuestions().get(numIndex));
+        for (int i = 0; i < array.size(); i++){
+            System.out.println("Вопрос : " + (i+1) + " " + array.get(i) + isTrue(array.get(i)));
+//            if (isTrue(array.get(i))){
+//                System.out.print("true");
+//            }else {
+//                System.out.print("false");
+//            }
+        }
     }
-
 
 //    public void beginTestSuot() {
 //        for (int i = 0; i < 10; ++i) {
@@ -43,22 +43,20 @@ class Questions {
 //        }
 //    }
 
-    public void getElementIn(List<String> arrayList) {
-        int index = 0;
-        for (int i = 0; i < 10; i++) {
-            int num = random.nextInt(arrayList.size());
-            index++;
-            if (questions[0] == null) {
-                questions[0] = arrayList.get(num);
-            } else questions[i] = arrayList.get(i);
-
-//            if (!questions[i].equals(arrayList.get(i))) {
-//                questions[i] = arrayList.get(i);
-//            }
-
-
+    public List<String> getRandomElementIn(List<String> arrayList) {
+        for (int i = 0; i < 10; i++){
+            int index = random.nextInt(arrayList.size());
+            questions.add(arrayList.get(index));
+            arrayList.remove(index);
         }
-        System.out.println(Arrays.toString(questions));
+        return questions;
+    }
+
+    public boolean isTrue(String str){
+        if (str.lastIndexOf('+') > 0){
+            return true;
+        }
+        return false;
     }
 
 
