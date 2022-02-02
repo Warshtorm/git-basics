@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Parser {
-    private List<String> questions = new ArrayList<>();
+public class Data {
+    private final List<String> repositoryOfQuestions = new ArrayList<>();
 
     public void readFile(String dataFile) {
 
@@ -16,7 +16,7 @@ public class Parser {
 
             String line;
             while((line = buffer.readLine()) != null) {
-                questions.add(line.replaceAll("/", "\n"));
+                repositoryOfQuestions.add(line.replaceAll("/", "\n"));
             }
             buffer.close();
         }
@@ -27,7 +27,7 @@ public class Parser {
     }
 
 
-    public List<String> getQuestions() {
-        return questions;
+    public List<String> getRepositoryOfQuestions() {
+        return repositoryOfQuestions;
     }
 }

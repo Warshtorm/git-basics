@@ -5,17 +5,18 @@ class Questions {
     private static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
     private int correctAnswerCount = 0;
     private int wrongAnswerCount = 0;
+    private int inputAnswer;
 
-    List<String> questions = new ArrayList<>();
-    Parser parser = new Parser();
-    Scanner scanner = new Scanner(System.in);
-    Random random = new Random();
-    int inputAnswer;
+    private final List<String> questions = new ArrayList<>();
+    private final Data now = new Data();
+    private final Scanner scanner = new Scanner(System.in);
+    private final Random random = new Random();
+
 
 
     public void beginTestPtv() {
-        parser.readFile(PTV_DATA_FILE);
-        List<String> array = new ArrayList<>(getARandomItemToTheListFrom(parser.getQuestions()));
+        now.readFile(PTV_DATA_FILE);
+        List<String> array = new ArrayList<>(getARandomItemToTheListFrom(now.getRepositoryOfQuestions()));
 
         for (int i = 0; i < array.size(); i++) {
             System.out.println("Вопрос : " + (i + 1) + " " + array.get(i));
