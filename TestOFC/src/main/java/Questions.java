@@ -5,8 +5,6 @@ class Questions {
     private static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
     private int correctAnswerCount = 0;
     private int wrongAnswerCount = 0;
-    private static int questionsNumTitle = 0;
-    private final int NUMBER_OF_QUESTIONS = 10;
 
     List<String> questions = new ArrayList<>();
     Parser parser = new Parser();
@@ -45,6 +43,7 @@ class Questions {
 //    }
 
     public List<String> getARandomItemToTheListFrom(List<String> arrayList) {
+        int NUMBER_OF_QUESTIONS = 10;
         for (int i = 0; i < NUMBER_OF_QUESTIONS; i++) {
             int index = random.nextInt(arrayList.size());
             questions.add(arrayList.get(index));
