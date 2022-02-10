@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public class Parser {
-    private List<String> questions = new ArrayList<>();
+    private final List<String> questions = new ArrayList<>();
 
     public void readFile(String dataFile) {
 
