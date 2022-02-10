@@ -4,32 +4,28 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Parser {
-    private final List<String> questions = new ArrayList<>();
-
+public class FactoryPtvQuestions implements FactoryService{
 
     private final List<String> repositoryOfQuestions = new ArrayList<>();
 
     public void readFile(String dataFile) {
 
-        try(FileReader reader = new FileReader(dataFile))
-        {
+        try (FileReader reader = new FileReader(dataFile)) {
             BufferedReader buffer = new BufferedReader(reader);
 
             String line;
-            while((line = buffer.readLine()) != null) {
+            while ((line = buffer.readLine()) != null) {
                 repositoryOfQuestions.add(line.replaceAll("/", "\n"));
             }
             buffer.close();
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
 
             System.out.println(ex.getMessage());
         }
     }
 
 
-    public List<String> getRepositoryOfQuestions() {
+    public List<String> getAstackOfQuestionsOnPtv() {
         return repositoryOfQuestions;
     }
 }

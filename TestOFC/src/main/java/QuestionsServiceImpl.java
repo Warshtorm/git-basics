@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Questions {
+class QuestionsServiceImpl implements QuestionsService{
     private static final String PTV_DATA_FILE = "src/main/resources/ptv.txt";
     private static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
     private int correctAnswerCount = 0;
@@ -8,7 +8,7 @@ class Questions {
     private int inputAnswer;
 
     private final List<String> questions = new ArrayList<>();
-    private final Parser now = new Parser();
+    private final FactoryPtvQuestions now = new FactoryPtvQuestions();
     private final Scanner scanner = new Scanner(System.in);
     private final Random random = new Random();
 
@@ -16,7 +16,7 @@ class Questions {
 
     public void beginTestPtv() {
         now.readFile(PTV_DATA_FILE);
-        List<String> array = new ArrayList<>(getARandomItemTo(now.getRepositoryOfQuestions()));
+        List<String> array = new ArrayList<>(getARandomItemTo(now.getAstackOfQuestionsOnPtv()));
 
         for (int i = 0; i < array.size(); i++) {
             System.out.println("Вопрос : " + (i + 1) + " " + array.get(i).replace('+', ' ').trim());
@@ -29,19 +29,13 @@ class Questions {
         System.out.println(writeResult);
     }
 
-//    public void beginTestSuot() {
-//        for (int i = 0; i < 10; ++i) {
-//
-//            // создаём переменную в которую заносим случайный индекс массива
-//            numIndex = random.nextInt(suotQuestions.size());
-//
-//            questionsNumTitle++;  // номер вопроса
-//            System.out.println("Вопрос №  " + questionsNumTitle + "\n");
-//            // выводим вопрос на экран в текстовом виде
-//            System.out.println(suotQuestions.get(numIndex));
-//            correctOrincorrectanswer(); // выводим ответ, верно или нет
-//        }
-//    }
+
+
+    public void beginTestSuot() {
+        for (int i = 0; i < 10; ++i) {
+
+        }
+    }
 
     public List<String> getARandomItemTo(List<String> arrayList) {
         int NUMBER_OF_QUESTIONS = 10;
@@ -53,8 +47,8 @@ class Questions {
         return questions;
     }
 
-    public String getAnswer(String str, int inputAnswer) {
-        int index = str.lastIndexOf('+');
+    public String getAnswer(String question, int inputAnswer) {
+        int index = question.lastIndexOf('+');
         if (index > 0 & inputAnswer == 1 || index < 0 & inputAnswer == 0) {
             correctAnswerCount++;
             return  "верно ";
