@@ -1,8 +1,19 @@
-public class Main {
+import java.util.Scanner;
 
+public class Main {
+    private static QuestionsServiceImpl questions = new QuestionsServiceImpl();
     public static void main(String[] args) {
-        QuestionsServiceImpl questions = new QuestionsServiceImpl();
+
+
         questions.beginTestPtv();
 
+        //questions.beginTestSuot();
+
+
+
+
+
     }
+
+
 }

@@ -4,11 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FactoryPtvQuestions implements FactoryService{
+public class FileConverter {
 
-    private final List<String> repositoryOfQuestions = new ArrayList<>();
-
-    public void readFile(String dataFile) {
+    public  List<String> convertToArray(String dataFile) {
+        List<String> repositoryOfQuestions = new ArrayList<>();
 
         try (FileReader reader = new FileReader(dataFile)) {
             BufferedReader buffer = new BufferedReader(reader);
@@ -22,10 +21,6 @@ public class FactoryPtvQuestions implements FactoryService{
 
             System.out.println(ex.getMessage());
         }
-    }
-
-
-    public List<String> getAstackOfQuestionsOnPtv() {
         return repositoryOfQuestions;
     }
 }

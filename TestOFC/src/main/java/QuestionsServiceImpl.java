@@ -8,18 +8,18 @@ class QuestionsServiceImpl implements QuestionsService{
     private int inputAnswer;
 
     private final List<String> questions = new ArrayList<>();
-    private final FactoryPtvQuestions now = new FactoryPtvQuestions();
+    private final FileConverter file = new FileConverter();
     private final Scanner scanner = new Scanner(System.in);
     private final Random random = new Random();
 
 
 
     public void beginTestPtv() {
-        now.readFile(PTV_DATA_FILE);
-        List<String> array = new ArrayList<>(getARandomItemTo(now.getAstackOfQuestionsOnPtv()));
+        List<String> array = new ArrayList<>(getARandomItemTo(file.convertToArray(PTV_DATA_FILE)));
 
         for (int i = 0; i < array.size(); i++) {
-            System.out.println("Вопрос : " + (i + 1) + " " + array.get(i).replace('+', ' ').trim());
+            System.out.println("Вопрос : " + (i + 1) + " "
+                    + array.get(i).replace('+', ' ').trim());
             System.out.print("Введите ответ: ");
             inputAnswer = scanner.nextInt();
             String answer = getAnswer(array.get(i), inputAnswer);
@@ -32,9 +32,18 @@ class QuestionsServiceImpl implements QuestionsService{
 
 
     public void beginTestSuot() {
-        for (int i = 0; i < 10; ++i) {
+        List<String> array = new ArrayList<>(getARandomItemTo(file.convertToArray(SUOT_DATA_FILE)));
 
+        for (int i = 0; i < array.size(); i++) {
+            System.out.println("Вопрос : " + (i + 1) + " "
+                    + array.get(i).replace('+', ' ').trim());
+            System.out.print("Введите ответ: ");
+            inputAnswer = scanner.nextInt();
+            String answer = getAnswer(array.get(i), inputAnswer);
+            System.out.println(answer);
         }
+        String writeResult = getresultTest();
+        System.out.println(writeResult);
     }
 
     public List<String> getARandomItemTo(List<String> arrayList) {
