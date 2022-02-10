@@ -28,13 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Analisator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Questions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/suot.json" beforeDir="false" />
->>>>>>> eb0e50b0496d2ef392840c79e12e25850323bf33
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ptv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ptv.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
