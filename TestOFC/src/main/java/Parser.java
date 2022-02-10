@@ -4,14 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-<<<<<<< HEAD:TestOFC/src/main/java/Parser.java
 public class Parser {
     private final List<String> questions = new ArrayList<>();
-=======
-public class Data {
+
+
     private final List<String> repositoryOfQuestions = new ArrayList<>();
->>>>>>> eb0e50b0496d2ef392840c79e12e25850323bf33:TestOFC/src/main/java/Data.java
 
     public void readFile(String dataFile) {
 

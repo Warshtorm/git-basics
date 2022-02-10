@@ -8,7 +8,7 @@ class Questions {
     private int inputAnswer;
 
     private final List<String> questions = new ArrayList<>();
-    private final Data now = new Data();
+    private final Parser now = new Parser();
     private final Scanner scanner = new Scanner(System.in);
     private final Random random = new Random();
 
