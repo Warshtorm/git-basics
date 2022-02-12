@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class PtvTesting extends TestLogic implements TestCreator {
 
     @Override
-    public void beginTest() {
+    public void create() {
         Scanner scanner = new Scanner(System.in);
-        array = new ArrayList<>(getARandomItemTo(file.convertFromFileToArray(PTV_DATA_FILE)));
+        array = new ArrayList<>(getARandomItemTo(convertFromFileToArray(PTV_DATA_FILE)));
 
         for (int i = 0; i < array.size(); i++) {
             System.out.println("Вопрос : " + (i + 1) + " "

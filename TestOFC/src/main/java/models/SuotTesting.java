@@ -1,14 +1,13 @@
 package models;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SuotTesting extends TestLogic implements TestCreator{
 
     @Override
-    public void beginTest() {
+    public void create() {
         Scanner scanner = new Scanner(System.in);
-        array = new ArrayList<>(getARandomItemTo(file.convertFromFileToArray(SUOT_DATA_FILE)));
+        array = new ArrayList<>(getARandomItemTo(convertFromFileToArray(SUOT_DATA_FILE)));
 
         for (int i = 0; i < array.size(); i++) {
             System.out.println("Вопрос : " + (i + 1) + " "

@@ -1,25 +1,21 @@
 package models;
-
-
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 class TestLogic {
     protected static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
     protected static final String PTV_DATA_FILE = "src/main/resources/ptv.txt";
     protected List<String> array;
-
-    protected int correctAnswerCount = 0;
-    protected int wrongAnswerCount = 0;
+    public final int questionsSize = 10;
+    private int correctAnswerCount = 0;
+    private int wrongAnswerCount = 0;
     protected int inputAnswer;
-
-    protected final FileConverter file = new FileConverter();
-
-
 
     public List<String> getARandomItemTo(List<String> arrayList) {
         Random random = new Random();
         List<String> questions = new ArrayList<>();
-        int questionsSize = 10;
         for (int i = 0; i < questionsSize; i++) {
             int index = random.nextInt(arrayList.size());
             questions.add(arrayList.get(index));
@@ -38,6 +34,24 @@ class TestLogic {
             return "не верно ";
         }
         return "";
+    }
+
+    public  List<String> convertFromFileToArray(String dataFile) {
+        List<String> repositoryOfQuestions = new ArrayList<>();
+
+        try (FileReader reader = new FileReader(dataFile)) {
+            BufferedReader buffer = new BufferedReader(reader);
+
+            String line;
+            while ((line = buffer.readLine()) != null) {
+                repositoryOfQuestions.add(line.replaceAll("/", "\n"));
+            }
+            buffer.close();
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+        return repositoryOfQuestions;
     }
 
     public String getresultTest() {
