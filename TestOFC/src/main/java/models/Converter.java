@@ -1,6 +1,8 @@
+package models;
+
 import java.util.List;
 
-public interface FactoryService {
+public interface Converter {
 
      List<String> convertFromFileToArray(String dataFile);
 

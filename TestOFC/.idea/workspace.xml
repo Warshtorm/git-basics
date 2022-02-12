@@ -28,8 +28,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QuestionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuestionsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Analisator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/PtvTesting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/SuotTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Analisator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FactoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FileConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QuestionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TestCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QuestionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TestLogic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +47,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="package-info" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,7 +94,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="models.Main" />
       <module name="TestOFC" />
       <method v="2">
         <option name="Make" enabled="true" />
