@@ -4,17 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static TestCreator test;
     public static Scanner scanner = new Scanner(System.in);
-
-    public static void run(int input) {
-        if (input == 1) {
-            test = new PtvTesting();
-        } else if (input == 2) {
-            test = new SuotTesting();
-        }
-        test.create();
-    }
 
 
     public static void main(String[] args) {
@@ -24,6 +14,17 @@ public class Main {
 
         run(input);
 
+
+    }
+
+    public static void run(int input) {
+        TestCreator test = null;
+        if (input == 1) {
+            test = new PtvTesting();
+        } else if (input == 2) {
+            test = new SuotTesting();
+        }
+        if (test != null){test.create();}
 
     }
 
