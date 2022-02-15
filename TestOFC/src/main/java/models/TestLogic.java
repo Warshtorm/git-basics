@@ -54,6 +54,18 @@ class TestLogic {
         return repositoryOfQuestions;
     }
 
+    public void go(List<String> array){
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < array.size(); i++) {
+            System.out.println("Вопрос : " + (i + 1) + " "
+                    + array.get(i).replace('+', ' ').trim());
+            System.out.print("Введите ответ: ");
+            inputAnswer = scanner.nextInt();
+            String answer = getAnswer(array.get(i), inputAnswer);
+            System.out.println(answer);
+        }
+    }
+
     public String getresultTest() {
         return "Ответов : " + " Правильных - " + correctAnswerCount +
                 ", " + "Не правильных - " + wrongAnswerCount;
