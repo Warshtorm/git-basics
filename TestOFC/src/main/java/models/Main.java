@@ -21,5 +21,6 @@ public class Main {
             test.start();
         }
         scanner.close();
+
     }
 }
