@@ -26,6 +26,8 @@ public class Main {
         }
         if (test != null){test.create();}
 
+        scanner.close();
+
     }
 
 
