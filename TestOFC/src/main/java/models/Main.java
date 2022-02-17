@@ -5,9 +5,15 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("1 - load PTV Testing: \n2 - load SUOT Testing: \n3 - load Medical Testing");
-        int input = scanner.nextInt();
-        run(input);
+        int input = -1;
+
+        while (input != 0) {
+            System.out.println("1 - load PTV Testing: \n2 - load SUOT Testing: " +
+                    "\n3 - load Medical Testing: " +
+                    "\n0 - Exit programm");
+            input = scanner.nextInt();
+            run(input);
+        }
     }
 
     public static void run(int input) {
