@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-class TestLogic {
+class LogicProgram {
     protected static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
     protected static final String PTV_DATA_FILE = "src/main/resources/ptv.txt";
     protected List<String> array;

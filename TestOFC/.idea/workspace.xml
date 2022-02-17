@@ -28,7 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Analisator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Reporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PtvTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PtvTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/SuotTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SuotTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/TestLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LogicProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,7 +1,7 @@
 package models;
 import java.util.ArrayList;
 
-public class SuotTesting extends TestLogic implements TestCreator{
+public class SuotTesting extends LogicProgram implements TestCreator{
 
     @Override
     public void start() {
