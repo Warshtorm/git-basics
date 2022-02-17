@@ -27,14 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/MedicalTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/PtvTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PtvTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/SuotTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SuotTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/TestCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TestCreator.java" afterDir="false" />
-    </list>
+    <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +63,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="models" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyProject's\git-basics\TestOFC\src\main\resources" />
       <recent name="D:\MyProject's\git-basics\TestOFC\src\main" />
