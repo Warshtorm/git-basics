@@ -1,4 +1,6 @@
-package models;
+package models.core;
+
+import models.TestCreator;
 
 public class MedicalTesting implements TestCreator {
     @Override

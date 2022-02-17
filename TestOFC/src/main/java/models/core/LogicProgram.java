@@ -1,4 +1,4 @@
-package models;
+package models.core;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,8 +7,9 @@ import java.util.*;
 class LogicProgram {
     protected static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
     protected static final String PTV_DATA_FILE = "src/main/resources/ptv.txt";
+    protected static final String MED_DATA_FILE = "src/main/resources/med.txt";
     protected List<String> array;
-    public final int questionsSize = 10;
+    public final int QUESTIONS_SIZE = 10;
     private int correctAnswerCount = 0;
     private int wrongAnswerCount = 0;
     protected int inputAnswer;
@@ -26,14 +27,13 @@ class LogicProgram {
 
         String writeResult = getresultTest();
         System.out.println(writeResult);
-
         scanner.close();
     }
 
     public List<String> getARandomItemTo(List<String> arrayList) {
         Random random = new Random();
         List<String> questions = new ArrayList<>();
-        for (int i = 0; i < questionsSize; i++) {
+        for (int i = 0; i < QUESTIONS_SIZE; i++) {
             int index = random.nextInt(arrayList.size());
             questions.add(arrayList.get(index));
             arrayList.remove(index);
@@ -54,21 +54,21 @@ class LogicProgram {
     }
 
     public  List<String> convertFromFileToArray(String dataFile) {
-        List<String> repositoryOfQuestions = new ArrayList<>();
+        List<String> convertedRepositoryWithQuestions = new ArrayList<>();
 
         try (FileReader reader = new FileReader(dataFile)) {
             BufferedReader buffer = new BufferedReader(reader);
 
             String line;
             while ((line = buffer.readLine()) != null) {
-                repositoryOfQuestions.add(line.replaceAll("/", "\n"));
+                convertedRepositoryWithQuestions.add(line.replaceAll("/", "\n"));
             }
             buffer.close();
         } catch (IOException ex) {
 
             System.out.println(ex.getMessage());
         }
-        return repositoryOfQuestions;
+        return convertedRepositoryWithQuestions;
     }
 
 
