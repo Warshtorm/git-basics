@@ -1,13 +1,10 @@
 package models.core;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 class LogicProgram {
-    protected static final String SUOT_DATA_FILE = "src/main/resources/suot.txt";
-    protected static final String PTV_DATA_FILE = "src/main/resources/ptv.txt";
-    protected static final String MED_DATA_FILE = "src/main/resources/med.txt";
     protected List<String> array;
     public final int QUESTIONS_SIZE = 10;
     private int correctAnswerCount = 0;
@@ -27,7 +24,6 @@ class LogicProgram {
 
         String writeResult = getresultTest();
         System.out.println(writeResult);
-        scanner.close();
     }
 
     public List<String> getARandomItemTo(List<String> arrayList) {
@@ -53,17 +49,11 @@ class LogicProgram {
         return "";
     }
 
-    public  List<String> convertFromFileToArray(String dataFile) {
+    public List<String> convertFromFileToArray(String dataFile) {
         List<String> convertedRepositoryWithQuestions = new ArrayList<>();
 
-        try (FileReader reader = new FileReader(dataFile)) {
-            BufferedReader buffer = new BufferedReader(reader);
-
-            String line;
-            while ((line = buffer.readLine()) != null) {
-                convertedRepositoryWithQuestions.add(line.replaceAll("/", "\n"));
-            }
-            buffer.close();
+        try {
+            convertedRepositoryWithQuestions = Files.readAllLines(Paths.get(dataFile));
         } catch (IOException ex) {
 
             System.out.println(ex.getMessage());

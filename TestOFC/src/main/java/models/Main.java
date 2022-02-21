@@ -2,7 +2,6 @@ package models;
 import models.core.MedicalTesting;
 import models.core.PtvTesting;
 import models.core.SuotTesting;
-
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +17,7 @@ public class Main {
             input = scanner.nextInt();
             run(input);
         }
+        scanner.close();
     }
 
     public static void run(int input) {
@@ -30,7 +30,5 @@ public class Main {
         if (test != null) {
             test.start();
         }
-        scanner.close();
-
     }
 }

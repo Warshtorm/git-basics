@@ -29,6 +29,13 @@
   <component name="ChangeListManager">
     <list default="true" id="dad9c355-a53b-40bb-b896-32f13cdbc0e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/core/LogicProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/core/LogicProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/core/MedicalTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/core/MedicalTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/core/PtvTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/core/PtvTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/core/SuotTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/core/SuotTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ptv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ptv.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/suot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/suot.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
