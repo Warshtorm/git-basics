@@ -1,13 +1,14 @@
 package models.core;
 
 import models.TestCreator;
+import java.util.ArrayList;
 
-public class MedicalTesting implements TestCreator {
-    private final String MED_DATA_FILE = "src/main/resources/med.txt";
+public class MedicalTesting extends LogicProgram implements TestCreator {
 
     @Override
     public void start() {
-        System.out.println("тестирование находится в разработке");
+        String medDataFile = "src/main/resources/med.txt";
+        getQuestionsFromThe(array = new ArrayList<>(getARandomItemTo(convertFromFileToArray(medDataFile))));
 
     }
 }

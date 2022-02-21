@@ -11,14 +11,14 @@ class LogicProgram {
     private int wrongAnswerCount = 0;
     protected int inputAnswer;
 
-    public void getQuestionsFromThe(List<String> array){
+    public void getQuestionsFromThe(List<String> questions){
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < array.size(); i++) {
+        for (int i = 0; i < questions.size(); i++) {
             System.out.println("Вопрос : " + (i + 1) + " "
-                    + array.get(i).replace('+', ' ').trim());
+                    + questions.get(i).replace('+', ' ').trim());
             System.out.print("Введите ответ: ");
             inputAnswer = scanner.nextInt();
-            String answer = getAnswer(array.get(i), inputAnswer);
+            String answer = getAnswer(questions.get(i), inputAnswer);
             System.out.println(answer);
         }
 
@@ -26,13 +26,13 @@ class LogicProgram {
         System.out.println(writeResult);
     }
 
-    public List<String> getARandomItemTo(List<String> arrayList) {
+    public List<String> getARandomItemTo(List<String> convertedRepositoryWithQuestions) {
         Random random = new Random();
         List<String> questions = new ArrayList<>();
         for (int i = 0; i < QUESTIONS_SIZE; i++) {
-            int index = random.nextInt(arrayList.size());
-            questions.add(arrayList.get(index));
-            arrayList.remove(index);
+            int index = random.nextInt(convertedRepositoryWithQuestions.size());
+            questions.add(convertedRepositoryWithQuestions.get(index));
+            convertedRepositoryWithQuestions.remove(index);
         }
         return questions;
     }
@@ -55,7 +55,6 @@ class LogicProgram {
         try {
             convertedRepositoryWithQuestions = Files.readAllLines(Paths.get(dataFile));
         } catch (IOException ex) {
-
             System.out.println(ex.getMessage());
         }
         return convertedRepositoryWithQuestions;

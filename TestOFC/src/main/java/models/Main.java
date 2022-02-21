@@ -24,7 +24,7 @@ public class Main {
         TestCreator test = switch (input) {
             case 1 -> new PtvTesting();
             case 2 -> new SuotTesting();
-            case 3 -> new MedicalTesting();
+            //case 3 -> new MedicalTesting();
             default -> null;
         };
         if (test != null) {
