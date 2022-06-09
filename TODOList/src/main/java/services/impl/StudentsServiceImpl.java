@@ -1,6 +1,7 @@
 package services.impl;
 
 import models.Student;
+import org.springframework.stereotype.Service;
 import repositorys.StudentRepository;
 import services.StudentService;
 import java.util.List;
